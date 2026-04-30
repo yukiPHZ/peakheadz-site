@@ -1,0 +1,23 @@
+
+## .gitignore
+
+```gitignore
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+
+# Node / build tools if added later
+node_modules/
+dist/
+.cache/
