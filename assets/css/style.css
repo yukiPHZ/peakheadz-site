@@ -4,17 +4,6 @@
    Base
 ========================= */
 
-@media (max-width: 640px) {
-  .profile-block {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .profile-image-wrap {
-    max-width: 220px;
-  }
-}
-
 :root {
   --bg: #0a0a0a;
   --bg-soft: #111111;
@@ -246,15 +235,16 @@ img {
 
 .profile-block {
   display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 32px;
+  grid-template-columns: minmax(220px, 360px) 1fr;
+  gap: 48px;
   align-items: center;
-  padding: 48px 0;
+  padding: 56px 0;
   border-bottom: 1px solid var(--line);
 }
 
 .profile-image-wrap {
-  border-radius: 24px;
+  width: 100%;
+  border-radius: 28px;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--line);
@@ -263,24 +253,32 @@ img {
 
 .profile-image {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
-  filter: grayscale(100%) contrast(1.05) brightness(0.92);
+  filter: grayscale(100%) contrast(1.05) brightness(0.94);
+}
+
+.profile-text {
+  max-width: 420px;
+}
+
+.profile-text .eyebrow {
+  margin-bottom: 14px;
 }
 
 .profile-text h2 {
-  margin-bottom: 16px;
-  font-size: 24px;
+  margin-bottom: 20px;
+  font-size: clamp(28px, 5vw, 42px);
+  line-height: 1.25;
   letter-spacing: 0.08em;
+  font-weight: 650;
 }
 
 .profile-text p {
   color: #c7c7c7;
   font-size: 15px;
+  line-height: 2;
 }
-
-
-
 /* =========================
    Information Page
 ========================= */
@@ -401,5 +399,28 @@ img {
 
   .info-table td {
     padding-bottom: 18px;
+  }
+    .profile-block {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    padding: 44px 0;
+  }
+
+  .profile-image-wrap {
+    max-width: 100%;
+    border-radius: 24px;
+  }
+
+  .profile-text {
+    max-width: none;
+  }
+
+  .profile-text h2 {
+    font-size: 30px;
+  }
+
+  .profile-text p {
+    font-size: 15px;
+    line-height: 1.9;
   }
 }
