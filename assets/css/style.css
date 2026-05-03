@@ -330,6 +330,7 @@ img {
   border: 1px solid var(--line);
   border-radius: 14px;
   color: #d8d8d8;
+  background: transparent;
   overflow-wrap: anywhere;
   transition:
     border-color 0.2s ease,
@@ -337,10 +338,36 @@ img {
     color 0.2s ease;
 }
 
-.link-list a:hover {
-  color: var(--text);
-  border-color: rgba(47, 111, 237, 0.5);
-  background: var(--accent-soft);
+.link-list a:visited,
+.link-list a:focus {
+  color: #d8d8d8;
+  background: transparent;
+  border-color: var(--line);
+  outline: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .link-list a:hover {
+    color: var(--text);
+    border-color: rgba(47, 111, 237, 0.5);
+    background: var(--accent-soft);
+  }
+}
+
+@media (hover: none) {
+  .link-list a:hover,
+  .link-list a:focus,
+  .link-list a:visited {
+    color: #d8d8d8;
+    background: transparent;
+    border-color: var(--line);
+  }
+
+  .link-list a:active {
+    color: var(--text);
+    border-color: rgba(47, 111, 237, 0.35);
+    background: rgba(47, 111, 237, 0.08);
+  }
 }
 
 .mail-text {
