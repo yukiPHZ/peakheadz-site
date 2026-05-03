@@ -191,6 +191,7 @@ img {
   margin-top: 28px;
   color: var(--text-muted);
   font-size: 16px;
+  overflow-wrap: anywhere;
 }
 
 .content-block {
@@ -306,6 +307,7 @@ img {
 
 .info-table td {
   color: #d8d8d8;
+  overflow-wrap: anywhere;
 }
 
 .link-list {
@@ -314,12 +316,21 @@ img {
   gap: 12px;
 }
 
+.link-group-title {
+  margin: 32px 0 12px;
+  color: var(--text-muted);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+}
+
 .link-list a {
   display: block;
   padding: 14px 16px;
   border: 1px solid var(--line);
   border-radius: 14px;
   color: #d8d8d8;
+  overflow-wrap: anywhere;
   transition:
     border-color 0.2s ease,
     background-color 0.2s ease,
@@ -336,6 +347,7 @@ img {
   margin-top: 18px;
   color: #8A8A8A;
   letter-spacing: 0.06em;
+  overflow-wrap: anywhere;
 }
 
 /* =========================
@@ -370,7 +382,8 @@ img {
   }
 
   .page {
-    padding: 40px 22px 72px;
+    width: calc(100% - 44px);
+    padding: 40px 0 72px;
   }
 
   .back-link {
@@ -383,6 +396,20 @@ img {
 
   .content-block {
     padding: 40px 0;
+  }
+
+  .lead,
+  .info-table td,
+  .link-list a,
+  .mail-text {
+    word-break: break-all;
+  }
+
+  .info-table,
+  .info-table tbody,
+  .info-table tr {
+    display: block;
+    width: 100%;
   }
 
   .info-table th,
@@ -422,5 +449,10 @@ img {
   .profile-text p {
     font-size: 15px;
     line-height: 1.9;
+  }
+
+  .site-footer {
+    width: calc(100% - 44px);
+    padding: 0 0 40px;
   }
 }

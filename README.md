@@ -30,12 +30,21 @@ It is a place to express the philosophy of continuous making, working, and updat
    ├─ phzlogo1.png
    └─ css/
       └─ style.css
+```
 
 <!--
 Links:
 YouTube: https://www.youtube.com/@yukiz_PHZ
 DAKE: https://dakeapp.com/
 GitHub: https://github.com/yukiPHZ/dake-series/releases
-Instagram: https://www.instagram.com/kikuta.shimarisu_fudosan/
+Instagram Shimarisu: https://www.instagram.com/kikuta.shimarisu_fudosan/
 Shimarisu: https://shimarisu-fudosan.com/
+BORINEF: https://borinef.com/
+note: https://note.com/borinef
+Instagram Personal: https://www.instagram.com/kikutayukihiko/
+HolidayJinja: https://holiday-jinja.com/
+JapanMemoryLane: https://japanmemorylane.com/
+NICESKILL: https://niceskill.com/
+NICEKIP: https://nicekip.com/
+YUKIZBLOG: https://yukizblog.com/
 -->
