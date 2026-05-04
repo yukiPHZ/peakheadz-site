@@ -16,7 +16,7 @@
     <a class="back-link" href="index.html">← PEAKHEADZ</a>
 
     <section class="page-hero">
-      <p class="eyebrow">About</p>
+      <p class="eyebrow wlzphz-about-signal">About</p>
       <h1>つくり続けること、そのもの。</h1>
       <p class="lead">
         PEAKHEADZは、仕事・開発・制作・発信を束ねる屋号です。
@@ -110,8 +110,106 @@
 
   </main>
 
-  <footer class="site-footer">
-    © PEAKHEADZ
+  <footer class="site-footer about-footer">
+    <span class="about-footer-copy" data-wlzphz-copy>© PEAKHEADZ</span>
+    <nav class="wlzphz-signal" aria-label="WLZPHZ signal">
+      <a href="https://wlzphz.com/signals/">signal</a>
+      <span aria-hidden="true">/</span>
+      <a href="https://wlzphz.com/noise/">noise</a>
+      <span aria-hidden="true">/</span>
+      <a href="https://wlzphz.com/">何か</a>
+    </nav>
   </footer>
+  <script>
+    (() => {
+      const mutationRate = 0.03;
+      const flashRate = 0.08;
+      const flashDuration = 150;
+      const minInterval = 260;
+
+      document.addEventListener("DOMContentLoaded", () => {
+        if (Math.random() >= mutationRate) {
+          return;
+        }
+
+        const copy = document.querySelector("[data-wlzphz-copy]");
+        if (!copy) {
+          return;
+        }
+
+        document.body.classList.add("wlzphz-receiving");
+        copy.textContent = "何か";
+        copy.classList.add("wlzphz-mutated");
+        wrapZNoise(document.querySelector("main"));
+        wrapZNoise(document.querySelector(".about-footer"));
+        bindZNoise();
+      });
+
+      function wrapZNoise(root) {
+        if (!root) {
+          return;
+        }
+
+        const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+        const nodes = [];
+        let node = walker.nextNode();
+        while (node) {
+          if (node.nodeValue.includes("Z")) {
+            nodes.push(node);
+          }
+          node = walker.nextNode();
+        }
+
+        nodes.forEach((textNode) => {
+          const fragment = document.createDocumentFragment();
+          textNode.nodeValue.split("Z").forEach((part, index, parts) => {
+            if (part) {
+              fragment.appendChild(document.createTextNode(part));
+            }
+            if (index < parts.length - 1) {
+              const span = document.createElement("span");
+              span.className = "wlzphz-z-noise";
+              span.dataset.wlzphzZ = "";
+              span.textContent = "Z";
+              fragment.appendChild(span);
+            }
+          });
+          textNode.parentNode.replaceChild(fragment, textNode);
+        });
+      }
+
+      function bindZNoise() {
+        let ticking = false;
+        let lastFlash = 0;
+
+        window.addEventListener("scroll", () => {
+          if (ticking) {
+            return;
+          }
+
+          ticking = true;
+          window.requestAnimationFrame(() => {
+            ticking = false;
+            const now = Date.now();
+            if (now - lastFlash < minInterval || Math.random() >= flashRate) {
+              return;
+            }
+
+            const targets = document.querySelectorAll("[data-wlzphz-z]");
+            if (!targets.length) {
+              return;
+            }
+
+            lastFlash = now;
+            const target = targets[Math.floor(Math.random() * targets.length)];
+            target.classList.add("wlzphz-pink");
+            window.setTimeout(() => {
+              target.classList.remove("wlzphz-pink");
+            }, flashDuration);
+          });
+        }, { passive: true });
+      }
+    })();
+  </script>
 </body>
 </html>
