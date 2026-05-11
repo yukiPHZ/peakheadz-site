@@ -17,6 +17,17 @@ It is a place to express the philosophy of continuous making, working, and updat
 - `about.html` — concept and philosophy
 - `information.html` — public information and credibility page
 
+## Signals
+
+`Signals` is not a news section.  
+It is a quiet activity log for PEAKHEADZ.
+
+It shows small traces of motion:
+- DAKE Series releases
+- API experiments
+- live development structure
+- connected works
+
 ## Structure
 
 ```text
