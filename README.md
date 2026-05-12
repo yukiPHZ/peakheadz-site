@@ -1,61 +1,45 @@
-# PEAKHEADZ
+# PEAKHEADZ Site
 
-PEAKHEADZ is the personal brand and creative base of Yukihiko Kikuta.
+## サイト役割
 
-It connects real estate work, AI-assisted development, web production, desktop tools, sewing work, and live streaming.
+PEAKHEADZ の屋号・活動・関連プロジェクトを束ねる本部サイト。対外的な確認ページとして、DAKE、しまりす不動産、制作物、発信活動への入口を置く。
 
-## Concept
+## 世界観
 
-Stay in motion.
+合言葉は "Stay in motion."。ポートフォリオだけではなく、仕事・開発・制作・発信が動き続けている気配を静かに見せる。
 
-PEAKHEADZ is not only a portfolio site.  
-It is a place to express the philosophy of continuous making, working, and updating.
+## 技術構成
 
-## Pages
+- 静的 HTML / CSS
+- ルート: `index.html`, `about.html`, `information.html`
+- CSS: `assets/css/style.css`
+- 画像: `assets/`
+- Cloudflare Pages で静的公開
 
-- `index.html` — minimal landing page
-- `about.html` — concept and philosophy
-- `information.html` — public information and credibility page
+## 触ってよい範囲
 
-## Signals
+- 本文、リンク、活動情報、Signals の更新
+- `assets/css/style.css` の軽微な表示調整
+- `assets/` 内のロゴ・写真の差し替え
+- README の運用ルール更新
 
-`Signals` is not a news section.  
-It is a quiet activity log for PEAKHEADZ.
+## 触らない範囲
 
-It shows small traces of motion:
-- DAKE Series releases
-- API experiments
-- live development structure
-- connected works
+- PEAKHEADZ の屋号、基本トーン、"Stay in motion." の軸
+- 本番ドメイン `peakheadz.com`
+- GitHub remote / Cloudflare Project 設定
+- 外部リンクの削除や意味変更
 
-## Structure
+## deploy手順
 
-```text
-.
-├─ index.html
-├─ about.html
-├─ information.html
-├─ README.md
-├─ .gitignore
-└─ assets/
-   ├─ phzlogo1.png
-   └─ css/
-      └─ style.css
-```
+1. 変更前にこの README を読む。
+2. `git status` で既存変更を確認する。
+3. 変更後に表示確認を行う。
+4. `git add . && git commit -m "Update peakheadz site"`
+5. `git push origin main`
+6. Cloudflare Pages のデプロイ完了を確認する。
 
-<!--
-Links:
-YouTube: https://www.youtube.com/@yukiz_PHZ
-DAKE: https://dakeapp.com/
-GitHub: https://github.com/yukiPHZ/dake-series/releases
-Instagram Shimarisu: https://www.instagram.com/kikuta.shimarisu_fudosan/
-Shimarisu: https://shimarisu-fudosan.com/
-BORINEF: https://borinef.com/
-note: https://note.com/borinef
-Instagram Personal: https://www.instagram.com/kikutayukihiko/
-HolidayJinja: https://holiday-jinja.com/
-JapanMemoryLane: https://japanmemorylane.com/
-NICESKILL: https://niceskill.com/
-NICEKIP: https://nicekip.com/
-YUKIZBLOG: https://yukizblog.com/
--->
+## 次にやること
+
+- `information.html` の Links / Signals を定期更新する。
+- 関連サイトが増えたらリンクと README を同時に更新する。
