@@ -229,6 +229,95 @@ img {
   color: #d8d8d8;
 }
 
+.quiet-hero .lead {
+  color: var(--text);
+}
+
+.quiet-hero-note {
+  max-width: 520px;
+  margin-top: 28px;
+  color: var(--text-muted);
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+
+.quiet-page .content-block p {
+  overflow-wrap: anywhere;
+}
+
+.quiet-list,
+.quiet-steps {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+  color: #d8d8d8;
+  font-size: 15px;
+}
+
+.quiet-list {
+  list-style: none;
+}
+
+.quiet-list li,
+.quiet-steps li {
+  padding: 0 0 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.quiet-steps {
+  padding-left: 18px;
+}
+
+.quiet-menu,
+.quiet-examples {
+  display: grid;
+  gap: 24px;
+}
+
+.quiet-menu section,
+.quiet-examples section {
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.quiet-menu h3,
+.quiet-examples h3 {
+  margin-bottom: 8px;
+  color: #e0e0e0;
+  font-size: 15px;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+
+.quiet-price {
+  margin-bottom: 10px;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.quiet-mail-link {
+  color: #d8d8d8;
+  border-bottom: 1px solid rgba(47, 111, 237, 0.4);
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.quiet-mail-link:hover,
+.quiet-mail-link:focus {
+  color: var(--text);
+  border-color: rgba(47, 111, 237, 0.8);
+  outline: none;
+}
+
+.link-note {
+  display: block;
+  margin-top: 4px;
+  color: var(--text-muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
 
 /* =========================
    Profile
@@ -499,6 +588,9 @@ img {
   .lead,
   .info-table td,
   .link-list a,
+  .quiet-page .content-block p,
+  .quiet-list li,
+  .quiet-steps li,
   .mail-text {
     word-break: break-all;
   }
