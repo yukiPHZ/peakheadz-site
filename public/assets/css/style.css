@@ -392,6 +392,48 @@ img {
   outline: none;
 }
 
+.personal-orbit {
+  padding-top: 42px;
+}
+
+.content-block .personal-orbit-title {
+  margin-bottom: 6px;
+  color: #d8d8d8;
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+}
+
+.content-block .personal-orbit-title a {
+  color: inherit;
+  border-bottom: 1px solid rgba(47, 111, 237, 0.24);
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.content-block .personal-orbit-title a:hover,
+.content-block .personal-orbit-title a:focus {
+  color: var(--text);
+  border-color: rgba(47, 111, 237, 0.65);
+  outline: none;
+}
+
+.personal-orbit .personal-orbit-sub,
+.personal-orbit .personal-orbit-note {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.personal-orbit .personal-orbit-sub {
+  margin-top: 2px;
+  letter-spacing: 0.08em;
+}
+
+.personal-orbit .personal-orbit-note {
+  margin-top: 10px;
+}
+
 .link-note {
   display: block;
   margin-top: 4px;
