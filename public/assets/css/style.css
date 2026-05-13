@@ -262,6 +262,20 @@ img {
   color: var(--text);
 }
 
+.quiet-hero .workflow-title {
+  display: grid;
+  gap: 4px;
+  max-width: 620px;
+  font-size: clamp(34px, 5.4vw, 54px);
+  line-height: 1.08;
+  letter-spacing: 0.08em;
+  font-weight: 620;
+}
+
+.quiet-hero .workflow-title span {
+  display: block;
+}
+
 .quiet-hero-note {
   max-width: 520px;
   margin-top: 28px;
@@ -656,11 +670,16 @@ img {
   .lead,
   .info-table td,
   .link-list a,
-  .quiet-page .content-block p,
-  .quiet-list li,
-  .quiet-steps li,
   .mail-text {
     word-break: break-all;
+  }
+
+  .quiet-page .content-block p,
+  .quiet-list li,
+  .quiet-steps li {
+    word-break: normal;
+    overflow-wrap: anywhere;
+    line-break: strict;
   }
 
   .info-table,
@@ -721,5 +740,30 @@ img {
   .wlzphz-signal {
     font-size: 9px;
     gap: 4px;
+  }
+}
+
+@media (max-width: 420px) {
+  .quiet-page {
+    width: calc(100% - 38px);
+  }
+
+  .quiet-hero .workflow-title {
+    gap: 5px;
+    font-size: 35px;
+    line-height: 1.05;
+    letter-spacing: 0.07em;
+  }
+
+  .quiet-page .content-block {
+    padding: 38px 0;
+  }
+
+  .quiet-page .content-block p,
+  .quiet-list,
+  .quiet-steps {
+    font-size: 14px;
+    line-height: 1.95;
+    letter-spacing: 0.015em;
   }
 }
