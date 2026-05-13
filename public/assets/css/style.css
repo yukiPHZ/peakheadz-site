@@ -314,6 +314,13 @@ img {
   padding-left: 18px;
 }
 
+.quiet-page .quiet-note {
+  margin-top: 26px;
+  color: #d8d8d8;
+  font-weight: 500;
+  line-height: 2;
+}
+
 .quiet-menu,
 .quiet-examples {
   display: grid;
