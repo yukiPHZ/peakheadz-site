@@ -264,6 +264,23 @@ img {
   border-bottom: 1px solid var(--line);
 }
 
+.quiet-card-list {
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.quiet-card-list li {
+  padding: 9px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.quiet-card-list li:last-child {
+  border-bottom: none;
+}
+
 .quiet-steps {
   padding-left: 18px;
 }
@@ -307,6 +324,21 @@ img {
 .quiet-mail-link:focus {
   color: var(--text);
   border-color: rgba(47, 111, 237, 0.8);
+  outline: none;
+}
+
+.quiet-text-link {
+  color: inherit;
+  border-bottom: 1px solid rgba(47, 111, 237, 0.28);
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.quiet-text-link:hover,
+.quiet-text-link:focus {
+  color: var(--text);
+  border-color: rgba(47, 111, 237, 0.7);
   outline: none;
 }
 
