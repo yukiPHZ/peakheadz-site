@@ -172,6 +172,69 @@ img {
   color: var(--accent);
 }
 
+.home-now {
+  width: min(100%, var(--max-width));
+  margin: 0 auto;
+  padding: 0 24px 88px;
+}
+
+.home-now-label {
+  margin-bottom: 14px;
+  color: var(--text-dim);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.home-now-card {
+  display: grid;
+  gap: 12px;
+  padding: 24px 0 26px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  color: #d8d8d8;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.home-now-card h2 {
+  color: var(--text);
+  font-size: 16px;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+.home-now-copy {
+  color: var(--text);
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.home-now-note {
+  max-width: 560px;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.home-now-link {
+  margin-top: 2px;
+  color: var(--text-dim);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  transition: color 0.2s ease;
+}
+
+.home-now-card:hover,
+.home-now-card:focus {
+  border-color: rgba(47, 111, 237, 0.34);
+  outline: none;
+}
+
+.home-now-card:hover .home-now-link,
+.home-now-card:focus .home-now-link {
+  color: var(--accent);
+}
+
 /* =========================
    Common Page Layout
 ========================= */
@@ -688,8 +751,13 @@ img {
   }
 
   .nav {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    justify-content: center;
+    width: min(100%, 320px);
+    max-width: 320px;
     margin-top: 34px;
-    gap: 12px 18px;
+    gap: 12px 16px;
   }
 
   .page {
