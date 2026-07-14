@@ -79,8 +79,8 @@ the day before visiting, and 8,800 JPY after arrival or for an absence.
 
 ### Critical
 
-- QR / LINE WORKS real-device account presentation must be confirmed before
-  release.
+- None. The owner confirmed the QR code, account, display name, icon, and
+  message send/receive flow on 2026-07-14.
 
 ### Major
 

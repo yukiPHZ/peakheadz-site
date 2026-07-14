@@ -5,11 +5,11 @@
 url: `https://works.do/R/ti/p/yukihiko.kikuta@simarisu-fudosan`
 qr_asset: `/assets/it-support/lineworks-qr.png`
 qr_url_status: `verified`
-account_display_status: `owner_device_check_required`
+account_display_status: `owner_device_verified_2026-07-14`
 
-The supplied QR-code target is recorded as the URL above. Before publication,
-the owner must scan the public QR asset with a smartphone and confirm the
-displayed account, display name, icon, and ability to send a message.
+The owner scanned the public QR asset with a smartphone on 2026-07-14 and
+confirmed the displayed account, display name, icon, and message send/receive
+flow.
 
 ## Email
 
