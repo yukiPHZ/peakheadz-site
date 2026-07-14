@@ -54,6 +54,11 @@
     return false;
   }
 
+  function isNoindex(relPath) {
+    const html = fs.readFileSync(path.join(PUBLIC_DIR, relPath), "utf8");
+    return /<meta\s+name=["']robots["']\s+content=["'][^"']*noindex/i.test(html);
+  }
+
   function toUrlPath(relPath) {
     const normalized = relPath.replace(/\\/g, "/");
     if (normalized === "index.html") return "/";
@@ -74,6 +79,7 @@
   const urls = walk(PUBLIC_DIR)
     .map(toRelative)
     .filter((relPath) => !shouldExclude(relPath))
+    .filter((relPath) => !isNoindex(relPath))
     .map(toUrlPath)
     .sort((a, b) => a.localeCompare(b));
 

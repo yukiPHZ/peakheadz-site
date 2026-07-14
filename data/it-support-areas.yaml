@@ -1,0 +1,28 @@
+areas:
+  - slug: sakura
+    name: 佐倉市
+    priority: 1
+    tier: core
+    status: published
+    index: true
+    actual_cases: 0
+    unique_content_approved: true
+  - slug: inzai
+    name: 印西市
+    priority: 2
+    tier: core
+    status: published
+    index: true
+    actual_cases: 0
+    unique_content_approved: true
+  - slug: narita
+    name: 成田市
+    priority: 3
+    tier: core
+    status: published
+    index: true
+    actual_cases: 0
+    unique_content_approved: true
+
+# priority 4以降は、実際の有償依頼、紹介、移動時間、道路混雑、対応事例、再依頼、
+# 地域固有の知見、実質時給、精神的・時間的負担を人間が確認してから追加する。
