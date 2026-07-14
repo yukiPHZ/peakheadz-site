@@ -67,6 +67,13 @@ PEAKHEADZ の屋号・活動・関連プロジェクトを束ねる本部サイ�
 - quiet workflow design は、PEAKHEADZ の稼働思想から派生した静かな実務導線サービスとして扱う。
 - 導線は営業LP化せず、静かに認識できる程度に調整する。
 
+## 小さい会社のIT係
+
+- `/it-support/` は、印西市を拠点にした地域小規模事業者向けの訪問ITサポート・業務改善の入口。
+- 公開対象は本体、佐倉市・印西市・成田市の地域ページ、3つのサービスページ。地域ごとの相談理由を分け、三市を同時にindex対象として扱う。
+- 地域の優先順位と公開状態は `data/it-support-areas.yaml` を正本とし、地域固有の事実が未承認のページは公開indexしない。
+- Googleビジネスプロフィールの変更正本は `docs/google-business-profile/` に置く。実際のプロフィール変更や分析IDの設定は人間確認後に行う。
+
 ## favicon / app icon
 
 - favicon assets: `/assets/favicon/`
@@ -118,3 +125,10 @@ PEAKHEADZ の屋号・活動・関連プロジェクトを束ねる本部サイ�
     "show_on_dashboard":  true
 }
 ```
+
+## IT support second audit
+
+- 佐倉市・印西市・成田市を同時にindex候補として整え、それぞれ固有の相談理由を持つ地域ページにした。
+- `/it-support/services/printer-scanner/`、`/it-support/services/pdf-electronic-contract/`、`/it-support/services/workflow-improvement/` を追加した。
+- 料金・連絡方法・実例・市場観測・GBPの正本は `docs/it-support/` と `docs/google-business-profile/` に分離している。
+- 事例ページは会社名・写真・説明の掲載承諾がpendingのため `noindex,follow`。市場観測は `configured_pending_deploy` で、本番の同意状態と実イベント受信の確認後に `active` とする。

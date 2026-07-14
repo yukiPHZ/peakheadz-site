@@ -1,0 +1,104 @@
+schema_version: 1
+project_id: peakheadz_it_support
+launch_group: sakura_inzai_narita_initial
+measurement_status: configured_pending_deploy
+
+# This file is a release-preparation contract. Do not create a new GA4
+# property or stream. The existing PEAKHEADZ Measurement ID and numeric
+# Property ID are variables, not secrets.
+receiver:
+  type: ga4_web_stream
+  property_name: peakheadz - GA4
+  measurement_id: G-QW5ZR7QCTE
+  numeric_property_id: '428662579'
+  production_origin: https://peakheadz.com
+  consent_required: true
+  daily_report_target: enabled_and_api_verified_2026-07-14
+  collector_access: viewer_granted_2026-07-14
+
+search_console:
+  property: https://peakheadz.com/
+  domain: peakheadz.com
+  status: collector_full_user_granted_api_verified_2026-07-14
+
+privacy:
+  destination_policy: aliases_only_no_raw_url_or_query
+  utm_policy: lowercase_aliases_only
+  prohibited_fields:
+    - name
+    - company_name
+    - email
+    - phone_number
+    - message_body
+    - error_screenshot
+    - full_url_query
+
+routes:
+  - route_id: it_support_home
+    path: /it-support/
+    content_type: service_home
+    area: sakura_inzai_narita
+    service_type: onsite_it_support
+    intent_cluster: small_business_it_support
+  - route_id: it_support_area_sakura
+    path: /it-support/areas/sakura/
+    content_type: area_page
+    area: sakura
+    service_type: onsite_it_support
+    intent_cluster: sakura_it_support
+  - route_id: it_support_area_inzai
+    path: /it-support/areas/inzai/
+    content_type: area_page
+    area: inzai
+    service_type: onsite_it_support
+    intent_cluster: inzai_it_support
+  - route_id: it_support_area_narita
+    path: /it-support/areas/narita/
+    content_type: area_page
+    area: narita
+    service_type: onsite_it_support
+    intent_cluster: narita_it_support
+  - route_id: it_support_service_printer_scanner
+    path: /it-support/services/printer-scanner/
+    content_type: service_page
+    area: sakura_inzai_narita
+    service_type: printer_scanner
+    intent_cluster: printer_scanner_support
+  - route_id: it_support_service_pdf_econtract
+    path: /it-support/services/pdf-electronic-contract/
+    content_type: service_page
+    area: sakura_inzai_narita
+    service_type: pdf_econtract
+    intent_cluster: pdf_econtract_workflow
+  - route_id: it_support_service_workflow
+    path: /it-support/services/workflow-improvement/
+    content_type: service_page
+    area: sakura_inzai_narita
+    service_type: workflow_improvement
+    intent_cluster: small_business_workflow
+
+events:
+  - it_support_page_view
+  - it_support_cta_impression
+  - it_support_pricing_view
+  - it_support_lineworks_qr_view
+  - it_support_contact_method_click
+  - it_support_internal_link
+  - it_support_quiet_workflow
+  - it_support_dake
+
+required_event_attributes:
+  - project_id
+  - route_id
+  - content_type
+  - area
+  - service_type
+  - intent_cluster
+  - launch_group
+  - cta_id
+  - destination
+  - utm_source
+  - utm_medium
+  - utm_campaign
+  - utm_content
+  - referrer_type

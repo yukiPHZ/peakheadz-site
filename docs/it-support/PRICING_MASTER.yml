@@ -1,0 +1,53 @@
+currency: JPY
+tax_included: true
+status: approved
+approved_at_jst: 2026-07-14
+
+pre_contact:
+  price: 0
+  description: >
+    LINE WORKSまたはメールで、症状、利用機器、地域、希望日時などの概要を確認する。
+    無料の詳細診断や無制限の相談は含まない。
+
+onsite_check:
+  name: 現地確認・切り分け
+  price: 8800
+  estimated_minutes: 30
+  description: >
+    訪問、機器構成の確認、初期切り分け、次に取るべき対応の案内。
+
+onsite_solution:
+  name: 設定・解決対応
+  price: 15400
+  estimated_minutes: 60
+  includes_onsite_base: true
+  description: >
+    訪問基本料を含む総額。設定変更、接続、動作確認までの一般的な対応。
+
+onsite_complex:
+  name: 複合的な対応
+  from_price: 22000
+  estimated_minutes: 90
+  includes_onsite_base: true
+  description: >
+    訪問基本料を含む総額の22,000円から。複数機器、複数アカウント、
+    データ移行、業務運用整理などの複合的な対応。
+
+extension:
+  price: 4400
+  unit_minutes: 30
+
+remote_support:
+  price: 6600
+  unit_minutes: 45
+
+additional_costs:
+  parking: actual_cost
+  tolls: actual_cost
+  parts: actual_cost
+  outside_priority_area: estimate_required
+
+cancellation:
+  until_previous_day: 0
+  same_day_before_visit: 4400
+  after_arrival_or_absence: 8800
