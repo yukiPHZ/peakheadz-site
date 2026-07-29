@@ -14,7 +14,7 @@
     ja: {
       heading: "匿名の利用状況の計測にご協力ください",
       body: [
-        "このサイトでは、サイトやサービスを改善するため、Google Analyticsを使用して匿名の利用状況を計測しています。",
+        "DAKEでは、サイトやツールを改善するため、Google Analyticsを使用して匿名の利用状況を計測しています。",
         "入力した文章、変換結果、氏名、メールアドレス、電話番号、住所、購入情報は送信しません。",
         "許可しなくても、すべての機能をそのまま利用できます。",
       ],
@@ -31,7 +31,7 @@
     en: {
       heading: "Help us improve with anonymous usage analytics",
       body: [
-        "This site uses Google Analytics to measure anonymous usage and improve its pages and services.",
+        "DAKE uses Google Analytics to measure anonymous usage and improve its sites and tools.",
         "We do not send your input, output, name, email address, phone number, address, or purchase information.",
         "You can use every feature without allowing analytics.",
       ],

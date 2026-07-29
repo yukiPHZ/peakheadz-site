@@ -1,0 +1,31 @@
+{
+  "generated_at_utc": "2026-07-23T13:31:44Z",
+  "managed_file_checksums": {
+    "README.md": "b1a39d09970173ca0f9a84f05fd78e110381ffdc373d50e1d33c782145da0f0b",
+    "consent-banner.js": "53b7f06977cf2a72e2b66ec326268a9721acb42362414d4fa70437dd6d65813e",
+    "generated/manifest.json": "d38cb28116fe395b3b5790e0f02a57ba6b09b11f1e5897423dd1fb602a57b67a",
+    "generated/peakheadz_it_support.profile.json": "fce5a36d58bbad53dfaa4af40242d3efb6acdea80279683b743f28cc39978d29",
+    "generated/runtime-package.js": "e688ef111a37afbc06624a89d910f5bf1189e624f991c74e2672bfcbc2e6367d",
+    "generated/runtime_schema.json": "c0a5bb5a42b50c50478a3f4d6ad30b6817de6be6b7600617567f971c0b1c84a5",
+    "market-observer.js": "9fe7dc9020bd5a342b46b2b4c0f622ff25046f66ec73030dedb967c98f9e11de"
+  },
+  "manifest_checksum": "d38cb28116fe395b3b5790e0f02a57ba6b09b11f1e5897423dd1fb602a57b67a",
+  "market_observer_commit": "5777375b8beef1e75409a1f1e7c281706ed2b3e8",
+  "profile_checksums": {
+    "peakheadz_it_support": "fce5a36d58bbad53dfaa4af40242d3efb6acdea80279683b743f28cc39978d29"
+  },
+  "project_ids": [
+    "peakheadz_it_support"
+  ],
+  "repository": "yukiPHZ/peakheadz-site",
+  "runtime_checksum": "9fe7dc9020bd5a342b46b2b4c0f622ff25046f66ec73030dedb967c98f9e11de",
+  "runtime_version": "1.0.0",
+  "schema_version": "1.0.0-lite",
+  "site_file_checksums": {
+    "public/assets/js/it-support-observation.js": "012bfe85ea9a5be27ca5775e598989ecce74f03b113273e206d8e68063900146",
+    "public/assets/js/peakheadz-it-support-market-observer.config.js": "4791c95676342d3539a022789026ddd96cafc2ebbd2c293c3a230d1287c09c46",
+    "public/it-support/index.html": "9d0e14aef550fe8f821c1fceddf10d97546e7213f554a41703b23ffaa25fc36b"
+  },
+  "site_local_overrides": [],
+  "target_id": "peakheadz_site"
+}
