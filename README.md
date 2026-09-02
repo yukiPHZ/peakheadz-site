@@ -61,7 +61,7 @@ PEAKHEADZは、菊田幸彦がつくる実務道具、Webサービス、メデ�
 
 ## 次にやること
 
-- `information.html` の Links / Signals を定期更新する。
+- `information.html` の Selected Works は、現在動いている代表作に絞って更新する。
 - 関連サイトが増えたらリンクと README を同時に更新する。
 
 ## quiet workflow design
