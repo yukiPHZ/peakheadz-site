@@ -26,7 +26,7 @@
   function mountConsent() {
     const api = root.MarketObserverConsent;
     if (api && typeof api.mount === "function") {
-      api.mount({ locale: "ja", privacyUrl: "/information.html" });
+      api.mount({ locale: "ja", privacyUrl: "/information" });
     }
   }
 
