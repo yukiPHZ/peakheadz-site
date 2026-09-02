@@ -9,6 +9,8 @@ PEAKHEADZは、菊田幸彦がつくる実務道具、Webサービス、メデ�
 - `docs/serp-conquest/README.md` を、`tools.dakeapp.com`、`peakheadz.com`、`yukihikokikuta.com` を横断する大規模サープコンクエストの正本とする。
 - DAKEの中心思想、三サイトの役割、公開予定ページ、実装順、重複禁止、計測方針を同文書で管理する。
 - 三サイトの役割、URL、公開順、相互リンク方針を変更する場合は、同文書を先に更新する。
+- PEAKHEADZ本体は一般検索キーワードの大量獲得を担当せず、活動母体としてPEAKHEADZ、ピークヘッズ、菊田幸彦との関係を受け止める。
+- 具体的な検索需要はDAKE、しまりす不動産、NICE SKILL、NICE KIP、Japan Memory Laneなど、それぞれのブランド・プロジェクトが受け持つ。
 
 ## 世界観
 
@@ -28,7 +30,7 @@ PEAKHEADZは、菊田幸彦がつくる実務道具、Webサービス、メデ�
 
 ## 触ってよい範囲
 
-- 本文、リンク、活動情報、Signals の更新
+- 本文、リンク、Selected Works / Projects / Orbit の活動情報更新
 - `public/assets/css/style.css` の軽微な表示調整
 - `public/assets/` 内のロゴ・写真の差し替え
 - README の運用ルール更新
