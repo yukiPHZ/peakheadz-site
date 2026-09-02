@@ -2,7 +2,7 @@
 
 ## サイト役割
 
-PEAKHEADZ の屋号・活動・関連プロジェクトを束ねる本部サイト。対外的な確認ページとして、DAKE、しまりす不動産、制作物、発信活動への入口を置く。
+PEAKHEADZは、菊田幸彦がつくる実務道具、Webサービス、メディア、実験を束ねる活動母体。特定のサービス会社ではなく、現在動いている代表作と、実験・履歴を静かにつなぐ。
 
 ## SERP CONQUEST 正本
 
@@ -12,13 +12,14 @@ PEAKHEADZ の屋号・活動・関連プロジェクトを束ねる本部サイ�
 
 ## 世界観
 
-合言葉は "Stay in motion."。ポートフォリオだけではなく、仕事・開発・制作・発信が動き続けている気配を静かに見せる。
+合言葉は "Stay motion."。TOPは作品一覧や販売ページにせず、PEAKHEADZという場所へ入る静かな玄関として保つ。
 
 ## 技術構成
 
 - 静的 HTML / CSS
 - 静的ファイル: `public/`
-- ルート: `public/index.html`, `public/about.html`, `public/information.html`, `public/quiet-workflow/index.html`
+- 公開索引: `public/index.html`, `public/about.html`, `public/information.html`, `public/projects/index.html`, `public/orbit/index.html`
+- 凍結保持: `public/quiet-workflow/index.html`, `public/it-support/`
 - CSS: `public/assets/css/style.css`
 - 画像: `public/assets/`
 - Cloudflare Pages Build output directory: `public`
@@ -34,7 +35,7 @@ PEAKHEADZ の屋号・活動・関連プロジェクトを束ねる本部サイ�
 
 ## 触らない範囲
 
-- PEAKHEADZ の屋号、基本トーン、"Stay in motion." の軸
+- PEAKHEADZ の屋号、基本トーン、"Stay motion." の軸
 - 本番ドメイン `peakheadz.com`
 - GitHub remote / Cloudflare Project 設定
 - 外部リンクの削除や意味変更
@@ -65,19 +66,13 @@ PEAKHEADZ の屋号・活動・関連プロジェクトを束ねる本部サイ�
 
 ## quiet workflow design
 
-- `/quiet-workflow/` を追加。
-- 静かな実務導線と、止まらない仕組みを整えるサービスページ。
-- 営業LPではなく、PEAKHEADZ の稼働思想から派生した小さなサービスページとして置く。
-- 千葉県印西市を拠点に、車で1時間圏内を中心にするサービス。
-- `/quiet-workflow/` への内部導線をトップ / Information / About に追加。
-- quiet workflow design は、PEAKHEADZ の稼働思想から派生した静かな実務導線サービスとして扱う。
-- 導線は営業LP化せず、静かに認識できる程度に調整する。
+- `/quiet-workflow/` は凍結中。URLは200で保持するが、`noindex,follow` とし、sitemapと現在活動の内部導線から外す。
+- ページ内容は将来再開できる状態で保管し、新規受付中には見せない。
 
 ## 小さい会社のIT係
 
-- `/it-support/` は、印西市を拠点にした地域小規模事業者向けの訪問ITサポート・業務改善の入口。
-- 公開対象は本体、佐倉市・印西市・成田市の地域ページ、3つのサービスページ。地域ごとの相談理由を分け、三市を同時にindex対象として扱う。
-- 地域の優先順位と公開状態は `data/it-support-areas.yaml` を正本とし、地域固有の事実が未承認のページは公開indexしない。
+- `/it-support/` と配下ページは凍結中。既存URLは200で保持するが、`noindex,follow` とし、sitemapと現在活動の内部導線から外す。
+- 過去の料金・地域・連絡方法・計測記録は、再開判断に備えて削除せず保管する。
 - Googleビジネスプロフィールの変更正本は `docs/google-business-profile/` に置く。実際のプロフィール変更や分析IDの設定は人間確認後に行う。
 
 ## favicon / app icon
@@ -132,9 +127,9 @@ PEAKHEADZ の屋号・活動・関連プロジェクトを束ねる本部サイ�
 }
 ```
 
-## IT support second audit
+## IT support archive record
 
-- 佐倉市・印西市・成田市を同時にindex候補として整え、それぞれ固有の相談理由を持つ地域ページにした。
-- `/it-support/services/printer-scanner/`、`/it-support/services/pdf-electronic-contract/`、`/it-support/services/workflow-improvement/` を追加した。
+- 佐倉市・印西市・成田市の地域ページと3つのサービスページは、過去の実装記録として保持する。
+- 2026年の情報設計再編後はすべて凍結し、`noindex,follow` としてsitemapから除外する。
 - 料金・連絡方法・実例・市場観測・GBPの正本は `docs/it-support/` と `docs/google-business-profile/` に分離している。
-- 事例ページは会社名・写真・説明の掲載承諾がpendingのため `noindex,follow`。市場観測は `configured_pending_deploy` で、本番の同意状態と実イベント受信の確認後に `active` とする。
+- 事例ページは会社名・写真・説明の掲載承諾がpendingのため、引き続き `noindex,follow` とする。
