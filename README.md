@@ -1,14 +1,22 @@
 # PEAKHEADZ Site
 
+## Phase 2仕様の現在地
+
+Content OS: specified。START: planned / not implemented。Market Observer v2: specified / runtime not implemented。Consent UI v2: specified / migration pending。今回の変更はREADMEとSERP仕様だけで、public、runtime、sitemap、Productionには反映しない。
+
+STARTの予定URLはhttps://start.peakheadz.com/。本工程ではpeakheadz-start-site、Cloudflare projectを作成せず、DNSを接続しない。公開リンクや公開索引への追加は将来の別工程で判断する。
+
+横断ルールはpeakheadz-project-index、明示されたORIGINAL.mdはsiteブランド・製品仕様、READMEは現在状態・技術・deploy/保守、専門正本は当該領域のみを扱う。START仕様は同indexのrules/PEAKHEADZ_START_SPEC.md、制作循環はrules/CONTENT_OS_RULE.md、優先順位の詳細はrules/CANONICAL_AUTHORITY.mdを参照する。
+
 ## サイト役割
 
 PEAKHEADZは、菊田幸彦がつくる実務道具、Webサービス、メディア、実験を束ねる活動母体。特定のサービス会社ではなく、現在動いている代表作と、実験・履歴を静かにつなぐ。
 
 ## SERP CONQUEST 正本
 
-- `docs/serp-conquest/README.md` を、`tools.dakeapp.com`、`peakheadz.com`、`yukihikokikuta.com` を横断する大規模サープコンクエストの正本とする。
-- DAKEの中心思想、三サイトの役割、公開予定ページ、実装順、重複禁止、計測方針を同文書で管理する。
-- 三サイトの役割、URL、公開順、相互リンク方針を変更する場合は、同文書を先に更新する。
+- `docs/serp-conquest/README.md` を、`peakheadz.com`、`start.peakheadz.com`（planned）、`tools.dakeapp.com`、`yukihikokikuta.com` の四surfaceを横断する大規模サープコンクエストの正本とする。
+- DAKEの中心思想、四surfaceの役割、過去の公開候補・実装順（検討履歴）、重複禁止、計測方針を同文書で管理する。
+- 四surfaceの役割、URLの責任、SERP公開順、相互リンク方針を変更する場合は、同文書を先に更新する。
 - PEAKHEADZ本体は一般検索キーワードの大量獲得を担当せず、活動母体としてPEAKHEADZ、ピークヘッズ、菊田幸彦との関係を受け止める。
 - 具体的な検索需要はDAKE、しまりす不動産、NICE SKILL、NICE KIP、Japan Memory Laneなど、それぞれのブランド・プロジェクトが受け持つ。
 
@@ -44,6 +52,8 @@ PEAKHEADZは、菊田幸彦がつくる実務道具、Webサービス、メデ�
 
 ## deploy手順
 
+以下はProduction変更が明示承認された工程だけに適用する。監査・仕様工程はfeature branchへ目的ファイルだけcommit/pushし、Draft PRまで。main merge/pushやProduction deployへ進まない。
+
 1. 変更前にこの README を読む。
 2. `git status` で既存変更を確認する。
 3. 変更後に表示確認を行う。
@@ -75,6 +85,7 @@ PEAKHEADZは、菊田幸彦がつくる実務道具、Webサービス、メデ�
 
 - `/it-support/` と配下ページは凍結中。既存URLは200で保持するが、`noindex,follow` とし、sitemapと現在活動の内部導線から外す。
 - 過去の料金・地域・連絡方法・計測記録は、再開判断に備えて削除せず保管する。
+- STARTは制作代行・個別IT支援ではない。旧IT Support archiveをテンプレート・営業導線として再利用しない。START追加を理由にindex化、sitemap復帰、service CTA復活、case導線復活を行わない。計測がactiveでもpublic_lifecycleはfrozenのまま。
 - Googleビジネスプロフィールの変更正本は `docs/google-business-profile/` に置く。実際のプロフィール変更や分析IDの設定は人間確認後に行う。
 
 ## favicon / app icon

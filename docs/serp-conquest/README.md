@@ -1,10 +1,13 @@
 # KIKUTA / PEAKHEADZ / DAKE SERP CONQUEST
 
-この文書は、`tools.dakeapp.com`、`peakheadz.com`、`yukihikokikuta.com` を横断する大規模サープコンクエストの正本です。
+この文書は、`peakheadz.com`、`start.peakheadz.com`（planned）、`tools.dakeapp.com`、`yukihikokikuta.com` の四surfaceを横断するSERP責任分担の専門正本です。
 
 単なるSEO施策や記事量産ではなく、実際に役立つ道具、活動を束ねる母体、その理由を持つ人を、それぞれの役割のまま検索上へ広げていきます。
 
 ## 2026年9月の現在地
+
+- Content OSは内部運用層としてspecified。STARTはplanned / not implemented。予定URLはhttps://start.peakheadz.com/であり公開済みURLとして扱わない。repo・Cloudflare projectの作成、DNS接続、Production公開は本仕様工程で行わない。
+- 四surfaceの責任境界を確定する。Market Observer v2はspecified / runtime not implemented、Consent UI v2はspecified / migration pending。
 
 - PEAKHEADZ本体の2026年再編は完了。TOPは静かな玄関、Informationは現在活動の索引、Projectsは代表作、Orbitは全量側として運用する。
 - PEAKHEADZ本体では一般検索キーワードを大量獲得せず、具体的な検索需要は各ブランド・プロジェクトが受け持つ。
@@ -13,11 +16,13 @@
 
 ## 正本の優先順位
 
-1. この文書
-2. 各サイトの `README.md`
-3. 各ページ固有の仕様書・実装
+- 横断ルールはpeakheadz-project-index/rules/CANONICAL_AUTHORITY.mdと同repoのrules/が正本。
+- siteがORIGINAL.mdをブランド・製品正本として明示している場合は、その領域でORIGINAL.mdを優先する。DAKEの思想を他ブランドへ一律適用しない。
+- 各READMEは現在状態、技術構成、deploy、保守を扱う。
+- 本書は検索責任、検索意図別canonical、相互リンクとSERP公開順の領域だけを扱う。ブランドの統合・改名やdeploy承認を行わない。
+- STARTのブランド・製品仕様はpeakheadz-project-index/rules/PEAKHEADZ_START_SPEC.md、制作循環はCONTENT_OS_RULE.md、KGI/KPIはmarket-observer/00_core/V2_FRAMEWORK.mdが正本。
 
-役割、URL、公開順、相互リンク方針を変更する場合は、この文書を先に更新します。
+検索責任、URLの役割、SERP公開順、相互リンク方針を変更する場合は本書を更新し、現在の実装状態は対象READMEへ反映する。領域の衝突は関係正本を整合させ、一つの文書で他領域を上書きしない。
 
 ---
 
@@ -159,7 +164,7 @@ DAKEは、仕事ができる人をさらに強くするためだけの道具で�
 
 ---
 
-# 2. 三サイトの役割
+# 2. 四surfaceの役割
 
 ## tools.dakeapp.com
 
@@ -200,7 +205,25 @@ DAKEは、仕事ができる人をさらに強くするためだけの道具で�
 
 「小さい会社のIT係」とquiet workflow designは凍結中。既存URLは保持するが、現在活動の内部導線とsitemapから外し、`noindex,follow` とする。
 
+Projects / Information / Orbitで活動を整理する。PEAKHEADZ本体はgeneric keyword大量獲得を担当しない。
+
 わかりやすいが売り込みすぎない。静かだが何をしているかは分かる状態を目指す。
+
+## start.peakheadz.com（planned）
+
+### 役割
+
+PEAKHEADZ START。「やりたかったもの、作ってみよう。」発想から実現するまでの一次情報を公開し、人がやってみる入口を作る。
+
+### 担当する検索意図
+
+AIでWebを作る、Codexで作る、GitHub、Cloudflare、WordPress、Domain、Server、公開、失敗、Prompt、実例。ただし自分たちの制作・確認・失敗・修正など一次情報が存在するページを優先する。generic keywordのために薄い記事や比較記事を量産しない。
+
+### 境界
+
+完成物は各ブランドへリンクし、本文を複製しない。無料で実現できる経路を先に示し、独自ドメインやserverを必須にしない。個別制作代行・IT支援・完成保証・有料consultingへの誘導をしない。STARTのため、SEOのため、SNSのために制作せず、制作とShipmentから事実を派生させる。
+
+旧IT Support archiveをテンプレート・営業導線として再利用しない。START追加を理由にnoindex解除、sitemap復帰、service CTAやcase導線の復活を行わない。
 
 ## yukihikokikuta.com
 
@@ -218,6 +241,8 @@ DAKEは、仕事ができる人をさらに強くするためだけの道具で�
 
 ### 方針
 
+制作方法の記事置場にはしない。
+
 DAKE側から人へ強く誘導しない。菊田幸彦サイト側から、DAKEやPEAKHEADZを自分の活動として深く語る。
 
 ---
@@ -232,6 +257,14 @@ tools.dakeapp.com の個別ツール
 関連する用途・カテゴリ・別ツール
     ↓
 DAKEを認識する
+
+作ってみたい人
+    ↓
+start.peakheadz.com（planned）
+    ↓
+制作過程・失敗・Prompt・実例を読む
+    ↓
+自分で試す／完成物へ進む
 
 別の入口
     ↓
@@ -249,7 +282,8 @@ yukihikokikuta.com
 全員を同じ順路へ送らない。
 
 - ツールだけ使う人
-- PEAKHEADZへ相談する人
+- STARTで制作過程を知って試す人
+- PEAKHEADZの活動全体を見る人
 - 菊田幸彦の考えまで読む人
 
 それぞれの滞在を完成形として扱う。
@@ -269,7 +303,7 @@ yukihikokikuta.com
 3. 用途別ページ
 4. 誤解防止に必要な確認資料
 
-## ブログ化しない
+## Toolsをブログ化しない
 
 時系列の記事一覧を主役にしない。
 
@@ -292,7 +326,9 @@ yukihikokikuta.com
 
 ---
 
-# 5. 公開予定ページ
+# 5. 旧構想の公開予定ページ（検討履歴）
+
+以下は三サイト構想時の候補であり、現在の公開指示ではない。凍結中のサービス再開やSTARTへの流用を認めない。
 
 ## tools.dakeapp.com カテゴリ・用途ページ
 
@@ -396,7 +432,9 @@ yukihikokikuta.com
 
 ---
 
-# 6. ロードマップ
+# 6. 旧構想のロードマップ（検討履歴）
+
+以下のPhase番号は過去のSERP構想内の番号であり、Content OS Phase 2 / Phase 3とは別。現在の次工程はConsent UI Reference Implementation + START Core Preview準備。START公開・全site改修の承認を含まない。
 
 ## Phase 0: 正本と監査
 
@@ -465,7 +503,7 @@ yukihikokikuta.com
 
 ---
 
-# 7. 公開順
+# 7. 旧構想の公開順（検討履歴）
 
 ## First Batch
 
@@ -519,6 +557,15 @@ yukihikokikuta.com
 - 母体と個別サービスを混同させない
 - プロジェクトを網羅しすぎず、ORBITと役割分担する
 
+## PEAKHEADZ START
+
+- 制作の一次情報、確認日、対象version、失敗・修正、費用の条件、Preview / Productionの区別を示す
+- 無料ルートを意図的に難しくせず、有料ルートは必要な場合に示す
+- Prompt本文の公開とanalyticsへの送信を区別し、本文・clipboardを計測しない
+- Shipmentは確認済みでユーザーがアクセス・利用できる公開。内部commitや作業完了は含めない
+- 完成物へのcanonical linkを置き、制作記事をツール利用条件にしない
+- 広告・AffiliateでChallenge、Prompt、START HERE、作品、世界観を阻害しない
+
 ## Yukihiko Kikuta
 
 - 活動一覧を増やしすぎない
@@ -530,7 +577,16 @@ yukihikokikuta.com
 
 # 9. 重複禁止
 
-- 3サイトで同じ本文を使い回さない
+| 内容 | canonical責任 |
+|---|---|
+| DAKEの完成物・利用方法 | DAKE / tools.dakeapp.com等の当該製品 |
+| 発想から制作・失敗・出荷まで | START |
+| 活動全体との関係・Projects / Information / Orbit | PEAKHEADZ |
+| 人物・原点・なぜ作るのか | yukihikokikuta.com |
+
+完成物は各ブランドがcanonicalを持つ。別surfaceでは固有の短い文脈説明とリンクを使い、同一本文の再掲載で代用しない。
+
+- 四surfaceおよび各ブランド間で同じ本文を使い回さない
 - 同じ検索意図を複数URLで取り合わない
 - Toolsの用途説明をPEAKHEADZで再掲載しない
 - PEAKHEADZの活動一覧を菊田幸彦サイトで再現しない
@@ -540,6 +596,12 @@ yukihikokikuta.com
 ---
 
 # 10. 計測
+
+## STARTとv2の境界
+
+Missionはreader_creation、KGI候補はverified_reader_creation。確認経路のない期間はmeasurement_status=not_configuredを許容する。Prompt copy、CTA click、creator_profile、branded searchはproxyでありverified成果ではない。自分たちのShipment数を読者KGIや市場反応へ加算しない。
+
+既存event dictionaryを先に使い、新規eventを増やす前にcta_click等の固定aliasで表現する。GA4の同意gate、allowlist、sanitizationを維持する。Search Consoleはv2_search_aggregates.yamlのbranded / target cluster / non-brand集計案を参照し、生queryを取得・保存しない。Phase 2ではsource接続・runtime登録をしない。
 
 ## ページ単位
 
@@ -563,8 +625,10 @@ yukihikokikuta.com
 ## 評価時期
 
 - 公開時点: index、表示、計測確認
-- 30日: クロール、検索語、利用成立の初期確認
+- 30日: クロール、事前定義した検索clusterの集計、利用成立の初期確認（raw query保存なし）
 - 90日: 継続、改善、統合、停止の判断
+
+v2の初回baseline観測候補28日は、上記30日・90日のSERPレビュー周期とは別。trafficや品質が不足すればbaseline_pendingを延長し、AIで補完しない。measurement bad時は市場評価、distribution low時は需要判断を停止する。
 
 アクセスが少ないだけで即削除しない。検索意図、実利用、関連ページへの役割を合わせて判断する。
 
@@ -572,7 +636,9 @@ yukihikokikuta.com
 
 # 11. サープコンクエストの定義
 
-DAKEが検索の面を広げる。
+DAKEが役立つ道具で検索の面を広げる。
+
+STARTが制作の一次情報から、やってみたい人の入口を作る。
 
 PEAKHEADZが活動を一つに束ねる。
 
