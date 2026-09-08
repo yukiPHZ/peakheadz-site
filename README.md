@@ -1,3 +1,7 @@
+## START Public Launch — 2026-09-08
+
+STARTの本番公開に合わせ、TOPの既存navigationへ通常テキストリンクを1つ追加。表示はSTART、接続先は https://start.peakheadz.com/ 。既存の階層・CSS・JavaScript・analyticsを変更しない。IT Support / quiet workflowの凍結を維持。SERPの四surface責任分担は docs/serp-conquest/README.md を参照。
+
 # PEAKHEADZ Site
 
 ## Phase 2仕様の現在地
