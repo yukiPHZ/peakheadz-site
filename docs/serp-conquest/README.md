@@ -1,13 +1,13 @@
 # KIKUTA / PEAKHEADZ / DAKE SERP CONQUEST
 
-この文書は、`peakheadz.com`、`start.peakheadz.com`（planned）、`tools.dakeapp.com`、`yukihikokikuta.com` の四surfaceを横断するSERP責任分担の専門正本です。
+この文書は、`peakheadz.com`、`start.peakheadz.com`、`tools.dakeapp.com`、`yukihikokikuta.com` の四surfaceを横断するSERP責任分担の専門正本です。
 
 単なるSEO施策や記事量産ではなく、実際に役立つ道具、活動を束ねる母体、その理由を持つ人を、それぞれの役割のまま検索上へ広げていきます。
 
 ## 2026年9月の現在地
 
-- Content OSは内部運用層としてspecified。STARTはplanned / not implemented。予定URLはhttps://start.peakheadz.com/であり公開済みURLとして扱わない。repo・Cloudflare projectの作成、DNS接続、Production公開は本仕様工程で行わない。
-- 四surfaceの責任境界を確定する。Market Observer v2はspecified / runtime not implemented、Consent UI v2はspecified / migration pending。
+- STARTは2026年9月8日に https://start.peakheadz.com/ で本番公開。制作過程の公開という責任を維持し、PEAKHEADZ TOPの既存navigationに小さなSTARTリンクを1つ置く。一般キーワードの大量獲得はPEAKHEADZ本体の役割にしない。
+- 四surfaceの責任境界を維持する。STARTのConsent UI v2と同意時のProduction計測は実装・検証済み。v2 collector / dashboardとは区別し、Liteを置換しない。
 
 - PEAKHEADZ本体の2026年再編は完了。TOPは静かな玄関、Informationは現在活動の索引、Projectsは代表作、Orbitは全量側として運用する。
 - PEAKHEADZ本体では一般検索キーワードを大量獲得せず、具体的な検索需要は各ブランド・プロジェクトが受け持つ。
@@ -20,7 +20,7 @@
 - siteがORIGINAL.mdをブランド・製品正本として明示している場合は、その領域でORIGINAL.mdを優先する。DAKEの思想を他ブランドへ一律適用しない。
 - 各READMEは現在状態、技術構成、deploy、保守を扱う。
 - 本書は検索責任、検索意図別canonical、相互リンクとSERP公開順の領域だけを扱う。ブランドの統合・改名やdeploy承認を行わない。
-- STARTのブランド・製品仕様はpeakheadz-project-index/rules/PEAKHEADZ_START_SPEC.md、制作循環はCONTENT_OS_RULE.md、KGI/KPIはmarket-observer/00_core/V2_FRAMEWORK.mdが正本。
+- STARTのブランド・製品仕様はpeakheadz-start-site/ORIGINAL.md（repo作成前の起点仕様はpeakheadz-project-index/rules/PEAKHEADZ_START_SPEC.md）、制作循環はCONTENT_OS_RULE.md、KGI/KPIはmarket-observer/00_core/V2_FRAMEWORK.mdが正本。
 
 検索責任、URLの役割、SERP公開順、相互リンク方針を変更する場合は本書を更新し、現在の実装状態は対象READMEへ反映する。領域の衝突は関係正本を整合させ、一つの文書で他領域を上書きしない。
 
