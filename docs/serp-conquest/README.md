@@ -14,6 +14,14 @@
 - 「小さい会社のIT係」とquiet workflow designは凍結中。既存URLを保持し、`noindex,follow`、sitemap除外、現在活動からの主要内部導線なしとする。
 - 以下に残る未実装URLやPhase記述は検討履歴であり、現在の実装指示として扱わない。再開時は現行のサイト役割を基準に再承認する。
 
+## Copyright B / 作者導線（2026-09-13 仕様レビュー）
+
+表示・年の管理・改行契約は [中央WEB_COMMON_SPECの固定commit](https://github.com/yukiPHZ/peakheadz-project-index/blob/c747f8466ed75a589d0dd72c92eb0958820bba70/rules/WEB_COMMON_SPEC.md#copyright--author-navigation)。中央と本書の仕様branchはmain未反映。ブランド/サービスのトップに想起KPI専用の人物CTAを置かず、作者紹介・プロフィールリンクはAboutを主な場所とし、標準copyrightは非リンクにする。各surfaceの責任と正当なブランド導線を変更しない。
+
+人物サイトそのもの、記事の実著者byline、既存Person ID `https://yukihikokikuta.com/#person`、必要な責任主体・ライセンス表示は維持する。トップ→Aboutは作品への関心、About内の実プロフィール移動はRecall Proxy。copyrightの視認を想起成果・プロフィール移動へ換算しない。配置変更前後の計測比較は別途確認する。
+
+今回は文書だけで、public/本文/SEO公開設定/計測runtime/検索登録を変更しない。SASHIIREは既存専用Previewの外側だけを実装し、2草稿の非配信とCore Observer 0を維持する。中央main反映・site別Preview承認・Production反映は別gate。
+
 ## 正本の優先順位
 
 - 横断ルールはpeakheadz-project-index/rules/CANONICAL_AUTHORITY.mdと同repoのrules/が正本。
