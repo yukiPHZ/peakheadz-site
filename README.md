@@ -28,6 +28,22 @@ PEAKHEADZは、菊田幸彦がつくる実務道具、Webサービス、メデ�
 
 合言葉は "Stay motion."。TOPは作品一覧や販売ページにせず、PEAKHEADZという場所へ入る静かな玄関として保つ。
 
+## 現在の活動の扱い
+
+- TOPは静かな玄関のまま、Projectsで現在の代表的な活動を扱う。DAKEの直後にNICE SKILL、Japan Memory Laneを置き、色やバッジで強調しない。
+- ORBITではNICE SKILLを、NICE KIPとは別の運用中の活動・作品群として扱う。代表例だけを添え、satellite全量はNICE SKILLの `/works/` に委ねる。
+- Japan Memory Laneは「七枚を巡り、一枚だけ持ち帰り、残りを還す」独立した作品世界として扱う。
+- この更新はfeature branch / Draft PRでHuman Reviewを待つ。承認前にmain mergeやProduction公開へ進めない。
+
+### ORBIT集計と確認範囲（2026-09-23）
+
+- Web Sites = Sitesセクションの16項目（削除済みの記録・まとめ項目も1行として含む）。Desktop Apps = DAKE Seriesの61項目。サイト全体の現役総数ではない。
+- Domains = Sites / Practical Tools内のサイトリンクの異なるhostname数17。GitHub・SNS・BOOTHは除外し、Worksとrootは同一hostにまとめる。稼働確認済みドメイン数ではない。
+- Repositories = 全カテゴリのGitHubリンクに明示された異なるowner/repo数15。tree / releaseの違いは重複計上しない。
+- Status Entries = `.orbit-section` 内のarticle数86。Nowは除外、カテゴリ間の再掲は含む。表示badgeのclassで運用中59・実験中11・保守中8・凍結8（過去・削除済みを含む）を数える。DAKEのdata-statusだけを使わない。
+- 代表例はTHANKS / HANDSHAKE / MIDDLE / HUG / SKY。各正本の公開記録と正式URLのHTTP 200、NICE SKILL `/works/` 掲載を確認。KOUKANはpublic-use HOLD、差し入れです。は参照checkoutに公開完了証跡がないため、今回の代表例から外した（作品自体の状態変更ではない）。
+- NICE KIPは従来の保守中とURLを維持。`nicekip.yukihikokikuta.com` はこの環境で名前解決できず要確認。DNSや別サイトへの差し替えは行わない。
+
 ## 技術構成
 
 - 静的 HTML / CSS
