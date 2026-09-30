@@ -2,3 +2,8 @@
 /company /information 301
 /business/ /quiet-workflow/ 301
 /business /quiet-workflow/ 301
+
+# SNS profile entries: each URL keeps its own exact canonical.
+/instagram /instagram/ 301
+/threads /threads/ 301
+/x /x/ 301

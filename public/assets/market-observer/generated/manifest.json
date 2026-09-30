@@ -1,13 +1,17 @@
 {
   "_notice": "Generated from 00_core canonical YAML. Do not edit by hand.",
   "artifacts": {
+    "peakheadz_brand_profile": {
+      "path": "generated/peakheadz_brand.profile.json",
+      "sha256": "8e0bbb0822c448532ebdc73d9c2a59e5bfa959ab508a68b768354d682f92eace"
+    },
     "peakheadz_it_support_profile": {
       "path": "generated/peakheadz_it_support.profile.json",
       "sha256": "fce5a36d58bbad53dfaa4af40242d3efb6acdea80279683b743f28cc39978d29"
     },
     "runtime_schema": {
       "path": "generated/runtime_schema.json",
-      "sha256": "c0a5bb5a42b50c50478a3f4d6ad30b6817de6be6b7600617567f971c0b1c84a5"
+      "sha256": "3ad3373293a74aceef924b4af98989c083e1d16e3bf7e5495f25988500a6eb26"
     }
   },
   "schema_version": "1.0.0-phase1a-revision",

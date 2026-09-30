@@ -1,3 +1,11 @@
+## SNS profile entries — Preview only / 2026-09-30
+
+Instagram is tool-first; Threads is making/reading-first. Both use @peakheadz. X is the author’s cross-brand personal entrance. Brand stream binding remains pending; frozen IT Support and quiet workflow are unchanged. README remains the brand entrypoint; no ORIGINAL is created.
+
+Two/three media configurations in data/profile-pages.json select approved reference IDs and order. One template per brand generates plain HTML: node scripts/generate-profile-pages.cjs; add --check to verify. No runtime product CMS/Publisher integration. Noindex,follow; sitemap excluded; exact slash canonicals with slashless 301. Footer stays in document flow; author signature is inside main and copyright is not a link/event. Canonical route_contracts keep every new route production-disabled, including saved consent/Preview query. Human Review is pending; commit/push/Preview do not authorize merge, Production or live measurement. [Phase 0](docs/SNS_PROFILE_PHASE0.md).
+
+Rollback: revert only this feature’s site commit and paired central contract after any separately approved release; never reset unrelated history. Existing public assets and child Core remain outside scope.
+
 ## START Public Launch — 2026-09-08
 
 STARTの本番公開に合わせ、TOPの既存navigationへ通常テキストリンクを1つ追加。表示はSTART、接続先は https://start.peakheadz.com/ 。既存の階層・CSS・JavaScript・analyticsを変更しない。IT Support / quiet workflowの凍結を維持。SERPの四surface責任分担は docs/serp-conquest/README.md を参照。

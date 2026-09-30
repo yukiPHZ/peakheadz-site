@@ -1,3 +1,7 @@
+## SNS profile entries — 2026-09-30
+
+/instagram/, /threads/, /x/ are dedicated profile entrances with self-canonical, noindex,follow and no sitemap listing. Instagram prioritizes usable tools, Threads the making records, X the author’s cross-brand activities. These routes do not change the four search surfaces, copy START articles, reopen IT Support or request Search Console indexing. Production and observation await the separate human gate.
+
 # KIKUTA / PEAKHEADZ / DAKE SERP CONQUEST
 
 この文書は、`peakheadz.com`、`start.peakheadz.com`、`tools.dakeapp.com`、`yukihikokikuta.com` の四surfaceを横断するSERP責任分担の専門正本です。

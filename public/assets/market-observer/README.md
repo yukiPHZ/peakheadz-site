@@ -9,6 +9,7 @@ Files:
 - `market-observer.js`
 - `consent-banner.js`
 - `generated/runtime_schema.json`
+- `generated/peakheadz_brand.profile.json`
 - `generated/peakheadz_it_support.profile.json`
 - `generated/manifest.json`
 - `generated/runtime-package.js`
