@@ -59,6 +59,7 @@
       rateLimit: new Map(),
       rateLimitedCount: 0,
       pageContext: {},
+      boundRoute: null,
       now: () => Date.now(),
     };
   }
@@ -483,6 +484,7 @@
   }
 
   function init(config) {
+    if (TERMINAL_STATES.has(state.status)) return { ok: false, reasons: [`already_${state.status}`], retryable: false };
     const safeConfig = config || {};
     state.config = safeConfig;
     state.runtimeSchema = safeConfig.runtimeSchema || null;
@@ -496,6 +498,9 @@
       return { ok: false, reasons: reasons.slice(), retryable: state.status === "blocked_retryable" };
     }
 
+    if (state.profile.route_contracts && state.profile.route_contracts[getWindow().location.pathname]) {
+      state.boundRoute = { origin: getWindow().location.origin, path: getWindow().location.pathname };
+    }
     state.status = "loading";
     state.transport = ensureOwnedTransport(safeConfig);
     const loaded = state.transport.loadTag ? state.transport.loadTag(safeConfig.measurementId) : false;
@@ -753,6 +758,8 @@
     const runtimeSchema = state.runtimeSchema || {};
     if (state.status !== "ready") return { ok: false, reason: "tracker_not_ready" };
     const route = state.profile.route_contracts && state.profile.route_contracts[getWindow().location.pathname];
+    if (state.boundRoute && (getWindow().location.origin !== state.boundRoute.origin || getWindow().location.pathname !== state.boundRoute.path || !route)) return { ok: false, reason: "route_changed" };
+    if (route && eventName === "cta_click" && ((parameters || {}).route_id !== route.route_id || (parameters || {}).content_type !== route.content_type || !asArray(state.profile.aliases.cta_groups).includes((parameters || {}).cta_group))) return { ok: false, reason: "route_context_mismatch" };
     if (route && !profileRouteConsentAvailable()) return { ok: false, reason: "route_consent_unavailable" };
     if (route && (!asArray(route.allowed_events).includes(eventName)
         || (eventName === "cta_click" && !Object.prototype.hasOwnProperty.call(route.cta_destinations, (parameters || {}).cta_id)))) return { ok: false, reason: "route_event_not_allowed" };

@@ -54,3 +54,16 @@ Preview URL、幅別確認結果、Draft PRは完了時の追記を参照。
 - `scripts/generate-profile-pages.cjs`
 - `templates/connect.html`
 - `tests/connect.test.mjs`
+
+
+## Production Readiness follow-up (2026-10-08)
+
+Central source is 29dc51a (existing #139); peakheadz_site alone was exported with the canonical exporter. Prior pin 35e7f49 to 31861a1 was docs/tests only, but this new runtime fix requires repinning. Profile/schema and all nine no-send/pending gates remain unchanged. Runtime rejects state overwrite by repeated init and stops after origin/exact-path changes; CTA requires fixed route/content/group context. Shared bootstrap now installs only once per document; regression executes it twice and verifies one initialization, listener and pageview.
+
+Read-only GA4: existing property 428662579 / stream 7560298897 / G-QW5ZR7QCTE confirmed. Enhanced Measurement ON (pageviews only, history OFF); stream URL http://peakheadz.com/. Event dimensions 6/50; cta_id and cta_group absent. Separate approval: stream HTTPS URL, Enhanced Measurement master OFF after shared-stream impact review; property event-scoped CTA ID=cta_id and CTA Group=cta_group (8/50 afterward). START stream unchanged. Central offline checker can explicitly require these parameters; current inventory intentionally fails CTA readiness.
+
+Cloudflare Web Analytics UI confirms peakheadz.com RUM Disable and no automatic injection; Pages API reports no web_analytics configuration. Existing API RUM permissions are insufficient (403), resolved for setting audit via UI without access expansion. No settings changed. Full browser network capture/real GA4 processing remain release validation gates; static HTML and mocked transport are not substitutes.
+
+Central validation: Python 234 tests + 116 subtests and Node 215 tests pass; runtime builder --check, target validator, Lite secret scan, target-only export/check and installation validator pass. Site CONNECT tests 6 pass. No real GA4 event was sent. Lite has existing page/route/event counts once enabled; it does not request CTA dimensions, so social/work breakdown remains unavailable even after registration. Do not label follow intent as completion or uncollected metrics as zero.
+
+Existing Pages Preview and independent Workers Builds checks must be distinguished. Workers build command npx wrangler versions upload fails Missing entry-point; dashboard/deploy settings are outside this authorization. Production merge/deploy/measurement/reporting activation remain separate approvals. See central docs/PEAKHEADZ_PRODUCTION_READINESS_20261008.md for evidence and exact remaining gates.

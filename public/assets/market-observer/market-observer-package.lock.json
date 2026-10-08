@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-08T13:00:20Z",
+  "generated_at_utc": "2026-10-08T14:35:23Z",
   "managed_file_checksums": {
     "README.md": "95be62d9cd83a5a55c1355d54244e451b07e9f6f6826687b83e362f175ee048c",
     "consent-banner.js": "6c7739455934cd810fa9eaf51260b4f1c746e2c0ec767ee9cb0320f862592b55",
@@ -8,10 +8,10 @@
     "generated/peakheadz_it_support.profile.json": "fce5a36d58bbad53dfaa4af40242d3efb6acdea80279683b743f28cc39978d29",
     "generated/runtime-package.js": "d96d1bbd76cc920056c3205aa06ef8efef59bd94d6f4c3f49a42991e487fef85",
     "generated/runtime_schema.json": "c8265286b76ab46ec9389a9c5aa543e5f415ad82ba40da148c3326e9bd5c7a06",
-    "market-observer.js": "64eb3b29a861bad39766d140a110b57587176f1f87fc817c5210eaca22a41358"
+    "market-observer.js": "22979de8c78c924adb019b893c7533bd8db0261864079e32b89804d25e917c8d"
   },
   "manifest_checksum": "428e5aab02636c652e0a724494edff566586763e88d33cd5cbe996a9ab0ac893",
-  "market_observer_commit": "35e7f49c935bfd5f4c133babb4eb4b80eef795ee",
+  "market_observer_commit": "29dc51a6219a9ddbfd32935c837b1504a2a11755",
   "profile_checksums": {
     "peakheadz_brand": "d23e74a6499d1deee2cccf6e1e511562af9b82e61751852c02d9ff97ce352f17",
     "peakheadz_it_support": "fce5a36d58bbad53dfaa4af40242d3efb6acdea80279683b743f28cc39978d29"
@@ -21,7 +21,7 @@
     "peakheadz_it_support"
   ],
   "repository": "yukiPHZ/peakheadz-site",
-  "runtime_checksum": "64eb3b29a861bad39766d140a110b57587176f1f87fc817c5210eaca22a41358",
+  "runtime_checksum": "22979de8c78c924adb019b893c7533bd8db0261864079e32b89804d25e917c8d",
   "runtime_version": "1.0.0",
   "schema_version": "1.0.0-lite",
   "site_file_checksums": {
@@ -31,7 +31,7 @@
     "public/about.html": "f26fb13f5da3ba390e4c61cb2d0eca54929dbf2a8f9386c67d552d3084cd8183",
     "public/assets/js/it-support-observation.js": "628f2cec432cc019ef20214668d5f54b06bf748ab72a30d819bb89c7d27c46ed",
     "public/assets/js/peakheadz-it-support-market-observer.config.js": "4791c95676342d3539a022789026ddd96cafc2ebbd2c293c3a230d1287c09c46",
-    "public/assets/js/profile-observation.js": "050d0132172fcd7503ddd82eb3a7c903542dfd24b230da9cc934b16ec64321b0",
+    "public/assets/js/profile-observation.js": "a154c173f858eabe6c8462b43be04df50312f6cd0f974b9fa8d13f8f264690ce",
     "public/connect.html": "68d4e994c3480c8f12af3ad5486f82f7ac34e37d9c0e2b85c7713fafba0725af",
     "public/index.html": "690b9f38767ea8def202240460fe32e4d5726e7952dc9cbbe5b3af38f2cf0abf",
     "public/information.html": "1ed01fe970da07fb3cb17e640244003337853fdb55f2f9e9ddf84869885de86d",

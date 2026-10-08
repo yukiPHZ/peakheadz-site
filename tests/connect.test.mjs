@@ -35,9 +35,11 @@ test('CONNECT references the pinned central route and fixed CTA ledger IDs',()=>
 test('shared bootstrap rejects unknown ID, destination drift and unapproved group',()=>{
   const profile=JSON.parse(fs.readFileSync(new URL('../public/assets/market-observer/generated/peakheadz_brand.profile.json',import.meta.url),'utf8'));
   const script=fs.readFileSync(new URL('../public/assets/js/profile-observation.js',import.meta.url),'utf8');
-  let click; const events=[];
-  const root={location:new URL('https://peakheadz.com/connect?email=private#private'),document:{body:{getAttribute:()=> 'peakheadz_brand'},addEventListener:(name,fn)=>{click=fn;}},MarketObserverRuntimePackage:{profiles:{peakheadz_brand:profile},profileHashes:{peakheadz_brand:'fixture'}},MarketObserver:{init:()=>({ok:true}),trackPageView:()=>events.push(['page_view']),track:(...args)=>events.push(args)}};
+  let click; let listeners=0,initializations=0; const events=[];
+  const root={location:new URL('https://peakheadz.com/connect?email=private#private'),document:{body:{getAttribute:()=> 'peakheadz_brand'},addEventListener:(name,fn)=>{listeners++;click=fn;}},MarketObserverRuntimePackage:{profiles:{peakheadz_brand:profile},profileHashes:{peakheadz_brand:'fixture'}},MarketObserver:{init:()=>{initializations++;return {ok:true};},trackPageView:()=>events.push(['page_view']),track:(...args)=>events.push(args)}};
   vm.runInNewContext(script,{window:root});
+  vm.runInNewContext(script,{window:root});
+  assert.equal(initializations,1); assert.equal(listeners,1);
   const send=(id,href,group)=>click({target:{closest:()=>({href,getAttribute:k=>k==='data-mo-cta'?id:group})}});
   const href=profile.route_contracts['/connect'].cta_destinations.peakheadz_instagram;
   for(const args of [['unknown',href,'connect_follow'],['peakheadz_instagram',href+'?private=1','connect_follow'],['peakheadz_instagram',href,'free_input']])send(...args);
