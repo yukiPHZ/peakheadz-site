@@ -1,0 +1,63 @@
+{
+  "instagram": {
+    "title": "つくったものを、使えるところへ | PEAKHEADZ",
+    "heading": "つくったものを、使えるところへ。",
+    "intro": [
+      "実務道具、Webサービス、制作の記録。",
+      "気になったものから、使ってみてください。"
+    ],
+    "items": [
+      "dake",
+      "start",
+      "niceskill",
+      "projects"
+    ],
+    "labels": {
+      "dake": "道具を使う",
+      "start": "作り方を読む",
+      "niceskill": "小さな体験へ",
+      "projects": "活動一覧を見る"
+    }
+  },
+  "threads": {
+    "title": "制作の話から、動くものへ | PEAKHEADZ",
+    "heading": "制作途中の話から、動くものへ。",
+    "intro": [
+      "道具や作品、その作り方への入口をまとめています。"
+    ],
+    "items": [
+      "start",
+      "dake",
+      "projects"
+    ],
+    "labels": {
+      "start": "作り方と制作の記録を読む",
+      "dake": "実物を使う",
+      "projects": "現在の活動を見る"
+    }
+  },
+  "x": {
+    "title": "菊田幸彦が、つくっているもの | PEAKHEADZ",
+    "heading": "菊田幸彦が、つくっているもの。",
+    "intro": [
+      "実務の道具、人と人の体験、制作の記録。",
+      "PEAKHEADZと、その先の活動へ。"
+    ],
+    "items": [
+      "dake",
+      "niceskill",
+      "start",
+      "shimarisu_fudosan",
+      "creator_profile",
+      "projects"
+    ],
+    "labels": {
+      "dake": "道具を使う",
+      "niceskill": "体験する",
+      "start": "作り方を読む",
+      "shimarisu_fudosan": "不動産の情報",
+      "creator_profile": "菊田幸彦について",
+      "projects": "活動一覧を見る"
+    }
+  }
+}

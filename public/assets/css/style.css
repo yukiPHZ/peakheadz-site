@@ -954,6 +954,19 @@ img {
   max-width: 320px;
 }
 
+.project-card .work-constellation,
+.orbit-item .work-constellation {
+  margin: 8px 0;
+  color: var(--text-muted);
+  font-size: 12px;
+  line-height: 1.9;
+  letter-spacing: 0;
+}
+
+.work-constellation span {
+  display: inline-block;
+}
+
 .orbit-item nav a,
 .orbit-side-paths nav a {
   color: #cfcfcf;

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy｜Market Observer｜PEAKHEADZ</title>
+  <meta name="description" content="Market ObserverのGoogleデータ連携における権限、利用目的、保存する情報と個人情報の取扱い。" />
+  <link rel="canonical" href="https://peakheadz.com/market-observer/privacy/" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/assets/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+  <meta name="theme-color" content="#0f0f10" />
+</head>
+<body>
+  <main class="page quiet-page">
+    <a class="back-link" href="/market-observer/">← Market Observer</a>
+    <section class="page-hero">
+      <p class="eyebrow">Market Observer</p>
+      <h1>Privacy Policy</h1>
+      <p class="lead">Market Observerは、運営者本人のGoogle収益データを「市場観測エンジンBCOEU」で週次集計・観測する内部連携です。</p>
+    </section>
+    <section class="content-block">
+      <h2>Google OAuthの権限と利用目的</h2>
+      <p>次の2つのread-only scopeを使用し、本人のAdSense / YouTube収益を読み取ります。</p>
+      <p><code>https://www.googleapis.com/auth/adsense.readonly</code></p>
+      <p><code>https://www.googleapis.com/auth/yt-analytics-monetary.readonly</code></p>
+      <p>取得データは、市場観測エンジンBCOEUでの週次収益集計・観測に使用します。Googleアカウントやサービスへのwrite操作は行いません。</p>
+    </section>
+    <section class="content-block">
+      <h2>保存する情報</h2>
+      <p>集計済みの非個人収益snapshotと、coverage（取得範囲）、period（対象期間）、currency（通貨）等の観測情報を保存します。</p>
+    </section>
+    <section class="content-block">
+      <h2>観測データに保存しない情報</h2>
+      <p>access token / refresh token、Google account ID、YouTube channel ID、payment ID、raw API response、email等のPII（個人を識別する情報）は、収益snapshot・週報・公開成果物に保存しません。</p>
+      <p>連携に必要な認証情報は、公開サイトやGitの管理対象から分離した安全な認証情報保管領域でのみ扱います。</p>
+    </section>
+    <section class="content-block">
+      <h2>第三者への提供</h2>
+      <p>Googleから取得したデータを第三者へ販売しません。第三者の広告目的で共有しません。</p>
+    </section>
+    <section class="content-block">
+      <h2>連絡先</h2>
+      <p>データの取扱いに関するお問い合わせは、PEAKHEADZの既存連絡先へお願いいたします。</p>
+      <p class="mail-text">peakheadz[at]gmail.com</p>
+      <p><a class="quiet-text-link" href="/information">PEAKHEADZ Information</a></p>
+    </section>
+  </main>
+  <footer class="site-footer">© PEAKHEADZ</footer>
+</body>
+</html>

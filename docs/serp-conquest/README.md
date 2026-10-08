@@ -1,18 +1,30 @@
+## SNS profile entries — 2026-09-30
+
+/instagram/, /threads/, /x/ are dedicated profile entrances with self-canonical, noindex,follow and no sitemap listing. Instagram prioritizes usable tools, Threads the making records, X the author’s cross-brand activities. These routes do not change the four search surfaces, copy START articles, reopen IT Support or request Search Console indexing. Production and observation await the separate human gate.
+
 # KIKUTA / PEAKHEADZ / DAKE SERP CONQUEST
 
-この文書は、`peakheadz.com`、`start.peakheadz.com`（planned）、`tools.dakeapp.com`、`yukihikokikuta.com` の四surfaceを横断するSERP責任分担の専門正本です。
+この文書は、`peakheadz.com`、`start.peakheadz.com`、`tools.dakeapp.com`、`yukihikokikuta.com` の四surfaceを横断するSERP責任分担の専門正本です。
 
 単なるSEO施策や記事量産ではなく、実際に役立つ道具、活動を束ねる母体、その理由を持つ人を、それぞれの役割のまま検索上へ広げていきます。
 
 ## 2026年9月の現在地
 
-- Content OSは内部運用層としてspecified。STARTはplanned / not implemented。予定URLはhttps://start.peakheadz.com/であり公開済みURLとして扱わない。repo・Cloudflare projectの作成、DNS接続、Production公開は本仕様工程で行わない。
-- 四surfaceの責任境界を確定する。Market Observer v2はspecified / runtime not implemented、Consent UI v2はspecified / migration pending。
+- STARTは2026年9月8日に https://start.peakheadz.com/ で本番公開。制作過程の公開という責任を維持し、PEAKHEADZ TOPの既存navigationに小さなSTARTリンクを1つ置く。一般キーワードの大量獲得はPEAKHEADZ本体の役割にしない。
+- 四surfaceの責任境界を維持する。STARTのConsent UI v2と同意時のProduction計測は実装・検証済み。v2 collector / dashboardとは区別し、Liteを置換しない。
 
 - PEAKHEADZ本体の2026年再編は完了。TOPは静かな玄関、Informationは現在活動の索引、Projectsは代表作、Orbitは全量側として運用する。
 - PEAKHEADZ本体では一般検索キーワードを大量獲得せず、具体的な検索需要は各ブランド・プロジェクトが受け持つ。
 - 「小さい会社のIT係」とquiet workflow designは凍結中。既存URLを保持し、`noindex,follow`、sitemap除外、現在活動からの主要内部導線なしとする。
 - 以下に残る未実装URLやPhase記述は検討履歴であり、現在の実装指示として扱わない。再開時は現行のサイト役割を基準に再承認する。
+
+## Copyright B / 作者導線（2026-09-13 仕様レビュー）
+
+表示・年の管理・改行契約は [中央WEB_COMMON_SPECの固定commit](https://github.com/yukiPHZ/peakheadz-project-index/blob/c747f8466ed75a589d0dd72c92eb0958820bba70/rules/WEB_COMMON_SPEC.md#copyright--author-navigation)。中央と本書の仕様branchはmain未反映。ブランド/サービスのトップに想起KPI専用の人物CTAを置かず、作者紹介・プロフィールリンクはAboutを主な場所とし、標準copyrightは非リンクにする。各surfaceの責任と正当なブランド導線を変更しない。
+
+人物サイトそのもの、記事の実著者byline、既存Person ID `https://yukihikokikuta.com/#person`、必要な責任主体・ライセンス表示は維持する。トップ→Aboutは作品への関心、About内の実プロフィール移動はRecall Proxy。copyrightの視認を想起成果・プロフィール移動へ換算しない。配置変更前後の計測比較は別途確認する。
+
+今回は文書だけで、public/本文/SEO公開設定/計測runtime/検索登録を変更しない。SASHIIREは既存専用Previewの外側だけを実装し、2草稿の非配信とCore Observer 0を維持する。中央main反映・site別Preview承認・Production反映は別gate。
 
 ## 正本の優先順位
 
@@ -20,7 +32,7 @@
 - siteがORIGINAL.mdをブランド・製品正本として明示している場合は、その領域でORIGINAL.mdを優先する。DAKEの思想を他ブランドへ一律適用しない。
 - 各READMEは現在状態、技術構成、deploy、保守を扱う。
 - 本書は検索責任、検索意図別canonical、相互リンクとSERP公開順の領域だけを扱う。ブランドの統合・改名やdeploy承認を行わない。
-- STARTのブランド・製品仕様はpeakheadz-project-index/rules/PEAKHEADZ_START_SPEC.md、制作循環はCONTENT_OS_RULE.md、KGI/KPIはmarket-observer/00_core/V2_FRAMEWORK.mdが正本。
+- STARTのブランド・製品仕様はpeakheadz-start-site/ORIGINAL.md（repo作成前の起点仕様はpeakheadz-project-index/rules/PEAKHEADZ_START_SPEC.md）、制作循環はCONTENT_OS_RULE.md、KGI/KPIはmarket-observer/00_core/V2_FRAMEWORK.mdが正本。
 
 検索責任、URLの役割、SERP公開順、相互リンク方針を変更する場合は本書を更新し、現在の実装状態は対象READMEへ反映する。領域の衝突は関係正本を整合させ、一つの文書で他領域を上書きしない。
 

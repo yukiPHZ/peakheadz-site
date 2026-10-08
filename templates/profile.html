@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}">
+  <meta name="robots" content="noindex,follow">
+  <link rel="canonical" href="{{canonical}}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{brand}}">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:url" content="{{canonical}}">
+  <meta property="og:image" content="{{ogImage}}">
+  <meta property="og:image:alt" content="{{brand}}">
+  <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="stylesheet" href="{{baseCss}}">
+  <link rel="stylesheet" href="/assets/css/profile.css">
+</head>
+<body class="profile-page" data-mo-route="sns_{{medium}}" data-mo-content-type="profile_entry" data-profile-project="{{project}}">
+  <div class="profile-shell">
+    <header class="profile-brand">{{brandMark}}</header>
+    <main id="main">
+      <h1>{{heading}}</h1>
+      <div class="profile-intro">{{intro}}</div>
+      <nav class="profile-links" aria-label="{{brand}}の入口">{{links}}</nav>
+      {{author}}
+    </main>
+    {{footer}}
+    <div id="analytics-consent"></div>
+  </div>
+  <script src="/assets/market-observer/generated/runtime-package.js"></script>
+  <script src="/assets/market-observer/market-observer.js"></script>
+  <script src="/assets/market-observer/consent-banner.js"></script>
+  {{parentScript}}
+  <script src="/assets/js/profile-observation.js"></script>
+</body>
+</html>

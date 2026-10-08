@@ -1,0 +1,1399 @@
+{
+  "status": "PASS",
+  "checks": 161,
+  "physicalInAppBrowsers": "not_tested",
+  "zoom": "CSS 200% and effective-width 640; native browser zoom manual pending",
+  "realAnalyticsRequests": 0,
+  "records": [
+    {
+      "site": "niceskill-site",
+      "route": "instagram",
+      "state": "unknown",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "niceskill-site",
+      "route": "instagram",
+      "state": "denied",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "niceskill-site",
+      "route": "instagram",
+      "state": "granted",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "niceskill-site",
+      "route": "instagram",
+      "state": "GPC",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "niceskill-site",
+      "route": "instagram",
+      "state": "broken",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "niceskill-site",
+      "route": "instagram",
+      "state": "unavailable",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "niceskill-site",
+      "route": "instagram",
+      "state": "write-failure",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "niceskill-site",
+      "route": "instagram",
+      "state": "granted-write-failure",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "niceskill-site",
+      "route": "instagram",
+      "mode": "origin-gate",
+      "options": {
+        "preview": true
+      },
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "niceskill-site",
+      "route": "instagram",
+      "mode": "origin-gate",
+      "options": {
+        "preview": true,
+        "query": "?gtm_debug=market_observer_preview"
+      },
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "niceskill-site",
+      "route": "instagram",
+      "mode": "origin-gate",
+      "options": {
+        "local": true
+      },
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "niceskill-site",
+      "route": "instagram",
+      "mode": "origin-gate",
+      "options": {
+        "foreign": true
+      },
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "niceskill-site",
+      "route": "instagram",
+      "mode": "layout",
+      "width": 320,
+      "reducedMotion": "reduce"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "instagram",
+      "mode": "layout",
+      "width": 375,
+      "reducedMotion": "reduce"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "instagram",
+      "mode": "layout",
+      "width": 390,
+      "reducedMotion": "reduce"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "instagram",
+      "mode": "layout",
+      "width": 430,
+      "reducedMotion": "reduce"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "instagram",
+      "mode": "layout",
+      "width": 1280,
+      "reducedMotion": "reduce"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "instagram",
+      "mode": "layout",
+      "width": 844,
+      "reducedMotion": "reduce"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "instagram",
+      "mode": "layout",
+      "width": 640,
+      "reducedMotion": "reduce"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "instagram",
+      "mode": "200%-css-zoom"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "instagram",
+      "mode": "no-JS"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "instagram",
+      "state": "unknown",
+      "mode": "activated-fixture-negative"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "instagram",
+      "state": "denied",
+      "mode": "activated-fixture-negative"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "instagram",
+      "state": "GPC",
+      "mode": "activated-fixture-negative"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "instagram",
+      "state": "broken",
+      "mode": "activated-fixture-negative"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "instagram",
+      "state": "unavailable",
+      "mode": "activated-fixture-negative"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "instagram",
+      "state": "granted-write-failure",
+      "mode": "activated-fixture-negative"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "instagram",
+      "mode": "activated-intercept-only",
+      "manualViews": 1,
+      "clicks": 1,
+      "realCollect": 0,
+      "withdrawal": "stopped"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "/instagram-extra/",
+      "mode": "unregistered-path"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "/%69nstagram/",
+      "mode": "unregistered-path"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "threads",
+      "state": "unknown",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "niceskill-site",
+      "route": "threads",
+      "state": "denied",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "niceskill-site",
+      "route": "threads",
+      "state": "granted",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "niceskill-site",
+      "route": "threads",
+      "state": "GPC",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "niceskill-site",
+      "route": "threads",
+      "state": "broken",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "niceskill-site",
+      "route": "threads",
+      "state": "unavailable",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "niceskill-site",
+      "route": "threads",
+      "state": "write-failure",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "niceskill-site",
+      "route": "threads",
+      "state": "granted-write-failure",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "niceskill-site",
+      "route": "threads",
+      "mode": "origin-gate",
+      "options": {
+        "preview": true
+      },
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "niceskill-site",
+      "route": "threads",
+      "mode": "origin-gate",
+      "options": {
+        "preview": true,
+        "query": "?gtm_debug=market_observer_preview"
+      },
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "niceskill-site",
+      "route": "threads",
+      "mode": "origin-gate",
+      "options": {
+        "local": true
+      },
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "niceskill-site",
+      "route": "threads",
+      "mode": "origin-gate",
+      "options": {
+        "foreign": true
+      },
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "niceskill-site",
+      "route": "threads",
+      "mode": "layout",
+      "width": 320,
+      "reducedMotion": "reduce"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "threads",
+      "mode": "layout",
+      "width": 375,
+      "reducedMotion": "reduce"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "threads",
+      "mode": "layout",
+      "width": 390,
+      "reducedMotion": "reduce"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "threads",
+      "mode": "layout",
+      "width": 430,
+      "reducedMotion": "reduce"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "threads",
+      "mode": "layout",
+      "width": 1280,
+      "reducedMotion": "reduce"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "threads",
+      "mode": "layout",
+      "width": 844,
+      "reducedMotion": "reduce"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "threads",
+      "mode": "layout",
+      "width": 640,
+      "reducedMotion": "reduce"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "threads",
+      "mode": "200%-css-zoom"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "threads",
+      "mode": "no-JS"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "threads",
+      "state": "unknown",
+      "mode": "activated-fixture-negative"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "threads",
+      "state": "denied",
+      "mode": "activated-fixture-negative"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "threads",
+      "state": "GPC",
+      "mode": "activated-fixture-negative"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "threads",
+      "state": "broken",
+      "mode": "activated-fixture-negative"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "threads",
+      "state": "unavailable",
+      "mode": "activated-fixture-negative"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "threads",
+      "state": "granted-write-failure",
+      "mode": "activated-fixture-negative"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "threads",
+      "mode": "activated-intercept-only",
+      "manualViews": 1,
+      "clicks": 1,
+      "realCollect": 0,
+      "withdrawal": "stopped"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "/threads-extra/",
+      "mode": "unregistered-path"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "/%69nstagram/",
+      "mode": "unregistered-path"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "instagram",
+      "state": "unknown",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "instagram",
+      "state": "denied",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "instagram",
+      "state": "granted",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "instagram",
+      "state": "GPC",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "instagram",
+      "state": "broken",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "instagram",
+      "state": "unavailable",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "instagram",
+      "state": "write-failure",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "instagram",
+      "state": "granted-write-failure",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "instagram",
+      "mode": "origin-gate",
+      "options": {
+        "preview": true
+      },
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "instagram",
+      "mode": "origin-gate",
+      "options": {
+        "preview": true,
+        "query": "?gtm_debug=market_observer_preview"
+      },
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "instagram",
+      "mode": "origin-gate",
+      "options": {
+        "local": true
+      },
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "instagram",
+      "mode": "origin-gate",
+      "options": {
+        "foreign": true
+      },
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "instagram",
+      "mode": "layout",
+      "width": 320,
+      "reducedMotion": "reduce"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "instagram",
+      "mode": "layout",
+      "width": 375,
+      "reducedMotion": "reduce"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "instagram",
+      "mode": "layout",
+      "width": 390,
+      "reducedMotion": "reduce"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "instagram",
+      "mode": "layout",
+      "width": 430,
+      "reducedMotion": "reduce"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "instagram",
+      "mode": "layout",
+      "width": 1280,
+      "reducedMotion": "reduce"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "instagram",
+      "mode": "layout",
+      "width": 844,
+      "reducedMotion": "reduce"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "instagram",
+      "mode": "layout",
+      "width": 640,
+      "reducedMotion": "reduce"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "instagram",
+      "mode": "200%-css-zoom"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "instagram",
+      "mode": "no-JS"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "instagram",
+      "state": "unknown",
+      "mode": "activated-fixture-negative"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "instagram",
+      "state": "denied",
+      "mode": "activated-fixture-negative"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "instagram",
+      "state": "GPC",
+      "mode": "activated-fixture-negative"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "instagram",
+      "state": "broken",
+      "mode": "activated-fixture-negative"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "instagram",
+      "state": "unavailable",
+      "mode": "activated-fixture-negative"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "instagram",
+      "state": "granted-write-failure",
+      "mode": "activated-fixture-negative"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "instagram",
+      "mode": "activated-intercept-only",
+      "manualViews": 1,
+      "clicks": 1,
+      "realCollect": 0,
+      "withdrawal": "stopped"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "/instagram-extra/",
+      "mode": "unregistered-path"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "/%69nstagram/",
+      "mode": "unregistered-path"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "threads",
+      "state": "unknown",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "threads",
+      "state": "denied",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "threads",
+      "state": "granted",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "threads",
+      "state": "GPC",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "threads",
+      "state": "broken",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "threads",
+      "state": "unavailable",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "threads",
+      "state": "write-failure",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "threads",
+      "state": "granted-write-failure",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "threads",
+      "mode": "origin-gate",
+      "options": {
+        "preview": true
+      },
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "threads",
+      "mode": "origin-gate",
+      "options": {
+        "preview": true,
+        "query": "?gtm_debug=market_observer_preview"
+      },
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "threads",
+      "mode": "origin-gate",
+      "options": {
+        "local": true
+      },
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "threads",
+      "mode": "origin-gate",
+      "options": {
+        "foreign": true
+      },
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "threads",
+      "mode": "layout",
+      "width": 320,
+      "reducedMotion": "reduce"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "threads",
+      "mode": "layout",
+      "width": 375,
+      "reducedMotion": "reduce"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "threads",
+      "mode": "layout",
+      "width": 390,
+      "reducedMotion": "reduce"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "threads",
+      "mode": "layout",
+      "width": 430,
+      "reducedMotion": "reduce"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "threads",
+      "mode": "layout",
+      "width": 1280,
+      "reducedMotion": "reduce"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "threads",
+      "mode": "layout",
+      "width": 844,
+      "reducedMotion": "reduce"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "threads",
+      "mode": "layout",
+      "width": 640,
+      "reducedMotion": "reduce"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "threads",
+      "mode": "200%-css-zoom"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "threads",
+      "mode": "no-JS"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "threads",
+      "state": "unknown",
+      "mode": "activated-fixture-negative"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "threads",
+      "state": "denied",
+      "mode": "activated-fixture-negative"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "threads",
+      "state": "GPC",
+      "mode": "activated-fixture-negative"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "threads",
+      "state": "broken",
+      "mode": "activated-fixture-negative"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "threads",
+      "state": "unavailable",
+      "mode": "activated-fixture-negative"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "threads",
+      "state": "granted-write-failure",
+      "mode": "activated-fixture-negative"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "threads",
+      "mode": "activated-intercept-only",
+      "manualViews": 1,
+      "clicks": 1,
+      "realCollect": 0,
+      "withdrawal": "stopped"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "/threads-extra/",
+      "mode": "unregistered-path"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "/%69nstagram/",
+      "mode": "unregistered-path"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "x",
+      "state": "unknown",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "x",
+      "state": "denied",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "x",
+      "state": "granted",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "x",
+      "state": "GPC",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "x",
+      "state": "broken",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "x",
+      "state": "unavailable",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "x",
+      "state": "write-failure",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "x",
+      "state": "granted-write-failure",
+      "mode": "pending",
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "x",
+      "mode": "origin-gate",
+      "options": {
+        "preview": true
+      },
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "x",
+      "mode": "origin-gate",
+      "options": {
+        "preview": true,
+        "query": "?gtm_debug=market_observer_preview"
+      },
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "x",
+      "mode": "origin-gate",
+      "options": {
+        "local": true
+      },
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "x",
+      "mode": "origin-gate",
+      "options": {
+        "foreign": true
+      },
+      "traffic": {
+        "tag": 0,
+        "collect": 0,
+        "rum": 0,
+        "other": 0
+      }
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "x",
+      "mode": "layout",
+      "width": 320,
+      "reducedMotion": "reduce"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "x",
+      "mode": "layout",
+      "width": 375,
+      "reducedMotion": "reduce"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "x",
+      "mode": "layout",
+      "width": 390,
+      "reducedMotion": "reduce"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "x",
+      "mode": "layout",
+      "width": 430,
+      "reducedMotion": "reduce"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "x",
+      "mode": "layout",
+      "width": 1280,
+      "reducedMotion": "reduce"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "x",
+      "mode": "layout",
+      "width": 844,
+      "reducedMotion": "reduce"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "x",
+      "mode": "layout",
+      "width": 640,
+      "reducedMotion": "reduce"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "x",
+      "mode": "200%-css-zoom"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "x",
+      "mode": "no-JS"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "x",
+      "state": "unknown",
+      "mode": "activated-fixture-negative"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "x",
+      "state": "denied",
+      "mode": "activated-fixture-negative"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "x",
+      "state": "GPC",
+      "mode": "activated-fixture-negative"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "x",
+      "state": "broken",
+      "mode": "activated-fixture-negative"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "x",
+      "state": "unavailable",
+      "mode": "activated-fixture-negative"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "x",
+      "state": "granted-write-failure",
+      "mode": "activated-fixture-negative"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "x",
+      "mode": "activated-intercept-only",
+      "manualViews": 1,
+      "clicks": 1,
+      "realCollect": 0,
+      "withdrawal": "stopped"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "/x-extra/",
+      "mode": "unregistered-path"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "/%69nstagram/",
+      "mode": "unregistered-path"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "/",
+      "mode": "regression-unknown"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "/about/",
+      "mode": "regression-unknown"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "/works/",
+      "mode": "regression-unknown"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "/way/",
+      "mode": "regression-unknown"
+    },
+    {
+      "site": "niceskill-site",
+      "route": "/way/work/cant-say-no/",
+      "mode": "regression-unknown"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "/",
+      "mode": "regression-unknown"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "/about.html",
+      "mode": "regression-unknown"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "/projects/",
+      "mode": "regression-unknown"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "/orbit/",
+      "mode": "regression-unknown"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "/it-support/",
+      "mode": "regression-unknown"
+    },
+    {
+      "site": "peakheadz-site",
+      "route": "/quiet-workflow/",
+      "mode": "regression-unknown"
+    }
+  ]
+}

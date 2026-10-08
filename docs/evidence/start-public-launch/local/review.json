@@ -1,0 +1,32 @@
+{
+  "origin": "http://127.0.0.1:58713",
+  "results": [
+    {
+      "width": 1440,
+      "http": 200,
+      "normalNavLink": 1,
+      "visualStyleMatchesSibling": true,
+      "overflow": false,
+      "focus": true,
+      "unexpectedRequests": 0
+    },
+    {
+      "width": 390,
+      "http": 200,
+      "normalNavLink": 1,
+      "visualStyleMatchesSibling": true,
+      "overflow": false,
+      "focus": true,
+      "unexpectedRequests": 0
+    },
+    {
+      "width": 320,
+      "http": 200,
+      "normalNavLink": 1,
+      "visualStyleMatchesSibling": true,
+      "overflow": false,
+      "focus": true,
+      "unexpectedRequests": 0
+    }
+  ]
+}

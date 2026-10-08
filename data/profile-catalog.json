@@ -1,0 +1,37 @@
+{
+  "dake": {
+    "name": "DAKE",
+    "url": "https://dakeapp.com/",
+    "source": "yukiPHZ/dakeapp-site:ORIGINAL.md and PEAKHEADZ current main navigation; public root verified 2026-09-30"
+  },
+  "start": {
+    "name": "START",
+    "url": "https://start.peakheadz.com/",
+    "source": "PEAKHEADZ README Public Launch 2026-09-08; yukiPHZ/peakheadz-start-site ORIGINAL.md/README.md; public root verified 2026-09-30"
+  },
+  "niceskill": {
+    "name": "NICE SKILL",
+    "url": "https://niceskill.com/",
+    "source": "PEAKHEADZ README current activities / Projects; NICE SKILL ORIGINAL.md; public root verified 2026-09-30"
+  },
+  "shimarisu_fudosan": {
+    "name": "しまりす不動産",
+    "url": "https://shimarisu-fudosan.com/",
+    "source": "PEAKHEADZ current Projects formal information entrance; public root verified 2026-09-30"
+  },
+  "creator_profile": {
+    "name": "菊田幸彦",
+    "url": "https://yukihikokikuta.com/",
+    "source": "PEAKHEADZ current About / Person entity; public root verified 2026-09-30"
+  },
+  "projects": {
+    "name": "Projects",
+    "url": "https://peakheadz.com/projects/",
+    "source": "PEAKHEADZ README canonical existing activity index"
+  },
+  "about": {
+    "name": "PEAKHEADZについて",
+    "url": "https://peakheadz.com/about",
+    "source": "PEAKHEADZ current root navigation canonical extensionless URL"
+  }
+}

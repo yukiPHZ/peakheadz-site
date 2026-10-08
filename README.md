@@ -1,3 +1,15 @@
+## SNS profile entries — Preview only / 2026-09-30
+
+Instagram is tool-first; Threads is making/reading-first. Both use @peakheadz. X is the author’s cross-brand personal entrance. Brand stream binding remains pending; frozen IT Support and quiet workflow are unchanged. README remains the brand entrypoint; no ORIGINAL is created.
+
+Two/three media configurations in data/profile-pages.json select approved reference IDs and order. One template per brand generates plain HTML: node scripts/generate-profile-pages.cjs; add --check to verify. No runtime product CMS/Publisher integration. Noindex,follow; sitemap excluded; exact slash canonicals with slashless 301. Footer stays in document flow; author signature is inside main and copyright is not a link/event. Canonical route_contracts keep every new route production-disabled, including saved consent/Preview query. Human Review is pending; commit/push/Preview do not authorize merge, Production or live measurement. [Phase 0](docs/SNS_PROFILE_PHASE0.md).
+
+Rollback: revert only this feature’s site commit and paired central contract after any separately approved release; never reset unrelated history. Existing public assets and child Core remain outside scope.
+
+## START Public Launch — 2026-09-08
+
+STARTの本番公開に合わせ、TOPの既存navigationへ通常テキストリンクを1つ追加。表示はSTART、接続先は https://start.peakheadz.com/ 。既存の階層・CSS・JavaScript・analyticsを変更しない。IT Support / quiet workflowの凍結を維持。SERPの四surface責任分担は docs/serp-conquest/README.md を参照。
+
 # PEAKHEADZ Site
 
 ## Phase 2仕様の現在地
@@ -23,6 +35,22 @@ PEAKHEADZは、菊田幸彦がつくる実務道具、Webサービス、メデ�
 ## 世界観
 
 合言葉は "Stay motion."。TOPは作品一覧や販売ページにせず、PEAKHEADZという場所へ入る静かな玄関として保つ。
+
+## 現在の活動の扱い
+
+- TOPは静かな玄関のまま、Projectsで現在の代表的な活動を扱う。DAKEの直後にNICE SKILL、Japan Memory Laneを置き、色やバッジで強調しない。
+- ORBITではNICE SKILLを、NICE KIPとは別の運用中の活動・作品群として扱う。代表例だけを添え、satellite全量はNICE SKILLの `/works/` に委ねる。
+- Japan Memory Laneは「七枚を巡り、一枚だけ持ち帰り、残りを還す」独立した作品世界として扱う。
+- この更新はfeature branch / Draft PRでHuman Reviewを待つ。承認前にmain mergeやProduction公開へ進めない。
+
+### ORBIT集計と確認範囲（2026-09-23）
+
+- Web Sites = Sitesセクションの16項目（削除済みの記録・まとめ項目も1行として含む）。Desktop Apps = DAKE Seriesの61項目。サイト全体の現役総数ではない。
+- Domains = Sites / Practical Tools内のサイトリンクの異なるhostname数17。GitHub・SNS・BOOTHは除外し、Worksとrootは同一hostにまとめる。稼働確認済みドメイン数ではない。
+- Repositories = 全カテゴリのGitHubリンクに明示された異なるowner/repo数15。tree / releaseの違いは重複計上しない。
+- Status Entries = `.orbit-section` 内のarticle数86。Nowは除外、カテゴリ間の再掲は含む。表示badgeのclassで運用中59・実験中11・保守中8・凍結8（過去・削除済みを含む）を数える。DAKEのdata-statusだけを使わない。
+- 代表例はTHANKS / HANDSHAKE / MIDDLE / HUG / SKY。各正本の公開記録と正式URLのHTTP 200、NICE SKILL `/works/` 掲載を確認。KOUKANはpublic-use HOLD、差し入れです。は参照checkoutに公開完了証跡がないため、今回の代表例から外した（作品自体の状態変更ではない）。
+- NICE KIPは従来の保守中とURLを維持。`nicekip.yukihikokikuta.com` はこの環境で名前解決できず要確認。DNSや別サイトへの差し替えは行わない。
 
 ## 技術構成
 
