@@ -17,3 +17,40 @@
 ローカルChrome接続はERR_FAILEDで開けなかったため、最終画面はCloudflare Previewで確認する。旧IMPLEMENTATION.mdのadapter固有テスト・送信条件は本記録で置き換える。市場の測定開始・Googleへの実送信・Production公開は未実施。
 
 Preview URL、幅別確認結果、Draft PRは完了時の追記を参照。
+
+
+## Final Preview evidence
+
+- Preview: https://79956c88.peakheadz-site.pages.dev/connect (deployed site commit 4d3e9c9). Alias: https://codex-peakheadz-observer-int.peakheadz-site.pages.dev/connect .
+- Draft PRs: https://github.com/yukiPHZ/market-observer/pull/139 ; https://github.com/yukiPHZ/peakheadz-site/pull/15 . Site #15 is stacked on CONNECT #14; #14 remains draft/unmodified. All Production operations require separate approval.
+- All nine Preview paths: HTTP 200, exact canonical, local HTML content parity, no-transform, one tracker script, no RUM injection. Preview platform X-Robots-Tag noindex retained; no Production SEO changes.
+- Chrome viewport 320/375/390/768/1440px: document widths 305/360/375/753/1425px respectively (15px vertical scrollbar); no horizontal overflow, no displayed CONNECT controls below 44px, nine SNS/four featured links, no broken images. 390px visual inspection confirms the existing quiet brand layout.
+- Eight existing page h1/canonical checks passed; browser error logs empty. Consent grant and withdrawal to 利用しない verified in Preview. No Google Analytics/tag or RUM scripts appeared, including granted Preview. Full production network trace/actual GA processing is not performed; fail-closed transport is covered by offline unit tests.
+- Cloudflare Pages GitHub check succeeded. A separate existing Workers Builds: peakheadz-site check failed; it is not the Pages deployment result. No Workers/deployment configuration is changed to clear it.
+- Workers buildログで `npx wrangler versions upload` が `Missing entry-point to Worker script or to assets directory` により失敗していることを読み取り確認。静的Pages repoに無関係なWorker entry/configは追加していない。
+
+## Changed files
+
+- `README.md`
+- `data/connect.json`
+- `docs/connect/OBSERVER_ONBOARDING.md`
+- `public/_headers`
+- `public/about.html`
+- `public/assets/css/connect.css`
+- `public/assets/js/connect.js`
+- `public/assets/market-observer/generated/manifest.json`
+- `public/assets/market-observer/generated/peakheadz_brand.profile.json`
+- `public/assets/market-observer/generated/runtime-package.js`
+- `public/assets/market-observer/generated/runtime_schema.json`
+- `public/assets/market-observer/market-observer-package.lock.json`
+- `public/assets/market-observer/market-observer.js`
+- `public/connect.html`
+- `public/index.html`
+- `public/information.html`
+- `public/orbit/index.html`
+- `public/projects/index.html`
+- `scripts/check-connect-browser.mjs`
+- `scripts/generate-connect.mjs`
+- `scripts/generate-profile-pages.cjs`
+- `templates/connect.html`
+- `tests/connect.test.mjs`
