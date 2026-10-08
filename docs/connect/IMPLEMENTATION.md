@@ -54,7 +54,7 @@ X流入設定候補（未設定）:
 ## テスト結果と境界
 
 - `node scripts/generate-connect.mjs --check`: PASS。
-- `node --test tests/connect.test.mjs`: 5/5 PASS。台帳変更反映、HTML escape、hidden非露出、planned承認必須・リンク禁止、不正URL・内部UTM拒否、確認日必須、mockによる同意/GPC/DNT/Preview/例外/撤回gate。
+- `node --test tests/connect.test.mjs`: 6/6 PASS。SEO/sitemap、台帳変更反映、HTML escape、hidden非露出、planned承認必須・リンク禁止、不正URL・内部UTM拒否、確認日必須、mockによる同意/GPC/DNT/Preview/例外/撤回gate。
 - `node scripts/generate-profile-pages.cjs --check`: PASS（Windows checkoutの改行差を通常の再生成で整合、既存ページの内容差分なし）。
 - 既存sitemap生成: 8 URL、CONNECT追加のみ。noindexのSNS別入口・凍結ページは引き続き除外。
 - Chromium headless: 320 / 375 / 390 / 768 / 1440pxすべて横スクロールなし、44px以上の操作領域、画像正常、外部リンク属性、canonical / index可を確認。SNSカード12件追加時も320pxで横スクロールなし。
@@ -65,4 +65,33 @@ X流入設定候補（未設定）:
 
 ## 公開状態
 
-本番 `https://peakheadz.com/connect` は公開前。既存READMEの「Production変更が明示承認された工程だけに適用する」に従い、main merge / push / Production deployは実施しない。既存Pagesプロジェクトの別ブランチへPreviewを公開して確認する。実URLとHTTP検証結果は本記録へ追記する。
+本番 `https://peakheadz.com/connect` は公開前。既存READMEの「Production変更が明示承認された工程だけに適用する」に従い、main merge / push / Production deployは実施していない。
+
+既存Pages project `peakheadz-site` の別ブランチ `codex-peakheadz-connect-v1` にPreviewを公開した。デプロイ対象の実装commitは `de99fe6`。Productionブランチ・DNS・Secrets・他projectは変更していない。
+
+- 固定Preview: https://dc7c63a9.peakheadz-site.pages.dev/connect
+- ブランチalias: https://codex-peakheadz-connect-v1.peakheadz-site.pages.dev/connect
+- `/connect` とプロフィール/固定投稿用UTM付きURL: HTTP 200、URLを維持。公開HTMLがローカル生成物とbyte単位で一致、SNS9件 / 注目4件、canonical `https://peakheadz.com/connect`。
+- PreviewのTOP / About / Information / Projects / Orbit / sitemap / 正式ロゴ: HTTP 200。
+- Preview実ブラウザ390px / 1440px: HTTP 200、横スクロールなし、pageerror0、外部リクエスト0。スクリーンショット `.cache/connect/preview-390.png` / `preview-1440.png`。
+- PagesのPreviewレスポンスには `X-Robots-Tag: noindex` が付く。これはPreview用のプラットフォーム制御。HTMLにnoindexはなく、将来Production公開時は通常index対象とする。ProductionのHTTP/検索インデックスは未検証。
+
+## 作成・変更ファイル（最新origin/main比）
+
+- `.gitignore`（既存CLIのローカル `.wrangler` キャッシュを除外）
+- `README.md`（CONNECT保守手順）
+- `data/profile-catalog.json`（既存URL正本の拡張）
+- `data/connect.json`（表示参照ID）
+- `templates/connect.html`（新ページテンプレート）
+- `scripts/generate-connect.mjs`（静的生成と台帳検査）
+- `public/connect.html`（生成ページ）
+- `public/assets/css/connect.css`（CONNECT限定スタイル）
+- `public/assets/js/connect.js`（送信停止の計測接続口）
+- `public/sitemap.xml`（CONNECT追加）
+- `scripts/preview-connect.mjs`（localhost限定プレビュー）
+- `scripts/check-connect-browser.mjs`（指定幅と既存ページのブラウザQA）
+- `tests/connect.test.mjs`（公開状態・SEO・同意gateのテスト）
+- `docs/serp-conquest/README.md`（CONNECTの役割・canonical記録）
+- `docs/connect/IMPLEMENTATION.md`（本記録）
+
+既存TOP、About、Information、Projects、Orbit、SNS別入口、共通CSS、中央配布物は最新origin/mainと内容差分なし。
