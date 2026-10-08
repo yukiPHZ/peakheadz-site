@@ -1,0 +1,51 @@
+.connect-page { background: var(--bg); color: var(--text); }
+.connect-page a:focus-visible, .connect-page summary:focus-visible { outline: 3px solid #8db3ff; outline-offset: 5px; }
+.connect-header, .connect-main, .connect-footer { width: min(100% - 40px, 1000px); margin-inline: auto; }
+.connect-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 16px; font-size: 12px; letter-spacing: .08em; }
+.connect-header a, .connect-footer a, .more-links a { display: inline-flex; align-items: center; min-height: 44px; }
+.connect-header span, .creator, .creator-ja, .section-note, .card-description, .connect-footer, .privacy-note { color: #b2b2b8; }
+.connect-hero { padding: 48px 0 64px; }
+.connect-hero img { object-fit: contain; margin-bottom: 24px; }
+.connect-page .eyebrow { color: #8db3ff; font-size: 11px; letter-spacing: .2em; margin-bottom: 8px; }
+.connect-hero h1 { font-size: clamp(30px, 7vw, 54px); line-height: 1.2; letter-spacing: .1em; font-weight: 650; overflow-wrap: anywhere; }
+.creator { font-size: 13px; margin-top: 14px; }
+.creator-ja { font-size: 12px; margin-top: 4px; }
+.connect-copy { font-size: clamp(21px, 4.5vw, 32px); line-height: 1.65; letter-spacing: .04em; margin: 28px 0 12px; }
+.section-note { font-size: 14px; }
+.connect-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.connect-actions a { min-height: 48px; padding: 10px 20px; border: 1px solid #45454d; border-radius: 6px; font-size: 14px; }
+.connect-actions .primary-action { background: #245bc5; border-color: #245bc5; color: #fff; }
+.connect-actions span { margin-left: 8px; }
+.connect-section { border-top: 1px solid #2a2a30; padding-block: 42px; scroll-margin-top: 20px; }
+.connect-section h2 { font-size: clamp(20px, 4vw, 26px); line-height: 1.5; margin-bottom: 12px; font-weight: 600; }
+.brand-group { margin-top: 28px; }
+.brand-group h3 { font-size: 14px; font-weight: 550; margin-bottom: 12px; }
+.connect-grid { list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 0; padding: 0; }
+.connect-grid li { min-width: 0; }
+.connect-card { height: 100%; min-width: 0; display: flex; align-items: flex-start; gap: 14px; background: #121215; border: 1px solid #303036; padding: 22px; border-radius: 8px; overflow-wrap: anywhere; }
+a.connect-card:hover { background: #19191e; border-color: #7195df; }
+.platform-icon { width: 24px; height: 24px; flex: 0 0 24px; margin-top: 4px; color: #eaeaea; }
+.card-body { display: flex; flex-direction: column; align-items: flex-start; height: 100%; }
+.card-label { font-size: 10px; color: #b2b2b8; letter-spacing: .08em; }
+.card-title { display: block; font-size: 16px; font-weight: 600; margin-block: 3px 8px; }
+.card-description { font-size: 13px; margin-bottom: 16px; }
+.card-action { font-size: 12px; color: #8db3ff; margin-top: auto; }
+.featured-grid { margin-top: 24px; }
+.planned .card-action { color: #b2b2b8; }
+.connect-section summary { cursor: pointer; min-height: 48px; padding-block: 12px; color: #8db3ff; font-size: 14px; }
+.more-links { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 20px; color: #8db3ff; font-size: 13px; }
+.privacy-note h2 { font-size: 14px; }
+.privacy-note p { font-size: 12px; max-width: 65ch; }
+.connect-footer { border-top: 1px solid #2a2a30; padding-block: 24px 36px; font-size: 12px; }
+.connect-footer nav { display: flex; flex-wrap: wrap; gap: 4px 24px; margin-bottom: 20px; }
+.stay-motion { margin-top: 12px; letter-spacing: .12em; }
+.sr-only, .skip-link:not(:focus) { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.skip-link:focus { position: fixed; z-index: 10; top: 12px; left: 12px; padding: 12px 20px; background: #245bc5; color: #fff; }
+.mobile-break { display: none; }
+@media (max-width: 600px) {
+  .connect-grid { grid-template-columns: minmax(0, 1fr); }
+  .connect-hero { padding-block: 32px 44px; }
+  .connect-section { padding-block: 32px; }
+  .connect-card { padding: 18px; }
+  .mobile-break { display: initial; }
+}
