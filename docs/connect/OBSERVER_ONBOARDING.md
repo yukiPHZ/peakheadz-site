@@ -67,3 +67,10 @@ Cloudflare Web Analytics UI confirms peakheadz.com RUM Disable and no automatic 
 Central validation: Python 234 tests + 116 subtests and Node 215 tests pass; runtime builder --check, target validator, Lite secret scan, target-only export/check and installation validator pass. Site CONNECT tests 6 pass. No real GA4 event was sent. Lite has existing page/route/event counts once enabled; it does not request CTA dimensions, so social/work breakdown remains unavailable even after registration. Do not label follow intent as completion or uncollected metrics as zero.
 
 Existing Pages Preview and independent Workers Builds checks must be distinguished. Workers build command npx wrangler versions upload fails Missing entry-point; dashboard/deploy settings are outside this authorization. Production merge/deploy/measurement/reporting activation remain separate approvals. See central docs/PEAKHEADZ_PRODUCTION_READINESS_20261008.md for evidence and exact remaining gates.
+
+
+### Latest Preview review
+
+https://00bbe7c5.peakheadz-site.pages.dev/connect (site 5131edd): nine literal routes return HTTP 200, match local HTML, use production canonical, carry no-transform and Preview noindex, contain one runtime loader and no injected Cloudflare RUM. Browser DOM inspection at all 9 × 5 requested widths completed. Orbit at 320px revealed a 5px text overflow (nowrap heading); scoped mobile wrapping fix follows. Other inspected widths/routes have no horizontal excess. Existing main navigation and headings render.
+
+Important unresolved privacy boundary: the top page's pre-existing unconditional AdSense loader (pagead2.googlesyndication.com/pagead/js/adsbygoogle.js) also runs on Preview before a consent choice and loads its managed advertisement script. This is not a GA4 gtag or Cloudflare RUM request, but prevents claiming zero third-party Google communications. Ad/consent semantics and revenue behavior require a separate explicit decision; this observer PR does not silently remove or enable advertisements. Full browser network evidence and ad-consent handling remain release gates.
