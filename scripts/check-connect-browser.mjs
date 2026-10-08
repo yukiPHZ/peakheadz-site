@@ -22,7 +22,7 @@ try {
     const response=await page.goto(origin+'/connect?utm_source=x&utm_medium=social&utm_campaign=profile');
     assert.equal(response.status(),200);
     await page.locator('.connect-hero img').waitFor();
-    await page.locator('summary').click();
+    await page.locator('#projects summary').click();
     const audit=await page.evaluate(()=>({
       width:innerWidth,scrollWidth:document.documentElement.scrollWidth,
       tooSmall:[...document.querySelectorAll('a,summary')].filter(x=>x.getClientRects().length && !x.classList.contains('skip-link')).filter(x=>x.getBoundingClientRect().height<44).map(x=>x.textContent.trim()),
@@ -35,7 +35,7 @@ try {
     }));
     assert.equal(audit.scrollWidth,width); assert.deepEqual(audit.tooSmall,[]); assert.deepEqual(audit.brokenImages,[]); assert.equal(audit.unsafe,0);
     assert.equal(audit.canonical,'https://peakheadz.com/connect');assert.equal(audit.socialLinks,9);assert.equal(audit.featuredLinks,4);assert.equal(audit.noindex,false);
-    await page.locator('summary').click();
+    await page.locator('#projects summary').click();
     await page.screenshot({path:`.cache/connect/${width}.png`,fullPage:true});
     results.push(audit);
   }

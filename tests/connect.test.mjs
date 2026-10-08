@@ -12,6 +12,41 @@ test('generated output is current and has unique IDs and verified public links',
   assert.equal(data.links.filter(x=>x.category==='social' && x.status==='active').length,9);
   assert.equal(data.links.filter(x=>x.featured && x.status==='active').length,4);
 });
+
+test('CONNECT references the pinned central route and fixed CTA ledger IDs',()=>{
+  const profile=JSON.parse(fs.readFileSync(new URL('../public/assets/market-observer/generated/peakheadz_brand.profile.json',import.meta.url),'utf8'));
+  const route=profile.route_contracts['/connect'];
+  assert.equal(profile.project_id,'peakheadz_brand');
+  assert.equal(route.route_id,'connect');
+  assert.equal(route.production_enabled,false);
+  assert.equal(route.preview_enabled,false);
+  assert.equal(route.reporting_enabled,false);
+  assert.deepEqual(route.allowed_events,['page_view','cta_click']);
+  for(const row of data.links.filter(x=>x.status==='active')) {
+    assert.equal(route.cta_destinations[row.id],new URL(row.url,'https://peakheadz.com').href);
+    assert.ok(profile.aliases.cta_ids.includes(row.id));
+  }
+  const html=generate();
+  for(const name of ['runtime-package.js','market-observer.js','consent-banner.js','profile-observation.js']) assert.equal(html.split(name).length-1,1);
+  assert.ok(!html.includes('/assets/js/connect.js'));
+  assert.ok(!fs.existsSync(new URL('../public/assets/js/connect.js',import.meta.url)));
+});
+
+test('shared bootstrap rejects unknown ID, destination drift and unapproved group',()=>{
+  const profile=JSON.parse(fs.readFileSync(new URL('../public/assets/market-observer/generated/peakheadz_brand.profile.json',import.meta.url),'utf8'));
+  const script=fs.readFileSync(new URL('../public/assets/js/profile-observation.js',import.meta.url),'utf8');
+  let click; const events=[];
+  const root={location:new URL('https://peakheadz.com/connect?email=private#private'),document:{body:{getAttribute:()=> 'peakheadz_brand'},addEventListener:(name,fn)=>{click=fn;}},MarketObserverRuntimePackage:{profiles:{peakheadz_brand:profile},profileHashes:{peakheadz_brand:'fixture'}},MarketObserver:{init:()=>({ok:true}),trackPageView:()=>events.push(['page_view']),track:(...args)=>events.push(args)}};
+  vm.runInNewContext(script,{window:root});
+  const send=(id,href,group)=>click({target:{closest:()=>({href,getAttribute:k=>k==='data-mo-cta'?id:group})}});
+  const href=profile.route_contracts['/connect'].cta_destinations.peakheadz_instagram;
+  for(const args of [['unknown',href,'connect_follow'],['peakheadz_instagram',href+'?private=1','connect_follow'],['peakheadz_instagram',href,'free_input']])send(...args);
+  assert.equal(events.length,1);
+  send('peakheadz_instagram',href,'connect_follow');
+  assert.equal(events[1][0],'cta_click');
+  assert.deepEqual(Object.keys(events[1][1]).sort(),['content_type','cta_group','cta_id','route_id']);
+  assert.ok(!JSON.stringify(events).includes('private'));
+});
 test('page-specific SEO, canonical, brand OGP and sitemap are present',()=>{
   const html=generate();
   for(const required of ['<title>PEAKHEADZ CONNECT','name="description"','property="og:title"','property="og:description"','property="og:url" content="https://peakheadz.com/connect"','property="og:image" content="https://peakheadz.com/assets/phzlogo1.png"','name="twitter:card"','rel="canonical" href="https://peakheadz.com/connect"']) assert.ok(html.includes(required),required);
@@ -45,33 +80,4 @@ test('unsafe links, unverified active rows and internal UTMs fail generation', (
   assert.throws(()=>validate(changed),/verification/);
   changed.links[0].verifiedAt='2026-10-08'; changed.analytics.enabled=true;
   assert.throws(()=>validate(changed),/onboarding/);
-});
-
-const script = fs.readFileSync(new URL('../public/assets/js/connect.js',import.meta.url),'utf8');
-function analytics({consent=true, enabled=true, origin='https://peakheadz.com', gpc=false, dnt='0', present=true, throws=false}={}) {
-  const events=[]; let click; let consentState=consent;
-  const adapter={enabled,contractVersion:'connect-v1',hasConsent:()=>{if(throws) throw Error('unavailable');return consentState;},track:(...args)=>events.push(args)};
-  const root={location:{origin,search:'?email=private@example.com&utm_source=x'},navigator:{globalPrivacyControl:gpc,doNotTrack:dnt},document:{addEventListener:(type,fn)=>{click=fn;}},PeakheadzConnectAnalytics:present?adapter:undefined};
-  vm.runInNewContext(script,{window:root});
-  return {
-    events,
-    revoke:()=>{consentState=false;},
-    click:(placement='follow')=>click({target:{closest:()=>({
-      dataset:{linkId:'example',brand:'PEAKHEADZ',platform:'x',category:'social',destinationId:'example',placement},
-      href:'https://x.com/?secret=test'
-    })}})
-  };
-}
-test('no send without adapter/consent or on preview, GPC, DNT and adapter errors',()=>{
-  for(const options of [{present:false},{consent:false},{consent:'unknown'},{enabled:false},{origin:'http://localhost:8788'},{gpc:true},{dnt:'1'},{throws:true}]) {
-    const a=analytics(options); a.click(); assert.equal(a.events.length,0);
-  }
-});
-test('consented adapter receives fixed metadata only; withdrawal stops sends',()=>{
-  const a=analytics();
-  for(const placement of ['follow','featured','projects','coming_next']) a.click(placement);
-  assert.deepEqual(a.events.map(x=>x[0]),['connect_page_view','connect_social_click','connect_featured_click','connect_project_click','connect_coming_soon_click']);
-  assert.ok(!JSON.stringify(a.events).includes('private@example.com'));
-  assert.ok(!JSON.stringify(a.events).includes('https://'));
-  a.revoke(); a.click(); assert.equal(a.events.length,5);
 });

@@ -7,7 +7,7 @@
 - SNS追加は台帳へ公開確認済み項目を追加し、表示IDへ登録する。`active` はURL・確認日・出典必須。`planned` は `announcementApprovedAt` 必須・URL禁止・クリック不可。`hidden` は公開HTMLへ出力しない。公開予定の登録は現在0件。
 - 生成: `node scripts/generate-connect.mjs`。確認: `node scripts/generate-connect.mjs --check`、`node --test tests/connect.test.mjs`。サイトマップ: `node scripts/generate-sitemap.js`。生成物もcommitする。Pagesの既存build設定は変更しない。
 - ローカル確認: `node scripts/preview-connect.mjs` → `http://127.0.0.1:8788/connect`。ブラウザ検証は `node scripts/check-connect-browser.mjs <既存playwright-coreの絶対パス> <Chromium実行ファイルの絶対パス>`。依存の新規導入は不要。
-- 計測送信は無効。最新の中央配布 `peakheadz_brand` は既存SNS別3ルートのみで、CONNECTのルート・イベント・固定パラメータは未登録。既存の中央生成物、GA4 ID、Consent、IT Support設定は編集しない。将来の接続条件と検証限界は [実装・QA記録](docs/connect/IMPLEMENTATION.md) に記載する。
+- 計測送信は無効。中央 `peakheadz_brand` の本体5ページ・CONNECT・SNS入口3ページをexact routeとして登録し、既存runtime / Consentへ接続した。独自connect_*イベントは撤去し、page_view / cta_clickと台帳の固定IDを使う。Preview・Production・reportingはすべて停止。中央生成物は正本からpeakheadz_site targetだけexportする。IT Support / STARTの契約は維持。[接続・監査記録](docs/connect/OBSERVER_ONBOARDING.md)。
 - CONNECTは通常index対象。canonicalは `https://peakheadz.com/connect`、OGP/Xは正式ロゴを使用。今回の対象はfeature branchとPreviewまで。本番mainへのmerge・Production公開は未実施。
 
 ## SNS profile entries — Preview only / 2026-09-30

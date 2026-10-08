@@ -44,7 +44,7 @@ export function validate(data) {
   if (data.analytics.enabled !== false) throw Error('Central analytics onboarding is required before enabling');
 }
 const sorted = (items) => [...items].sort((a,b) => a.displayOrder-b.displayOrder);
-const meta = (x, placement) => `data-connect-link data-link-id="${escape(x.id)}" data-brand="${escape(x.brand)}" data-platform="${escape(x.platform)}" data-category="${escape(x.category)}" data-destination-id="${escape(x.id)}" data-placement="${placement}"`;
+const meta = (x, placement) => `data-mo-cta="${escape(x.id)}" data-mo-cta-group="connect_${placement}" data-connect-link data-link-id="${escape(x.id)}" data-brand="${escape(x.brand)}" data-platform="${escape(x.platform)}" data-category="${escape(x.category)}" data-destination-id="${escape(x.id)}" data-placement="${placement}"`;
 function card(x, placement, social = false) {
   const title = social ? `${platforms[x.platform]} · ${x.accountName}` : x.accountName;
   const icon = social ? `<svg class="platform-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[x.platform]}</svg>` : '';

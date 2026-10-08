@@ -12,3 +12,33 @@
   Cache-Control: public, must-revalidate, max-age=0, no-transform
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
+
+/
+  Cache-Control: public, must-revalidate, max-age=0, no-transform
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/about
+  Cache-Control: public, must-revalidate, max-age=0, no-transform
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/information
+  Cache-Control: public, must-revalidate, max-age=0, no-transform
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/projects/
+  Cache-Control: public, must-revalidate, max-age=0, no-transform
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/orbit/
+  Cache-Control: public, must-revalidate, max-age=0, no-transform
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/connect
+  Cache-Control: public, must-revalidate, max-age=0, no-transform
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
