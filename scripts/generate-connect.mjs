@@ -64,13 +64,23 @@ export function render(data, template) {
   return template.replace('{{FOLLOW}}',follow).replace('{{FEATURED}}',featured).replace('{{PROJECTS}}',projects).replace('{{COMING_NEXT}}',coming ? `<ul class="connect-grid">${coming}</ul>` : '<p class="section-note">次の公開情報は、準備が整い次第ここでお知らせします。</p>');
 }
 export function generate() {
-  return render(JSON.parse(fs.readFileSync(path.join(root,'data/connect.json'),'utf8')),fs.readFileSync(path.join(root,'templates/connect.html'),'utf8'));
+  return render(loadData(),fs.readFileSync(path.join(root,'templates/connect.html'),'utf8').replace(/\r\n/g,'\n'));
+}
+export function loadData() {
+  const config = JSON.parse(fs.readFileSync(path.join(root,'data/connect.json'),'utf8'));
+  const catalog = JSON.parse(fs.readFileSync(path.join(root,'data/profile-catalog.json'),'utf8'));
+  const resolve = id => {
+    const row = catalog[id];
+    if (!row || !row.connect) throw Error(`Unknown CONNECT catalog ID: ${id}`);
+    return {...row.connect, id, url:row.url, source:row.source};
+  };
+  return {...config,links:config.linkIds.map(resolve),comingNext:config.comingNextIds.map(resolve)};
 }
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const html = generate();
   const output = path.join(root,'public/connect.html');
   if (process.argv.includes('--check')) {
-    if (!fs.existsSync(output) || fs.readFileSync(output,'utf8') !== html) throw Error('Run node scripts/generate-connect.mjs');
+    if (!fs.existsSync(output) || fs.readFileSync(output,'utf8').replace(/\r\n/g,'\n') !== html) throw Error('Run node scripts/generate-connect.mjs');
     console.log('CONNECT generated HTML is current.');
   } else { fs.writeFileSync(output,html); console.log('Generated public/connect.html'); }
 }

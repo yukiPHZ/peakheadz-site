@@ -1,3 +1,15 @@
+## PEAKHEADZ CONNECT v1.0 — 2026-10-08
+
+`/connect` はSNSと公開作品への独立した入口。既存TOP、About、Information、Projects、Orbit、SNS別入口は維持する。黒・青・白と正式ロゴを使用し、HTMLのみでも全リンクが使える。
+
+- リンクURLの正本は既存 `data/profile-catalog.json`。CONNECT用の公開状態・説明・確認日・順序を各項目の `connect` に追加した。既存 `name` / `url` / `source` の意味は維持する。
+- `data/connect.json` は表示する参照IDのみを選ぶ。URLを重複管理しない。注目作品は台帳の `connect.featured` で切り替える。
+- SNS追加は台帳へ公開確認済み項目を追加し、表示IDへ登録する。`active` はURL・確認日・出典必須。`planned` は `announcementApprovedAt` 必須・URL禁止・クリック不可。`hidden` は公開HTMLへ出力しない。公開予定の登録は現在0件。
+- 生成: `node scripts/generate-connect.mjs`。確認: `node scripts/generate-connect.mjs --check`、`node --test tests/connect.test.mjs`。サイトマップ: `node scripts/generate-sitemap.js`。生成物もcommitする。Pagesの既存build設定は変更しない。
+- ローカル確認: `node scripts/preview-connect.mjs` → `http://127.0.0.1:8788/connect`。ブラウザ検証は `node scripts/check-connect-browser.mjs <既存playwright-coreの絶対パス> <Chromium実行ファイルの絶対パス>`。依存の新規導入は不要。
+- 計測送信は無効。最新の中央配布 `peakheadz_brand` は既存SNS別3ルートのみで、CONNECTのルート・イベント・固定パラメータは未登録。既存の中央生成物、GA4 ID、Consent、IT Support設定は編集しない。将来の接続条件と検証限界は [実装・QA記録](docs/connect/IMPLEMENTATION.md) に記載する。
+- CONNECTは通常index対象。canonicalは `https://peakheadz.com/connect`、OGP/Xは正式ロゴを使用。今回の対象はfeature branchとPreviewまで。本番mainへのmerge・Production公開は未実施。
+
 ## SNS profile entries — Preview only / 2026-09-30
 
 Instagram is tool-first; Threads is making/reading-first. Both use @peakheadz. X is the author’s cross-brand personal entrance. Brand stream binding remains pending; frozen IT Support and quiet workflow are unchanged. README remains the brand entrypoint; no ORIGINAL is created.

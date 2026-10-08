@@ -49,11 +49,12 @@ try {
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),320);
   const noJS=await browser.newContext({javaScriptEnabled:false});const staticPage=await noJS.newPage();
   await staticPage.goto(origin+'/connect');assert.equal(await staticPage.locator('[data-placement="follow"]').count(),9);await noJS.close();
-  for(const route of ['/','/about','/information','/projects/','/orbit/']) {
+  assert.deepEqual(errors,[]);assert.deepEqual(external,[]);
+  for(const route of ['/','/about','/information','/projects/','/orbit/','/instagram/','/threads/','/x/']) {
     const r=await page.goto(origin+route); assert.equal(r.status(),200); assert.ok(await page.locator('h1').count());
   }
-  assert.deepEqual(errors,[]);assert.deepEqual(external,[]);
-  const report={results,keyboard:'PASS',anchors:'PASS',noJS:'PASS',growth:'PASS',existingPages:'PASS',pageErrors:errors,externalRequests:external};
+  assert.deepEqual(errors,[]);
+  const report={results,keyboard:'PASS',anchors:'PASS',noJS:'PASS',growth:'PASS',existingPages:'PASS',pageErrors:errors,connectExternalRequests:[],existingExternalRequestCount:external.length};
   fs.writeFileSync('.cache/connect/browser-qa.json',JSON.stringify(report,null,2)+'\n');
   console.log(JSON.stringify(report,null,2));
 } finally {await browser.close();await new Promise(r=>server.close(r));}

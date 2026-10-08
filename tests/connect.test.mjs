@@ -2,15 +2,24 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
-import {generate, render, validate} from '../scripts/generate-connect.mjs';
-const data = JSON.parse(fs.readFileSync(new URL('../data/connect.json',import.meta.url)));
+import {generate, render, validate, loadData} from '../scripts/generate-connect.mjs';
+const data = loadData();
 const template = fs.readFileSync(new URL('../templates/connect.html',import.meta.url),'utf8');
 
 test('generated output is current and has unique IDs and verified public links', () => {
   validate(data);
-  assert.equal(generate(),fs.readFileSync(new URL('../public/connect.html',import.meta.url),'utf8'));
+  assert.equal(generate(),fs.readFileSync(new URL('../public/connect.html',import.meta.url),'utf8').replace(/\r\n/g,'\n'));
   assert.equal(data.links.filter(x=>x.category==='social' && x.status==='active').length,9);
   assert.equal(data.links.filter(x=>x.featured && x.status==='active').length,4);
+});
+test('page-specific SEO, canonical, brand OGP and sitemap are present',()=>{
+  const html=generate();
+  for(const required of ['<title>PEAKHEADZ CONNECT','name="description"','property="og:title"','property="og:description"','property="og:url" content="https://peakheadz.com/connect"','property="og:image" content="https://peakheadz.com/assets/phzlogo1.png"','name="twitter:card"','rel="canonical" href="https://peakheadz.com/connect"']) assert.ok(html.includes(required),required);
+  assert.ok(!html.includes('noindex'));
+  assert.ok(fs.existsSync(new URL('../public/assets/phzlogo1.png',import.meta.url)));
+  const sitemap=fs.readFileSync(new URL('../public/sitemap.xml',import.meta.url),'utf8');
+  assert.equal((sitemap.match(/https:\/\/peakheadz.com\/connect/g)||[]).length,1);
+  assert.ok(!sitemap.includes('/it-support/') && !sitemap.includes('/quiet-workflow/'));
 });
 test('ledger changes update output; hidden fields and planned URLs cannot leak', () => {
   const changed = structuredClone(data);
