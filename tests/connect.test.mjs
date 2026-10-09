@@ -18,7 +18,7 @@ test('CONNECT references the pinned central route and fixed CTA ledger IDs',()=>
   const route=profile.route_contracts['/connect'];
   assert.equal(profile.project_id,'peakheadz_brand');
   assert.equal(route.route_id,'connect');
-  assert.equal(route.production_enabled,false);
+  assert.equal(route.production_enabled,true);
   assert.equal(route.preview_enabled,false);
   assert.equal(route.reporting_enabled,false);
   assert.deepEqual(route.allowed_events,['page_view','cta_click']);

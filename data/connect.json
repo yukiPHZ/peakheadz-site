@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "analytics": {
     "enabled": false,
-    "reason": "Central peakheadz_brand exact route registered; production/preview/reporting disabled pending separate approval."
+    "reason": "Independent CONNECT analytics remains disabled; the canonical peakheadz_brand runtime controls owner-approved Production-only consented collection. Preview and Lite reporting remain disabled."
   },
   "linkIds": [
     "peakheadz_instagram",

@@ -1,3 +1,7 @@
+## PEAKHEADZ Production / consented observation — 2026-10-09
+
+/connect and all nine brand routes are public after #14/#15. Owner-approved Production-only measurement package is pinned to central d7efc37; Preview and Lite reporting remain disabled. Consent, GPC, withdrawal and exact route gates remain. Real receipt/processing/mapping are separate evidence, not inferred from deployment. Preview-only CSP preserves the original Production AdSense ownership snippet. See docs/connect/OBSERVER_ONBOARDING.md and central docs/PEAKHEADZ_PRODUCTION_ACTIVATION.md. Historical Preview-only sections below describe prior stages.
+
 ## PEAKHEADZ CONNECT v1.0 — 2026-10-08
 
 `/connect` はSNSと公開作品への独立した入口。既存TOP、About、Information、Projects、Orbit、SNS別入口は維持する。黒・青・白と正式ロゴを使用し、HTMLのみでも全リンクが使える。
