@@ -3,7 +3,7 @@
   "artifacts": {
     "peakheadz_brand_profile": {
       "path": "generated/peakheadz_brand.profile.json",
-      "sha256": "d23e74a6499d1deee2cccf6e1e511562af9b82e61751852c02d9ff97ce352f17"
+      "sha256": "4e830597babdd507bd968df4863e27ab7f6833721357b2f2dcb3648e172433c6"
     },
     "peakheadz_it_support_profile": {
       "path": "generated/peakheadz_it_support.profile.json",
@@ -11,7 +11,7 @@
     },
     "runtime_schema": {
       "path": "generated/runtime_schema.json",
-      "sha256": "c8265286b76ab46ec9389a9c5aa543e5f415ad82ba40da148c3326e9bd5c7a06"
+      "sha256": "5febdd3a66a918a74e7b2b5c6d7a2a724f93b38a795990bcf3d368773f982496"
     }
   },
   "schema_version": "1.0.0-phase1a-revision",

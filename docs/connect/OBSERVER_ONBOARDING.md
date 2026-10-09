@@ -86,3 +86,9 @@ Central Lite now prepares CTA ID/group breakdown through its existing collector/
 Post-edit validation: site 7 tests and both generators pass. Central full suite: Python 256 plus 116 subtests; Node 215; focused post-edit Python 28. See the central production-readiness document's 2026-10-09 section for exact approval scope and release sequence. Real production communication/GA4 receipt are not marked PASS.
 
 Final central source pin: 42ddb82 (target-only canonical export; runtime/profile/schema unchanged).
+
+## Owner-approved Production — 2026-10-09
+
+#139 -> #14 -> #15 merged; Production deployment530394f3 succeeded with collection stopped. Live nine-route HTTP/canonical/HTML/no-transform/loader/RUM checks passed. GA4 admin HTTPS/OFF/CTA event definitions saved and reloaded; existing six definitions and START retained. Worker Git only disconnected. Pages-host-only CSP verified in Preview81208d62 and 45 width combinations; original Production ownership snippet unchanged. Official Google CMP test displayed and rejection dismissed the existing European message; regional TCF/network behavior is not claimed verified.
+
+Owner-approved activation pin d7efc37 is exported only for peakheadz_site. Production consented collection is allowed, Preview refused. Privacy text now describes that boundary. Central reporting/measurement evidence statuses remain pending, with validation quarantine and all Lite CTA gates OFF. Real browser wire/receipt and processed mapping require evidence; DOM/mock tests do not substitute for it. Rollback is the prior no-send Production deployment530394f3 if activation privacy/behavior fails.
