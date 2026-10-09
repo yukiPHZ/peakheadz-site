@@ -59,6 +59,7 @@
       rateLimit: new Map(),
       rateLimitedCount: 0,
       pageContext: {},
+      boundRoute: null,
       now: () => Date.now(),
     };
   }
@@ -282,6 +283,9 @@
   }
 
   function validProductionPath(profile) {
+    // Route contracts are literal Cloudflare canonical paths, including whether
+    // they end in a slash. Legacy prefix/normalized contracts keep their behavior.
+    if (profile.route_contracts && profile.production_path_policy.mode === "exact") return asArray(profile.production_path_policy.values).includes(getWindow().location.pathname);
     const path = currentPath();
     if (!path) return false;
     if (asArray(profile.excluded_routes).some((route) => path === normalizePath(route) || path.startsWith(normalizePath(route).replace(/\/$/, "") + "/"))) return false;
@@ -382,7 +386,7 @@
     const origin = currentOrigin();
     if (!origin || (!asArray(profile.production_origins).includes(origin) && !previewValidationAllowed)) reasons.push("non_production_origin");
     if (!validProductionPath(profile)) reasons.push("invalid_production_path");
-    const route = profile.route_contracts && profile.route_contracts[currentPath()];
+    const route = profile.route_contracts && profile.route_contracts[getWindow().location.pathname];
     if (route) {
       if (!profileRouteConsentAvailable()) reasons.push("route_consent_unavailable");
       const production = asArray(profile.production_origins).includes(getWindow().location.origin);
@@ -480,6 +484,7 @@
   }
 
   function init(config) {
+    if (TERMINAL_STATES.has(state.status)) return { ok: false, reasons: [`already_${state.status}`], retryable: false };
     const safeConfig = config || {};
     state.config = safeConfig;
     state.runtimeSchema = safeConfig.runtimeSchema || null;
@@ -493,6 +498,9 @@
       return { ok: false, reasons: reasons.slice(), retryable: state.status === "blocked_retryable" };
     }
 
+    if (state.profile.route_contracts && state.profile.route_contracts[getWindow().location.pathname]) {
+      state.boundRoute = { origin: getWindow().location.origin, path: getWindow().location.pathname };
+    }
     state.status = "loading";
     state.transport = ensureOwnedTransport(safeConfig);
     const loaded = state.transport.loadTag ? state.transport.loadTag(safeConfig.measurementId) : false;
@@ -608,7 +616,7 @@
     if (definition.allowed_values && !definition.allowed_values.includes(normalized)) return { ok: false, reason: "enum" };
     const sourceValues = allowedValuesForSource(definition.allowed_values_source);
     if (sourceValues && !sourceValues.has(normalized)) return { ok: false, reason: "source_enum" };
-    const strictAliasKey = { route_id: "route_ids", cta_id: "cta_ids", tool_action: "tool_actions", result_type: "result_types", error_code: "error_codes", component: "components" }[name];
+    const strictAliasKey = { route_id: "route_ids", cta_id: "cta_ids", section_id: "section_ids", product_id: "product_ids", price_id_alias: "price_id_aliases", tool_action: "tool_actions", result_type: "result_types", error_code: "error_codes", component: "components" }[name];
     if (state.profile.privacy_contract && state.profile.privacy_contract.permitted === "canonical_fixed_aliases_only" && strictAliasKey && !asArray(state.profile.aliases[strictAliasKey]).includes(normalized)) return { ok: false, reason: "project_alias" };
     if (definition.pattern && !new RegExp(definition.pattern).test(normalized)) return { ok: false, reason: "pattern" };
     return { ok: true, value: normalized };
@@ -749,7 +757,9 @@
   function track(eventName, parameters, options) {
     const runtimeSchema = state.runtimeSchema || {};
     if (state.status !== "ready") return { ok: false, reason: "tracker_not_ready" };
-    const route = state.profile.route_contracts && state.profile.route_contracts[currentPath()];
+    const route = state.profile.route_contracts && state.profile.route_contracts[getWindow().location.pathname];
+    if (state.boundRoute && (getWindow().location.origin !== state.boundRoute.origin || getWindow().location.pathname !== state.boundRoute.path || !route)) return { ok: false, reason: "route_changed" };
+    if (route && eventName === "cta_click" && ((parameters || {}).route_id !== route.route_id || (parameters || {}).content_type !== route.content_type || !asArray(state.profile.aliases.cta_groups).includes((parameters || {}).cta_group))) return { ok: false, reason: "route_context_mismatch" };
     if (route && !profileRouteConsentAvailable()) return { ok: false, reason: "route_consent_unavailable" };
     if (route && (!asArray(route.allowed_events).includes(eventName)
         || (eventName === "cta_click" && !Object.prototype.hasOwnProperty.call(route.cta_destinations, (parameters || {}).cta_id)))) return { ok: false, reason: "route_event_not_allowed" };

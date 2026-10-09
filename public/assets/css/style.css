@@ -1512,6 +1512,7 @@ img {
 @media (max-width: 420px) {
   .orbit-hero h1 span {
     display: block;
+    white-space: normal;
   }
 
   .orbit-hero h1 {

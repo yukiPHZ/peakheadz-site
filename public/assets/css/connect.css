@@ -42,6 +42,9 @@ a.connect-card:hover { background: #19191e; border-color: #7195df; }
 .sr-only, .skip-link:not(:focus) { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .skip-link:focus { position: fixed; z-index: 10; top: 12px; left: 12px; padding: 12px 20px; background: #245bc5; color: #fff; }
 .mobile-break { display: none; }
+.connect-page > .site-utility-links { width: min(100% - 40px, 1000px); margin: 0 auto 24px; font-size: 12px; color: #b2b2b8; }
+.connect-page > .site-utility-links summary, .connect-page > .site-utility-links a, .connect-page .market-observer-consent-change { display: flex; align-items: center; min-height: 44px; }
+.connect-page .market-observer-consent-banner { width: min(100% - 40px, 720px); }
 @media (max-width: 600px) {
   .connect-grid { grid-template-columns: minmax(0, 1fr); }
   .connect-hero { padding-block: 32px 44px; }
