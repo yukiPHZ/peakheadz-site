@@ -83,3 +83,16 @@ test('unsafe links, unverified active rows and internal UTMs fail generation', (
   changed.links[0].verifiedAt='2026-10-08'; changed.analytics.enabled=true;
   assert.throws(()=>validate(changed),/onboarding/);
 });
+
+
+test('advertising and analytics consent are explicitly separate without changing the AdSense review tag',()=>{
+  const paths=['index.html','about.html','information.html','projects/index.html','orbit/index.html','connect.html','instagram/index.html','threads/index.html','x/index.html'];
+  for(const file of paths){
+    const html=fs.readFileSync(new URL('../public/'+file,import.meta.url),'utf8');
+    assert.ok(html.includes('このGA4解析では広告シグナルと広告パーソナライズを使用しません。解析設定は広告への同意を兼ねません。'),file);
+    assert.ok(!/src="https:\/\/(www\.)?(googletagmanager|google-analytics)\.com/.test(html),file);
+    const ads=html.match(/<script async src="https:\/\/pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js\?client=ca-pub-5726328353897371"\s+crossorigin="anonymous"><\/script>/g)||[];
+    assert.equal(ads.length,file==='index.html'?1:0,file);
+    if(file==='index.html')assert.ok(html.includes('解析設定の選択前にも発生'));
+  }
+});

@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-08T14:35:23Z",
+  "generated_at_utc": "2026-10-09T04:53:22Z",
   "managed_file_checksums": {
     "README.md": "95be62d9cd83a5a55c1355d54244e451b07e9f6f6826687b83e362f175ee048c",
     "consent-banner.js": "6c7739455934cd810fa9eaf51260b4f1c746e2c0ec767ee9cb0320f862592b55",
@@ -11,7 +11,7 @@
     "market-observer.js": "22979de8c78c924adb019b893c7533bd8db0261864079e32b89804d25e917c8d"
   },
   "manifest_checksum": "428e5aab02636c652e0a724494edff566586763e88d33cd5cbe996a9ab0ac893",
-  "market_observer_commit": "29dc51a6219a9ddbfd32935c837b1504a2a11755",
+  "market_observer_commit": "42ddb82a1bd4677b8a76203ee7f8aac5e5a266ed",
   "profile_checksums": {
     "peakheadz_brand": "d23e74a6499d1deee2cccf6e1e511562af9b82e61751852c02d9ff97ce352f17",
     "peakheadz_it_support": "fce5a36d58bbad53dfaa4af40242d3efb6acdea80279683b743f28cc39978d29"
@@ -28,21 +28,21 @@
     "data/connect.json": "c49c19d53b6736584497086300dc7c8f237ca9074d86ade6b97712abab5cf169",
     "data/profile-catalog.json": "0e9c436ddd337a55110d545724abce26b7487d359a2c3250b6a756f19b6ae30e",
     "public/_headers": "1c3cf3b198b1fb32bdcc65e9b4141ca49ce8ea52ef3c7f09c595a1de08f3272c",
-    "public/about.html": "f26fb13f5da3ba390e4c61cb2d0eca54929dbf2a8f9386c67d552d3084cd8183",
+    "public/about.html": "4d3b61da6d52cecc309cf7be30862067cf2635be39bae46d1f88263d576b758f",
     "public/assets/js/it-support-observation.js": "628f2cec432cc019ef20214668d5f54b06bf748ab72a30d819bb89c7d27c46ed",
     "public/assets/js/peakheadz-it-support-market-observer.config.js": "4791c95676342d3539a022789026ddd96cafc2ebbd2c293c3a230d1287c09c46",
     "public/assets/js/profile-observation.js": "a154c173f858eabe6c8462b43be04df50312f6cd0f974b9fa8d13f8f264690ce",
-    "public/connect.html": "68d4e994c3480c8f12af3ad5486f82f7ac34e37d9c0e2b85c7713fafba0725af",
-    "public/index.html": "690b9f38767ea8def202240460fe32e4d5726e7952dc9cbbe5b3af38f2cf0abf",
-    "public/information.html": "1ed01fe970da07fb3cb17e640244003337853fdb55f2f9e9ddf84869885de86d",
-    "public/instagram/index.html": "2d99524c99f96a888ccbca44cc175da9b98eb331acef29f264ee282060826edc",
+    "public/connect.html": "8dafce1bec085d1221e85785d0b1199f8e8fe9d2ecd0cbdcb55adf8a55614163",
+    "public/index.html": "7fb5e6e0ba3ea0c0d19406999b7329cbc7b33e7b8b90b0bd96f32fedacaf5524",
+    "public/information.html": "dcecb533addcc0077eb7670c9ab80ce28e617ea7bfe812ad7567391dec234a61",
+    "public/instagram/index.html": "5cb54bf2463f04f2a3f9fd098eb4b70f9dfb33f47e21fa8d90e598e92d100332",
     "public/it-support/index.html": "623e2e10e101c1a8adf14489165a471f7bc69db802311924de1fd66523b3ead7",
-    "public/orbit/index.html": "ecbd34db63d7172332ce6bfbd9443e188547aa200ef20adbd2ab76c1017dbc03",
-    "public/projects/index.html": "78ef401b27c84ff956dcb5482a3e363c10365acaf50441770993bf1eae277d84",
-    "public/threads/index.html": "c49dece7727987b4bc74836ebe9e6e611230ad6a2a58f49cbb62cde8574a819c",
-    "public/x/index.html": "418411bc2a7ee4108b2af8498d45cba47c87995f61800c23bc8a9fb65b720325",
+    "public/orbit/index.html": "a2af9c70ea1e6dbc28d5c77be1b49d269432ce82238996345605a02303f6c3ae",
+    "public/projects/index.html": "7848cc87afe0368d79b276831a627a973c1fdbd754fbc378c22bcd6acd0717b5",
+    "public/threads/index.html": "6f78983efa0b62dc81f9e5cd527843f0f06150901c545a32590b202f1b7fcc27",
+    "public/x/index.html": "38c8b02eb62a93723c3718aa7a03f170c75c5255a43b2f9ded2f191cda6d351b",
     "scripts/generate-connect.mjs": "64ce3cd8796b2865a7b4bc55a612691466900646734f7eea8b1db083c2e79561",
-    "templates/connect.html": "14b608b79cc640be41960befa3bbb917750f6982cad9bcc2f0a7d8e3f0f302fb"
+    "templates/connect.html": "4ac79b262c8bde86098d63b73b6085bb88864f927e7d0a0ddb0fb8706f0c3807"
   },
   "site_local_overrides": [],
   "target_id": "peakheadz_site"
