@@ -96,3 +96,16 @@ test('advertising and analytics consent are explicitly separate without changing
     if(file==='index.html')assert.ok(html.includes('解析設定の選択前にも発生'));
   }
 });
+
+test('Pages host-only CSP blocks advertising and analytics without changing Production ownership HTML',()=>{
+  const headers=fs.readFileSync(new URL('../public/_headers',import.meta.url),'utf8');
+  const blocks=headers.trim().split(/\r?\n\r?\n/);
+  const policies=blocks.filter(b=>b.includes('Content-Security-Policy:'));
+  assert.equal(policies.length,2);
+  for(const block of policies){
+    assert.match(block,/https:\/\/(?:\:preview\.)?peakheadz-site\.pages\.dev\/\*/);
+    assert.match(block,/script-src 'self' 'unsafe-inline'; connect-src 'self'; frame-src 'none';/);
+    assert.ok(!block.includes('https://peakheadz.com'));
+    assert.ok(!block.includes('googlesyndication'));
+  }
+});
