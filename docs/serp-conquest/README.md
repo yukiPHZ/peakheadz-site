@@ -663,3 +663,8 @@ PEAKHEADZが活動を一つに束ねる。
 人が止まる場所へ、本当に使える道具と流れを先に置く。
 
 その結果として、検索の面を取る。
+
+## 告知事項 Legacy Revival（2026-10-09 ローカルレビュー）
+
+制作実物から派生する2記事と各surfaceの責任、公開順を [LEGACY_REVIVAL.md](LEGACY_REVIVAL.md) に記録。Production・検索登録・計測追加は未実施。
+

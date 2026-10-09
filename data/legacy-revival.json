@@ -1,0 +1,9 @@
+{
+  "id": "kokuchijiko",
+  "name": "告知事項",
+  "description": "不動産調査を入口にした推理アドベンチャー。人の話と残された記録を、確かめながらたどる作品です。人物帳と名前当てゲームを制作しています。",
+  "candidateOfficialUrl": "https://kokuchijiko.peakheadz.com/",
+  "localPreviewUrl": "http://127.0.0.1:4186/",
+  "publicationStatus": "local-review",
+  "productionLinkEnabled": false
+}
