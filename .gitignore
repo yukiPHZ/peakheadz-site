@@ -20,4 +20,5 @@ Thumbs.db
 # Node / build tools if added later
 node_modules/
 dist/
-.cache//review/
+.cache/
+/review/
