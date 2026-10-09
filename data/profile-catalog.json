@@ -12,7 +12,20 @@
   "niceskill": {
     "name": "NICE SKILL",
     "url": "https://niceskill.com/",
-    "source": "PEAKHEADZ README current activities / Projects; NICE SKILL ORIGINAL.md; public root verified 2026-09-30"
+    "source": "PEAKHEADZ README current activities / Projects; NICE SKILL ORIGINAL.md; public root verified 2026-09-30",
+    "connect": {
+      "brand": "NICE SKILL",
+      "platform": "website",
+      "accountName": "NICE SKILL",
+      "description": "暮らしの中に、小さな営みをひとつ。今日のちょっとを体験する。",
+      "category": "Web Experiences",
+      "status": "active",
+      "featured": false,
+      "displayOrder": 40,
+      "verifiedAt": "2026-10-08",
+      "cta": "体験する",
+      "verificationSource": "niceskill-site/public/index.html"
+    }
   },
   "shimarisu_fudosan": {
     "name": "しまりす不動産",
@@ -22,7 +35,20 @@
   "creator_profile": {
     "name": "菊田幸彦",
     "url": "https://yukihikokikuta.com/",
-    "source": "PEAKHEADZ current About / Person entity; public root verified 2026-09-30"
+    "source": "PEAKHEADZ current About / Person entity; public root verified 2026-09-30",
+    "connect": {
+      "brand": "菊田幸彦 / ユキズ",
+      "platform": "website",
+      "accountName": "Yukihiko Kikuta",
+      "description": "活動の奥にある、個人の視点。",
+      "category": "Making & Reviews",
+      "status": "active",
+      "featured": false,
+      "displayOrder": 51,
+      "verifiedAt": "2026-10-08",
+      "cta": "見に行く",
+      "verificationSource": "public/information.html"
+    }
   },
   "projects": {
     "name": "Projects",
@@ -33,5 +59,238 @@
     "name": "PEAKHEADZについて",
     "url": "https://peakheadz.com/about",
     "source": "PEAKHEADZ current root navigation canonical extensionless URL"
+  },
+  "peakheadz_instagram": {
+    "name": "@peakheadz",
+    "url": "https://www.instagram.com/peakheadz/",
+    "source": "peakheadz-social-publisher/brands/peakheadz/BRAND.md",
+    "connect": {
+      "brand": "PEAKHEADZ",
+      "platform": "instagram",
+      "accountName": "@peakheadz",
+      "description": "制作・開発と、作品のこと。",
+      "category": "social",
+      "status": "active",
+      "featured": false,
+      "displayOrder": 10,
+      "verifiedAt": "2026-10-08",
+      "cta": "フォローする",
+      "verificationSource": "peakheadz-social-publisher/brands/peakheadz/BRAND.md"
+    }
+  },
+  "peakheadz_threads": {
+    "name": "@peakheadz",
+    "url": "https://www.threads.com/@peakheadz",
+    "source": "peakheadz-social-publisher/brands/peakheadz/BRAND.md",
+    "connect": {
+      "brand": "PEAKHEADZ",
+      "platform": "threads",
+      "accountName": "@peakheadz",
+      "description": "制作・開発と、作品のこと。",
+      "category": "social",
+      "status": "active",
+      "featured": false,
+      "displayOrder": 11,
+      "verifiedAt": "2026-10-08",
+      "cta": "フォローする",
+      "verificationSource": "peakheadz-social-publisher/brands/peakheadz/BRAND.md"
+    }
+  },
+  "peakheadz_tiktok": {
+    "name": "@peakheadz",
+    "url": "https://www.tiktok.com/@peakheadz",
+    "source": "peakheadz-social-publisher/brands/peakheadz/BRAND.md",
+    "connect": {
+      "brand": "PEAKHEADZ",
+      "platform": "tiktok",
+      "accountName": "@peakheadz",
+      "description": "制作・開発と、作品のこと。",
+      "category": "social",
+      "status": "active",
+      "featured": false,
+      "displayOrder": 12,
+      "verifiedAt": "2026-10-08",
+      "cta": "フォローする",
+      "verificationSource": "peakheadz-social-publisher/brands/peakheadz/BRAND.md"
+    }
+  },
+  "niceskillcom_instagram": {
+    "name": "@niceskillcom",
+    "url": "https://www.instagram.com/niceskillcom/",
+    "source": "peakheadz-social-publisher/brands/nice-skill/BRAND.md",
+    "connect": {
+      "brand": "NICE SKILL",
+      "platform": "instagram",
+      "accountName": "@niceskillcom",
+      "description": "二人で使うWeb体験と、小さなきっかけ。",
+      "category": "social",
+      "status": "active",
+      "featured": false,
+      "displayOrder": 20,
+      "verifiedAt": "2026-10-08",
+      "cta": "フォローする",
+      "verificationSource": "peakheadz-social-publisher/brands/nice-skill/BRAND.md"
+    }
+  },
+  "niceskillcom_threads": {
+    "name": "@niceskillcom",
+    "url": "https://www.threads.com/@niceskillcom",
+    "source": "peakheadz-social-publisher/brands/nice-skill/BRAND.md",
+    "connect": {
+      "brand": "NICE SKILL",
+      "platform": "threads",
+      "accountName": "@niceskillcom",
+      "description": "二人で使うWeb体験と、小さなきっかけ。",
+      "category": "social",
+      "status": "active",
+      "featured": false,
+      "displayOrder": 21,
+      "verifiedAt": "2026-10-08",
+      "cta": "フォローする",
+      "verificationSource": "peakheadz-social-publisher/brands/nice-skill/BRAND.md"
+    }
+  },
+  "niceskillcom_tiktok": {
+    "name": "@niceskillcom",
+    "url": "https://www.tiktok.com/@niceskillcom",
+    "source": "peakheadz-social-publisher/brands/nice-skill/BRAND.md",
+    "connect": {
+      "brand": "NICE SKILL",
+      "platform": "tiktok",
+      "accountName": "@niceskillcom",
+      "description": "二人で使うWeb体験と、小さなきっかけ。",
+      "category": "social",
+      "status": "active",
+      "featured": false,
+      "displayOrder": 22,
+      "verifiedAt": "2026-10-08",
+      "cta": "フォローする",
+      "verificationSource": "peakheadz-social-publisher/brands/nice-skill/BRAND.md"
+    }
+  },
+  "yukiz_x": {
+    "name": "@yukiz_PHZ",
+    "url": "https://x.com/yukiz_PHZ",
+    "source": "peakheadz-social-publisher/campaigns/2026q4/PROGRESS.md (API identity verified)",
+    "connect": {
+      "brand": "菊田幸彦 / ユキズ",
+      "platform": "x",
+      "accountName": "@yukiz_PHZ",
+      "description": "レビュー、制作、日々の発信。",
+      "category": "social",
+      "status": "active",
+      "featured": false,
+      "displayOrder": 1,
+      "verifiedAt": "2026-10-08",
+      "cta": "フォローする",
+      "verificationSource": "peakheadz-social-publisher/campaigns/2026q4/PROGRESS.md (API identity verified)"
+    }
+  },
+  "yukiz_youtube": {
+    "name": "ユキズ 稼働中",
+    "url": "https://www.youtube.com/@yukiz_PHZ",
+    "source": "public/index.html",
+    "connect": {
+      "brand": "菊田幸彦 / ユキズ",
+      "platform": "youtube",
+      "accountName": "ユキズ 稼働中",
+      "description": "レビューと制作のコンテンツを、動画で。",
+      "category": "social",
+      "status": "active",
+      "featured": true,
+      "displayOrder": 30,
+      "verifiedAt": "2026-10-08",
+      "cta": "チャンネルを見る",
+      "verificationSource": "public/index.html"
+    }
+  },
+  "yuki_github": {
+    "name": "yukiPHZ",
+    "url": "https://github.com/yukiPHZ",
+    "source": "public/index.html",
+    "connect": {
+      "brand": "菊田幸彦 / ユキズ",
+      "platform": "github",
+      "accountName": "yukiPHZ",
+      "description": "開発しているものと、そのソースコード。",
+      "category": "social",
+      "status": "active",
+      "featured": false,
+      "displayOrder": 31,
+      "verifiedAt": "2026-10-08",
+      "cta": "コードを見る",
+      "verificationSource": "public/index.html"
+    }
+  },
+  "dake_tools": {
+    "name": "DAKE Web Tools",
+    "url": "https://tools.dakeapp.com/",
+    "source": "public/orbit/index.html",
+    "connect": {
+      "brand": "DAKE",
+      "platform": "website",
+      "accountName": "DAKE Web Tools",
+      "description": "ブラウザで使える、小さな実務道具。仕事の途中のひと手間を軽く。",
+      "category": "Apps & Tools",
+      "status": "active",
+      "featured": true,
+      "displayOrder": 41,
+      "verifiedAt": "2026-10-08",
+      "cta": "使ってみる",
+      "verificationSource": "public/orbit/index.html"
+    }
+  },
+  "dake_store": {
+    "name": "DAKE Store",
+    "url": "https://store.dakeapp.com/",
+    "source": "peakheadz-project-index/PEAKHEADZ_PROJECT_INDEX.md",
+    "connect": {
+      "brand": "DAKE",
+      "platform": "website",
+      "accountName": "DAKE Store",
+      "description": "用途から選べるDAKEのアプリ。各商品の詳細と入手先へ。",
+      "category": "Apps & Tools",
+      "status": "active",
+      "featured": true,
+      "displayOrder": 42,
+      "verifiedAt": "2026-10-08",
+      "cta": "アプリを探す",
+      "verificationSource": "peakheadz-project-index/PEAKHEADZ_PROJECT_INDEX.md"
+    }
+  },
+  "japan_memory_lane": {
+    "name": "Japan Memory Lane",
+    "url": "https://japanmemorylane.com/",
+    "source": "public/information.html",
+    "connect": {
+      "brand": "Japan Memory Lane",
+      "platform": "website",
+      "accountName": "Japan Memory Lane",
+      "description": "写真と言葉で、日本の静かな記憶を残す。",
+      "category": "Other Projects",
+      "status": "active",
+      "featured": false,
+      "displayOrder": 50,
+      "verifiedAt": "2026-10-08",
+      "cta": "見に行く",
+      "verificationSource": "public/information.html"
+    }
+  },
+  "thanks": {
+    "name": "THANKS",
+    "url": "https://thanks.niceskill.com/",
+    "source": "public/orbit/index.html; niceskill.com/works/; anonymous HTTP 200 with title identity on 2026-10-08",
+    "connect": {
+      "brand": "NICE SKILL",
+      "platform": "website",
+      "accountName": "THANKS",
+      "description": "いつもありがとう。二人で使う、小さなWeb体験。",
+      "category": "Web Experiences",
+      "status": "active",
+      "featured": true,
+      "displayOrder": 39,
+      "verifiedAt": "2026-10-08",
+      "cta": "体験する"
+    }
   }
 }

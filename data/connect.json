@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "analytics": {
+    "enabled": false,
+    "reason": "CONNECT is not registered in the central Market Observer event/profile contracts."
+  },
+  "linkIds": [
+    "peakheadz_instagram",
+    "peakheadz_threads",
+    "peakheadz_tiktok",
+    "niceskillcom_instagram",
+    "niceskillcom_threads",
+    "niceskillcom_tiktok",
+    "yukiz_x",
+    "yukiz_youtube",
+    "yuki_github",
+    "niceskill",
+    "dake_tools",
+    "dake_store",
+    "japan_memory_lane",
+    "creator_profile",
+    "thanks"
+  ],
+  "comingNextIds": []
+}
