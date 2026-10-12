@@ -1,3 +1,7 @@
+## 告知事項公式への作品導線 — 2026-10-13
+
+PR17 / main cf66005 により Projects の1カードを公開。Pages本番と390px表示を確認。公式 https://kokuchijiko.peakheadz.com/ は124人の人物帳・ゲームを公開済み、本編は公開準備中。START2記事は独立HOLDを維持。今回CONNECT/計測runtime/他作品は変更していない。[公開記録](docs/serp-conquest/LEGACY_REVIVAL.md)。
+
 ## PEAKHEADZ Production / consented observation — 2026-10-09
 
 /connect and all nine brand routes are public after #14/#15. Owner-approved Production-only measurement package is pinned to central d7efc37; Preview and Lite reporting remain disabled. Consent, GPC, withdrawal and exact route gates remain. Real receipt/processing/mapping are separate evidence, not inferred from deployment. Preview-only CSP preserves the original Production AdSense ownership snippet. See docs/connect/OBSERVER_ONBOARDING.md and central docs/PEAKHEADZ_PRODUCTION_ACTIVATION.md. Historical Preview-only sections below describe prior stages.

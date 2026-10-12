@@ -6,7 +6,7 @@
 
 最新maine52b5ebを取り込み、Projectsの既存gridへ1カード・通常リンク1本だけ追加。CONNECT/計測runtime・凍結ページ・他ブランドの責任は維持。新しい計測alias/eventなし。本人サイトは日英Legacyの一次証拠と実物。STARTの旧コード記事A/継承記事BはDraft PR #11で公開HOLD。公開拒否ゲートと32route観測窓を維持し、未公開URLへCTAを置かない。
 
-QA: 公式リンク1件、localhost URLなし、既存8テスト、390px表示/overflowなし。検索成果baseline pending。各Production実測はcommit後に記録する。以下は初期案の履歴。
+QA: 公式リンク1件、localhost URLなし、既存8テスト、390px表示/overflowなし。検索成果baseline pending。PR17はmain cf66005f60a83eac88a65a0e39e5377e40c8d9f7へmerge。Pages deployment 0f3e3681-148f-4a99-88ef-3e4164c66305 はsuccess。2026-10-12 22:44:36 JSTに本番/projects/のHTTP200、作品カードと公式リンクを照合。390pxをDOMで実測し横はみ出しなし。証跡は制作母艦related-production.jsonとlaunch-qa/peakheadz-project-verified-mobile.jpg。以下は初期案の履歴。
 
 2026-10-09、ローカルレビュー段階。検索順位・流入・インデックス効果は未測定。既存の四surfaceの責任を変更せず、作品本体を『告知事項』の独立した正本とする。
 
