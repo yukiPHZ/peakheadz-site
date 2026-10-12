@@ -4,6 +4,10 @@
 
 # KIKUTA / PEAKHEADZ / DAKE SERP CONQUEST
 
+## CONNECT追加 — 2026-10-08
+
+`https://peakheadz.com/connect` はXなどから来た訪問者が、公開済み作品と各ブランドのSNSを選ぶための独立ページ。通常index対象とし、ブランド・制作者の入口を担う。TOPの静かな玄関、Informationの正式索引、Projectsの代表作、Orbitの全量記録、既存SNS別入口の役割は維持する。内部リンクへUTMを付けず、一般検索需要は引き続き各作品・ブランドへ委ねる。URL正本は既存 `data/profile-catalog.json` を再利用し、CONNECTの表示設定だけを `data/connect.json` で管理する。未発表企画は登録しない。本番公開・計測有効化は未実施。
+
 この文書は、`peakheadz.com`、`start.peakheadz.com`、`tools.dakeapp.com`、`yukihikokikuta.com` の四surfaceを横断するSERP責任分担の専門正本です。
 
 単なるSEO施策や記事量産ではなく、実際に役立つ道具、活動を束ねる母体、その理由を持つ人を、それぞれの役割のまま検索上へ広げていきます。

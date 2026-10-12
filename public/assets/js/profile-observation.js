@@ -1,4 +1,5 @@
 (function(root){'use strict';
+  if(root.__PEAKHEADZ_OBSERVER_BOOTSTRAPPED__)return;
   var body=root.document.body, data=root.MarketObserverRuntimePackage,tracker=root.MarketObserver;
   if(root.MarketObserverConsent)root.MarketObserverConsent.mount({locale:'ja',presentation:'quiet',containerSelector:'#analytics-consent',settingsContainerSelector:'.site-utility-links',privacyUrl:body.getAttribute('data-profile-project')==='niceskill'?'/about/#analytics':'#analytics',detailsSelector:'.analytics-privacy'});
   if(!data||!tracker)return;
@@ -9,6 +10,7 @@
   if(!profile||!hash)return;
   var route=profile.route_contracts&&profile.route_contracts[root.location.pathname];
   if(!route)return;
+  root.__PEAKHEADZ_OBSERVER_BOOTSTRAPPED__=true;
   // No local Measurement ID, checksum, path or alias allowlist. All come from the pinned central package.
   var result=tracker.init({projectId:projectId,measurementId:profile.measurement_id,runtimeSchema:data.runtimeSchema,runtimeSchemaHash:data.runtimeSchemaHash,profile:profile,profileHash:hash,pageContext:{route_id:route.route_id,content_type:route.content_type}});
   if(!result.ok)return;

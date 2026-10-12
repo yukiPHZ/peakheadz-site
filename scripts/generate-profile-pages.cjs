@@ -2,7 +2,7 @@
 const fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'..');
 const ns=false;
-const read=p=>fs.readFileSync(path.join(root,p),'utf8');
+const read=p=>fs.readFileSync(path.join(root,p),'utf8').replace(/\r\n/g,'\n');
 const esc=v=>String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const pages=JSON.parse(read('data/profile-pages.json'));
 const brand=ns?'NICE SKILL':'PEAKHEADZ',origin=ns?'https://niceskill.com':'https://peakheadz.com';
@@ -38,5 +38,5 @@ for(const [medium,p] of Object.entries(pages)){
  output='<!-- Generated from templates/profile.html, data/profile-pages.json and approved sources. Regenerate with node scripts/generate-profile-pages.cjs. -->\n'+output;
  output=output.replace(/[\t ]+$/gm,'');
  const file=path.join(root,'public',medium,'index.html');
- if(process.argv.includes('--check')){if(!fs.existsSync(file)||fs.readFileSync(file,'utf8')!==output)throw Error('Stale profile '+medium)}else{fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,output)}
+ if(process.argv.includes('--check')){if(!fs.existsSync(file)||fs.readFileSync(file,'utf8').replace(/\r\n/g,'\n')!==output)throw Error('Stale profile '+medium)}else{fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,output)}
 }console.log(brand+': '+Object.keys(pages).length+' static profiles '+(process.argv.includes('--check')?'verified':'generated'));
