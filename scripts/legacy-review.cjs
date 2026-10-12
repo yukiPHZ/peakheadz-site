@@ -11,14 +11,14 @@ if(process.argv.includes('--serve')){
  }).listen(4192,'127.0.0.1',()=>console.log('PEAKHEADZ review: http://127.0.0.1:4192/projects/'));
 }else{
  const data=JSON.parse(fs.readFileSync(path.join(root,'data/legacy-revival.json'),'utf8'));
- if(data.productionLinkEnabled||data.publicationStatus!=='local-review')throw Error('Review state changed; verify publication separately.');
+ if(!['public','local-review'].includes(data.publicationStatus))throw Error('Review state changed; verify publication separately.');
  const original=fs.readFileSync(path.join(root,'public/projects/index.html'),'utf8');
  const marker='      <p class="operator-note">';
  if(!original.includes(marker)||original.includes('id="kokuchijiko-review"'))throw Error('Review insertion point changed.');
  const esc=s=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const section='<article class="project-card" id="kokuchijiko-review"><h2>'+esc(data.name)+'</h2><p>'+esc(data.description)+'</p><p>制作中 / この画面だけの確認用導線</p><a href="'+esc(data.localPreviewUrl)+'">告知事項のローカルPreviewを見る →</a></article>\n\n';
  fs.mkdirSync(out,{recursive:true});fs.cpSync(path.join(root,'public'),out,{recursive:true});
- fs.writeFileSync(path.join(out,'projects/index.html'),original.replace(marker,section+marker).replace('<head>','<head>\n  <meta name="robots" content="noindex,nofollow,noarchive">'));
+ fs.writeFileSync(path.join(out,'projects/index.html'),(original.includes('id="kokuchijiko"')?original:original.replace(marker,section+marker)).replace('<head>','<head>\n  <meta name="robots" content="noindex,nofollow,noarchive">'));
  fs.writeFileSync(path.join(out,'robots.txt'),'User-agent: *\nDisallow: /\n');
  fs.writeFileSync(path.join(out,'sitemap.xml'),'<?xml version="1.0"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"/>');
  console.log('Projects review generated; original public/ unchanged.');

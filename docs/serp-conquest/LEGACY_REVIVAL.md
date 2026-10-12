@@ -1,5 +1,13 @@
 # 告知事項 Legacy Revival — 検索意図と導線
 
+## Phase FINAL — 2026-10-12
+
+告知事項公式 https://kokuchijiko.peakheadz.com/ は公開・Production検証済み。公開source31d24f2、Worker version4521c8b5-bf03-4827-a20e-37413a2d77b4。人物帳・ゲームは作品公式、本編は公開準備中。124人の個別SEOページを増やさず人物帳IDへ結ぶ。
+
+最新maine52b5ebを取り込み、Projectsの既存gridへ1カード・通常リンク1本だけ追加。CONNECT/計測runtime・凍結ページ・他ブランドの責任は維持。新しい計測alias/eventなし。本人サイトは日英Legacyの一次証拠と実物。STARTの旧コード記事A/継承記事BはDraft PR #11で公開HOLD。公開拒否ゲートと32route観測窓を維持し、未公開URLへCTAを置かない。
+
+QA: 公式リンク1件、localhost URLなし、既存8テスト、390px表示/overflowなし。検索成果baseline pending。各Production実測はcommit後に記録する。以下は初期案の履歴。
+
 2026-10-09、ローカルレビュー段階。検索順位・流入・インデックス効果は未測定。既存の四surfaceの責任を変更せず、作品本体を『告知事項』の独立した正本とする。
 
 |Surface|役割・意図|今回の候補|状態|
