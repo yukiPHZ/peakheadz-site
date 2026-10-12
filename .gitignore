@@ -21,4 +21,5 @@ Thumbs.db
 node_modules/
 dist/
 .cache/
+/review/
 .wrangler/

@@ -1,0 +1,12 @@
+{
+  "id": "kokuchijiko",
+  "name": "告知事項",
+  "description": "不動産調査を入口にした推理アドベンチャー。人物帳と124人の4択ゲームを公開。本編は公開準備中。",
+  "candidateOfficialUrl": "https://kokuchijiko.peakheadz.com/",
+  "localPreviewUrl": "http://127.0.0.1:4186/",
+  "publicationStatus": "public",
+  "productionLinkEnabled": true,
+  "verifiedOfficialUrl": "https://kokuchijiko.peakheadz.com/",
+  "officialSourceCommit": "31d24f208c8e714e9861bb15345d78ecd14a3ae6",
+  "verifiedAt": "2026-10-12"
+}
