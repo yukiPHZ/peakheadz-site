@@ -33,7 +33,7 @@ h1{font-size:clamp(50px,6vw,76px);font-weight:800;letter-spacing:.025em;line-hei
 .paper-back{transform:translate(-42px,7px) rotate(-12deg);background:#dbe6f9;border-color:#96acd2}
 .paper-front{transform:rotate(7deg);flex-direction:column;gap:1px}.paper-front>span{font-size:18px;line-height:1}
 .yt-art-caption{position:absolute;bottom:0;left:0;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:8px;font-weight:650;letter-spacing:.15em;color:#4c5b70}
-.yt-feature h3{font-size:30px;font-weight:750;line-height:1.4;margin-top:20px;letter-spacing:-.025em}
+.yt-feature h3{word-break:keep-all;overflow-wrap:anywhere;font-size:30px;font-weight:750;line-height:1.4;margin-top:20px;letter-spacing:-.025em}
 .yt-product-name{font-size:14px;font-weight:650;margin-top:6px}.yt-feature-copy{font-size:13px;color:#465063;margin-block:13px 20px;line-height:1.8}
 .yt-jump{position:sticky;top:0;z-index:2;background:#0a0a0af5;display:flex;justify-content:space-between;gap:8px;border-block:1px solid var(--line)}
 .yt-jump>a{min-height:50px;display:flex;align-items:center;font-size:12px;white-space:nowrap;font-weight:600}
