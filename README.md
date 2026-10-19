@@ -1,3 +1,9 @@
+## ユキズ　稼働中 YouTubeリンクハブ — Preview / 2026-10-19
+
+候補 `/youtube/` は既存リンク正本 `data/profile-catalog.json` と、参照ID/表示順だけを持つ `data/youtube.json` から静的生成する。紹介アプリの掲載/順序はデータで編集し、`node scripts/generate-youtube.mjs` でHTMLと製品manifestを更新する。既存CONNECT、X、Instagram、Threads、TOP、共通CSS、中央Analyticsは保全する。
+
+`node scripts/generate-youtube.mjs --check`、`node --test tests/connect.test.mjs tests/youtube.test.mjs` で検証。手順・Preview境界は [YouTube実装記録](docs/youtube/IMPLEMENTATION.md)、[リンク確認](docs/youtube/LINK_VERIFICATION.md)、[Publisher経路設計](docs/youtube/PUBLISHER_ROUTE_DESIGN.md) を参照。今回は既存Pagesのfeature branch Previewまで。main merge・本番公開・YouTubeプロフィール変更は別承認。新ページはnoindex、sitemap未掲載、タグ/JS/解析送信なし。
+
 ## PEAKHEADZ Production / consented observation — 2026-10-09
 
 /connect and all nine brand routes are public after #14/#15. Owner-approved Production-only measurement package is pinned to central d7efc37; Preview and Lite reporting remain disabled. Consent, GPC, withdrawal and exact route gates remain. Real receipt/processing/mapping are separate evidence, not inferred from deployment. Preview-only CSP preserves the original Production AdSense ownership snippet. See docs/connect/OBSERVER_ONBOARDING.md and central docs/PEAKHEADZ_PRODUCTION_ACTIVATION.md. Historical Preview-only sections below describe prior stages.

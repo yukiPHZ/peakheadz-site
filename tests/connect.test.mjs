@@ -100,8 +100,11 @@ test('advertising and analytics consent are explicitly separate without changing
 test('Pages host-only CSP blocks advertising and analytics without changing Production ownership HTML',()=>{
   const headers=fs.readFileSync(new URL('../public/_headers',import.meta.url),'utf8');
   const blocks=headers.trim().split(/\r?\n\r?\n/);
-  const policies=blocks.filter(b=>b.includes('Content-Security-Policy:'));
+  const allPolicies=blocks.filter(b=>b.includes('Content-Security-Policy:'));
+  const policies=allPolicies.filter(b=>/^https:\/\//m.test(b));
+  assert.equal(allPolicies.length,3);
   assert.equal(policies.length,2);
+  assert.equal(allPolicies.filter(b=>b.startsWith('/youtube/*')).length,1);
   for(const block of policies){
     assert.match(block,/https:\/\/(?:\:preview\.)?peakheadz-site\.pages\.dev\/\*/);
     assert.match(block,/script-src 'self' 'unsafe-inline'; connect-src 'self'; frame-src 'none';/);
