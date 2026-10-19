@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "canonicalPath": "/youtube/",
+  "analytics": {
+    "enabled": false,
+    "reason": "No approved central route contract for /youtube/; do not load analytics or modify saved consent."
+  },
+  "channelRef": "yukiz_youtube",
+  "featuredRefs": [
+    "dake_pdf_merge"
+  ],
+  "appRefs": [
+    "dake_apps",
+    "dake_store"
+  ],
+  "serviceRefs": [
+    "dake_tools",
+    "niceskill"
+  ],
+  "socialRefs": [
+    "yukiz_x",
+    "yukiz_instagram",
+    "peakheadz_instagram",
+    "peakheadz_threads",
+    "peakheadz_tiktok",
+    "yuki_github"
+  ],
+  "supportRef": "dake_pdf_merge_booth",
+  "releaseStage": "production"
+}

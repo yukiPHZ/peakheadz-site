@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "releaseStage": "production",
+  "hubUrl": "https://peakheadz.com/youtube/",
+  "channelId": "UC3YSvhb13QKl9ejefmcayaw",
+  "products": [
+    {
+      "catalogId": "dake_pdf_merge",
+      "productId": "dake_pdf_merge",
+      "officialName": "DakePDF結合",
+      "officialUrl": "https://dakeapp.com/apps/pdf-merge/",
+      "anchor": "dake_pdf_merge",
+      "status": "active",
+      "verifiedAt": "2026-10-19"
+    }
+  ]
+}

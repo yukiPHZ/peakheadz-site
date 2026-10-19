@@ -2,7 +2,16 @@
   "dake": {
     "name": "DAKE",
     "url": "https://dakeapp.com/",
-    "source": "yukiPHZ/dakeapp-site:ORIGINAL.md and PEAKHEADZ current main navigation; public root verified 2026-09-30"
+    "source": "yukiPHZ/dakeapp-site:ORIGINAL.md and PEAKHEADZ current main navigation; public root verified 2026-09-30",
+    "youtube": {
+      "status": "active",
+      "kind": "directory",
+      "description": "実務のひと手間を軽くする、DAKEの道具。",
+      "cta": "DAKEを見る",
+      "verifiedAt": "2026-10-19",
+      "verificationSource": "docs/youtube/LINK_VERIFICATION.md",
+      "verificationSha256": "03325e46fdccd356f19010d05f0c5590394359995d7ca3326b92dca029cc36cd"
+    }
   },
   "start": {
     "name": "START",
@@ -25,6 +34,16 @@
       "verifiedAt": "2026-10-08",
       "cta": "体験する",
       "verificationSource": "niceskill-site/public/index.html"
+    },
+    "youtube": {
+      "status": "active",
+      "kind": "service",
+      "description": "今日のちょっと。人と人の間に、小さな体験を。",
+      "cta": "NICE SKILLをひらく",
+      "verifiedAt": "2026-10-19",
+      "verificationSource": "docs/youtube/LINK_VERIFICATION.md",
+      "category": "EXPERIENCES",
+      "verificationSha256": "753db131c38d0048ad634e322c3283c074331a1a300306963bb9e58738191fbd"
     }
   },
   "shimarisu_fudosan": {
@@ -76,6 +95,17 @@
       "verifiedAt": "2026-10-08",
       "cta": "フォローする",
       "verificationSource": "peakheadz-social-publisher/brands/peakheadz/BRAND.md"
+    },
+    "youtube": {
+      "status": "active",
+      "kind": "social",
+      "description": "制作・開発と、作品のこと。",
+      "cta": "フォローする",
+      "verifiedAt": "2026-10-19",
+      "verificationSource": "docs/youtube/LINK_VERIFICATION.md",
+      "platform": "instagram",
+      "brand": "PEAKHEADZ",
+      "verificationSha256": "5448a81682ccc6c5f539b9bd7d1d7fa3b1f4833f4c01553561b5625ab389bf68"
     }
   },
   "peakheadz_threads": {
@@ -94,6 +124,17 @@
       "verifiedAt": "2026-10-08",
       "cta": "フォローする",
       "verificationSource": "peakheadz-social-publisher/brands/peakheadz/BRAND.md"
+    },
+    "youtube": {
+      "status": "active",
+      "kind": "social",
+      "description": "制作・開発と、作品のこと。",
+      "cta": "フォローする",
+      "verifiedAt": "2026-10-19",
+      "verificationSource": "docs/youtube/LINK_VERIFICATION.md",
+      "platform": "threads",
+      "brand": "PEAKHEADZ",
+      "verificationSha256": "44c1d657b83a11c77129aafdc45199de9e401e777ac55ef18333cc5c54eedb89"
     }
   },
   "peakheadz_tiktok": {
@@ -112,6 +153,17 @@
       "verifiedAt": "2026-10-08",
       "cta": "フォローする",
       "verificationSource": "peakheadz-social-publisher/brands/peakheadz/BRAND.md"
+    },
+    "youtube": {
+      "status": "active",
+      "kind": "social",
+      "description": "制作・開発と、作品のこと。",
+      "cta": "フォローする",
+      "verifiedAt": "2026-10-19",
+      "verificationSource": "docs/youtube/LINK_VERIFICATION.md; browser title PEAKHEADZ (@peakheadz) | TikTok and visible profile handle peakheadz verified 2026-10-19",
+      "platform": "tiktok",
+      "brand": "PEAKHEADZ",
+      "verificationSha256": "27d37d499cd414f91a0564461113d06733e52523003359fe5d8b688b276ae1b1"
     }
   },
   "niceskillcom_instagram": {
@@ -184,10 +236,21 @@
       "verifiedAt": "2026-10-08",
       "cta": "フォローする",
       "verificationSource": "peakheadz-social-publisher/campaigns/2026q4/PROGRESS.md (API identity verified)"
+    },
+    "youtube": {
+      "status": "active",
+      "kind": "social",
+      "description": "レビュー、制作、日々の発信。",
+      "cta": "フォローする",
+      "verifiedAt": "2026-10-19",
+      "verificationSource": "docs/youtube/LINK_VERIFICATION.md",
+      "platform": "x",
+      "brand": "菊田幸彦",
+      "verificationSha256": "c8fac0f50b61c9448d0cbf90d34d94bcec991cf3a929c9f9a91cd36867aa83b6"
     }
   },
   "yukiz_youtube": {
-    "name": "ユキズ 稼働中",
+    "name": "ユキズ　稼働中",
     "url": "https://www.youtube.com/@yukiz_PHZ",
     "source": "public/index.html",
     "connect": {
@@ -202,6 +265,16 @@
       "verifiedAt": "2026-10-08",
       "cta": "チャンネルを見る",
       "verificationSource": "public/index.html"
+    },
+    "youtube": {
+      "status": "active",
+      "kind": "channel",
+      "description": "レビューと制作。つくる途中も、できたものも、動画で届けています。",
+      "cta": "YouTubeで見る・登録する",
+      "verifiedAt": "2026-10-19",
+      "verificationSource": "docs/youtube/LINK_VERIFICATION.md",
+      "channelId": "UC3YSvhb13QKl9ejefmcayaw",
+      "verificationSha256": "6d40fc0615e1ec5262e9956d824d465a6527a5034508ae88cc5ab75b6613902a"
     }
   },
   "yuki_github": {
@@ -220,6 +293,17 @@
       "verifiedAt": "2026-10-08",
       "cta": "コードを見る",
       "verificationSource": "public/index.html"
+    },
+    "youtube": {
+      "status": "active",
+      "kind": "social",
+      "description": "開発しているものと、そのソースコード。",
+      "cta": "コードを見る",
+      "verifiedAt": "2026-10-19",
+      "verificationSource": "docs/youtube/LINK_VERIFICATION.md",
+      "platform": "github",
+      "brand": "開発・ソースコード",
+      "verificationSha256": "2242c0ff1d601128a6b793d5487282bf5f429443333d1533e40a119f0f511fa0"
     }
   },
   "dake_tools": {
@@ -238,6 +322,16 @@
       "verifiedAt": "2026-10-08",
       "cta": "使ってみる",
       "verificationSource": "public/orbit/index.html"
+    },
+    "youtube": {
+      "status": "active",
+      "kind": "service",
+      "description": "ブラウザで使える、日々の小さな実務道具。",
+      "cta": "Webツールを使う",
+      "verifiedAt": "2026-10-19",
+      "verificationSource": "docs/youtube/LINK_VERIFICATION.md",
+      "category": "TOOLS",
+      "verificationSha256": "f4117da2f506c71f551c648bd06d79183bf96daf99a735bfb3f6d3e4cc7374aa"
     }
   },
   "dake_store": {
@@ -256,6 +350,15 @@
       "verifiedAt": "2026-10-08",
       "cta": "アプリを探す",
       "verificationSource": "peakheadz-project-index/PEAKHEADZ_PROJECT_INDEX.md"
+    },
+    "youtube": {
+      "status": "active",
+      "kind": "directory",
+      "description": "用途から選んで、商品の詳細と購入先へ。",
+      "cta": "購入先を探す",
+      "verifiedAt": "2026-10-19",
+      "verificationSource": "docs/youtube/LINK_VERIFICATION.md",
+      "verificationSha256": "9787a0128b537221140e3499e2a4d967782b2d6490265edf5df8f9c39b0b7a47"
     }
   },
   "japan_memory_lane": {
@@ -291,6 +394,68 @@
       "displayOrder": 39,
       "verifiedAt": "2026-10-08",
       "cta": "体験する"
+    }
+  },
+  "dake_pdf_merge": {
+    "name": "DakePDF結合",
+    "url": "https://dakeapp.com/apps/pdf-merge/",
+    "source": "DAKE_series/01_apps/DAKE_PDF_Merge/ORIGINAL.md; dakeapp-site/public/apps/pdf-merge/index.html; official public HTTP 200 and product title 2026-10-19",
+    "youtube": {
+      "status": "active",
+      "kind": "product",
+      "description": "複数のPDFを画面上で並べ替えて、表示順どおりにひとつに。Windows向けのPDF結合アプリです。",
+      "cta": "製品ページ・ダウンロードへ",
+      "verifiedAt": "2026-10-19",
+      "verificationSource": "docs/youtube/LINK_VERIFICATION.md",
+      "productId": "dake_pdf_merge",
+      "category": "WINDOWS / PDF",
+      "headline": "PDFを、ひとつに。",
+      "verificationSha256": "a24d9cde7f9149a7f6c264a0fce95937f45e323d5ed94be54b75a021001d5452"
+    }
+  },
+  "dake_apps": {
+    "name": "DAKEアプリ一覧",
+    "url": "https://dakeapp.com/apps/",
+    "source": "dakeapp-site/public/apps/index.html; official public HTTP 200 and APPS title 2026-10-19",
+    "youtube": {
+      "status": "active",
+      "kind": "directory",
+      "description": "PDF、画像、書類まわり。使いたい道具を一覧から。",
+      "cta": "一覧・ダウンロードへ",
+      "verifiedAt": "2026-10-19",
+      "verificationSource": "docs/youtube/LINK_VERIFICATION.md",
+      "verificationSha256": "468ec316b8f2849984281d6ad5d101bee23c0b13bd0241345be9351a43554fed"
+    }
+  },
+  "dake_pdf_merge_booth": {
+    "name": "DakePDF結合（BOOTH）",
+    "url": "https://peakheadz.booth.pm/items/8448196",
+    "source": "dake-store-site/public/assets/data/store_products.generated.json item dake_pdf_merge; anonymous HTTP 200, matching product/shop title, purchase control and InStock observed 2026-10-19",
+    "youtube": {
+      "status": "active",
+      "kind": "support",
+      "description": "公開中のDakePDF結合を購入して、DAKEの制作を応援できます。価格と内容は商品ページでご確認ください。",
+      "cta": "BOOTHの商品を見る",
+      "verifiedAt": "2026-10-19",
+      "verificationSource": "docs/youtube/LINK_VERIFICATION.md",
+      "productRef": "dake_pdf_merge",
+      "verificationSha256": "e11b7fabd4387ff06fdb4f18a7a7a31336714263a2edb5d1ca1276597a34e6c0"
+    }
+  },
+  "yukiz_instagram": {
+    "name": "@kikutayukihiko",
+    "url": "https://www.instagram.com/kikutayukihiko/",
+    "source": "Owner YouTube public profile/about link; anonymous HTTP 200 with matching handle and 菊田幸彦 title 2026-10-19",
+    "youtube": {
+      "status": "active",
+      "kind": "social",
+      "description": "写真と日々の記録。",
+      "cta": "Instagramを見る",
+      "verifiedAt": "2026-10-19",
+      "verificationSource": "docs/youtube/LINK_VERIFICATION.md",
+      "platform": "instagram",
+      "brand": "菊田幸彦 / 写真",
+      "verificationSha256": "80a1589a60785003b809fc89b1326fa118b56719f3d802ea87a871ef061c8cc3"
     }
   }
 }

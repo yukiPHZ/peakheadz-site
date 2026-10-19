@@ -13,6 +13,13 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
 
+/youtube/*
+  Cache-Control: public, must-revalidate, max-age=0, no-transform
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer
+  X-Robots-Tag: noindex, follow
+  Content-Security-Policy: default-src 'none'; script-src 'none'; style-src 'self'; img-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
+
 /
   Cache-Control: public, must-revalidate, max-age=0, no-transform
   X-Content-Type-Options: nosniff
