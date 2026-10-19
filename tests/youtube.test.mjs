@@ -53,4 +53,6 @@ test('hub route checker rejects ID/name/URL drift and a false manifest while nev
  const html=generate().html,m=destinations(data),p=data.catalog.dake_pdf_merge,channel=data.catalog.yukiz_youtube.youtube.channelId;
  for(const mutate of [x=>x.products[0].officialUrl+='fake',x=>x.products[0].officialName='Unverified',x=>x.products[0].status='hidden',x=>x.channelId='wrong',x=>x.releaseStage='production']){const changed=structuredClone(m);mutate(changed);assert.throws(()=>inspectHub(html,changed,p,channel));}
  assert.throws(()=>inspectHub(html.replace('data-youtube-product="dake_pdf_merge" href="'+p.url+'"','data-youtube-product="dake_pdf_merge" href="https://example.com/wrong"'),m,p,channel));
+ assert.throws(()=>inspectHub(html.replace('data-youtube-product="dake_pdf_merge" href="'+p.url+'"','data-href="'+p.url+'" data-youtube-product="dake_pdf_merge" href="https://example.com/wrong"'),m,p,channel));
+ assert.throws(()=>inspectHub(html.replace(/<a\b[^>]*data-youtube-product="dake_pdf_merge"[^>]*>[\s\S]*?<\/a>/,'<!-- $& -->'),m,p,channel));
 });

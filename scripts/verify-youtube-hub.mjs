@@ -10,8 +10,10 @@ export function inspectHub(html,manifest,product,channelId){
  if(manifest.schemaVersion!==1||manifest.hubUrl!=='https://peakheadz.com/youtube/'||manifest.channelId!==channelId||manifest.releaseStage!=='preview_only')throw Error('Hub identity or Preview stage mismatch');
  const row=manifest.products.filter(x=>x.productId===product.youtube.productId);
  if(row.length!==1||row[0].officialName!==product.name||row[0].officialUrl!==product.url||row[0].status!=='active')throw Error('Product manifest mismatch');
- const anchors=[...html.matchAll(/<a\b([^>]+)>/g)].filter(m=>new RegExp('data-youtube-product="'+esc(row[0].productId)+'"').test(m[1]));
- if(anchors.length!==1||decode(anchors[0][1].match(/\bhref="([^"]*)"/)?.[1]??'')!==product.url||!html.includes('id="'+row[0].anchor+'"'))throw Error('Actual product link mismatch');
+ const markup=html.replace(/<!--[\s\S]*?-->/g,'');
+ if(/<(?:script|textarea|template)\b/i.test(markup))throw Error('Unexpected executable/raw-text markup');
+ const anchors=[...markup.matchAll(/<a\b([^>]+)>/g)].filter(m=>new RegExp('(?:^|\\s)data-youtube-product="'+esc(row[0].productId)+'"(?=\\s|$)').test(m[1]));
+ if(anchors.length!==1||decode(anchors[0][1].match(/(?:^|\s)href="([^"]*)"/)?.[1]??'')!==product.url||!markup.includes('id="'+row[0].anchor+'"'))throw Error('Actual product link mismatch');
  if(!html.includes('rel="canonical" href="'+manifest.hubUrl+'"')||!html.includes('name="robots" content="noindex,follow"'))throw Error('Preview canonical/robots mismatch');
  return {validation:'preview_only',hubUrl:manifest.hubUrl,productId:row[0].productId,officialName:product.name,officialUrl:product.url,anchor:row[0].anchor,htmlSha256:createHash('sha256').update(html).digest('hex'),manifestSha256:createHash('sha256').update(JSON.stringify(manifest)).digest('hex'),manifestAndActualLinkMatch:true,publisherRouteReady:false,
   remaining:['Owner Preview acceptance','Separate production release approval and deployment','Actual YouTube profile link installation and public verification','Fresh production hub-to-product verification and owner-approved Publisher route evidence'],providerWrites:0};
