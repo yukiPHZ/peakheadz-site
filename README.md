@@ -1,8 +1,8 @@
-## ユキズ　稼働中 YouTubeリンクハブ — Preview / 2026-10-19
+## ユキズ　稼働中 YouTubeリンクハブ — Production / 2026-10-20
 
 候補 `/youtube/` は既存リンク正本 `data/profile-catalog.json` と、参照ID/表示順だけを持つ `data/youtube.json` から静的生成する。紹介アプリの掲載/順序はデータで編集し、`node scripts/generate-youtube.mjs` でHTMLと製品manifestを更新する。既存CONNECT、X、Instagram、Threads、TOP、共通CSS、中央Analyticsは保全する。
 
-`node scripts/generate-youtube.mjs --check`、`node --test tests/connect.test.mjs tests/youtube.test.mjs` で検証。手順・Preview境界は [YouTube実装記録](docs/youtube/IMPLEMENTATION.md)、[リンク確認](docs/youtube/LINK_VERIFICATION.md)、[Publisher経路設計](docs/youtube/PUBLISHER_ROUTE_DESIGN.md) を参照。今回は既存Pagesのfeature branch Previewまで。main merge・本番公開・YouTubeプロフィール変更は別承認。新ページはnoindex、sitemap未掲載、タグ/JS/解析送信なし。
+`node scripts/generate-youtube.mjs --check`、`node --test tests/connect.test.mjs tests/youtube.test.mjs` で検証。手順・Preview境界は [YouTube実装記録](docs/youtube/IMPLEMENTATION.md)、[リンク確認](docs/youtube/LINK_VERIFICATION.md)、[Publisher経路設計](docs/youtube/PUBLISHER_ROUTE_DESIGN.md) を参照。PR #18のiPhone確認と本番公開承認に基づき、既存Pages mainで公開。YouTubeプロフィールの実設置・公開確認とPublisher証跡登録は別工程。新ページはnoindex、sitemap未掲載、タグ/JS/解析送信なし。
 
 ## PEAKHEADZ Production / consented observation — 2026-10-09
 

@@ -1,3 +1,9 @@
+## Production release — 2026-10-20
+
+本人がPR #18のiPhone Previewを正式採用し、main mergeと既存Pagesの本番公開を承認。releaseStage=productionへ変更する。採用済みHTML/CSS、noindex、sitemap未掲載、解析なしを維持する。以下のPreview記録は制作時点の履歴。
+
+公式URL https://peakheadz.com/youtube/ をGET-only検証対象へ追加。コンテンツ一致だけではプロフィール公開確認にならず、publisherRouteReady=falseを維持する。プロフィールへ「ユキズ｜公式リンク」を実設置し、公開プロフィール→本番ハブ→公式製品ページを確認するまでverified_hubを登録しない。
+
 # ユキズ　稼働中 YouTubeリンクハブ
 
 候補canonical: `https://peakheadz.com/youtube/`。既存 `peakheadz-site` の静的ページ。

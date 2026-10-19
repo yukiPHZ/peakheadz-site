@@ -51,8 +51,15 @@ test('Preview SEO and accessibility preserve all required destinations without a
 });
 test('hub route checker rejects ID/name/URL drift and a false manifest while never authorizing publication',()=>{
  const html=generate().html,m=destinations(data),p=data.catalog.dake_pdf_merge,channel=data.catalog.yukiz_youtube.youtube.channelId;
- for(const mutate of [x=>x.products[0].officialUrl+='fake',x=>x.products[0].officialName='Unverified',x=>x.products[0].status='hidden',x=>x.channelId='wrong',x=>x.releaseStage='production']){const changed=structuredClone(m);mutate(changed);assert.throws(()=>inspectHub(html,changed,p,channel));}
+ for(const mutate of [x=>x.products[0].officialUrl+='fake',x=>x.products[0].officialName='Unverified',x=>x.products[0].status='hidden',x=>x.channelId='wrong',x=>x.releaseStage='unknown']){const changed=structuredClone(m);mutate(changed);assert.throws(()=>inspectHub(html,changed,p,channel));}
  assert.throws(()=>inspectHub(html.replace('data-youtube-product="dake_pdf_merge" href="'+p.url+'"','data-youtube-product="dake_pdf_merge" href="https://example.com/wrong"'),m,p,channel));
  assert.throws(()=>inspectHub(html.replace('data-youtube-product="dake_pdf_merge" href="'+p.url+'"','data-href="'+p.url+'" data-youtube-product="dake_pdf_merge" href="https://example.com/wrong"'),m,p,channel));
  assert.throws(()=>inspectHub(html.replace(/<a\b[^>]*data-youtube-product="dake_pdf_merge"[^>]*>[\s\S]*?<\/a>/,'<!-- $& -->'),m,p,channel));
+});
+
+test('production release retains no tracking and cannot establish a public profile route',()=>{
+ const d=clone();d.config.releaseStage='production';validate(d);
+ const proof=inspectHub(render(d,template),destinations(d),d.catalog.dake_pdf_merge,d.catalog.yukiz_youtube.youtube.channelId);
+ assert.equal(proof.releaseStage,'production');assert.equal(proof.publisherRouteReady,false);assert.equal(proof.providerWrites,0);
+ assert.ok(proof.remaining.some(x=>x.includes('profile')));
 });

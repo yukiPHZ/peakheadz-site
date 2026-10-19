@@ -11,7 +11,7 @@ export function loadData(){return {config:JSON.parse(read('data/youtube.json')),
 const platforms={x:'X',instagram:'Instagram',threads:'Threads',tiktok:'TikTok',github:'GitHub'};
 export const verificationHash=row=>createHash('sha256').update(JSON.stringify([row.name,row.url])).digest('hex');
 export function validate({config,catalog}){
- if(config.schemaVersion!==1||config.canonicalPath!=='/youtube/'||config.releaseStage!=='preview_only'||config.analytics?.enabled!==false)throw Error('YouTube Preview/analytics approval boundary changed');
+ if(config.schemaVersion!==1||config.canonicalPath!=='/youtube/'||!['preview_only','production'].includes(config.releaseStage)||config.analytics?.enabled!==false)throw Error('YouTube release/analytics boundary changed');
  const sections=[['featuredRefs','product'],['appRefs','directory'],['serviceRefs','service'],['socialRefs','social']];
  const refs=[config.channelRef,config.supportRef];
  for(const [key,kind]of sections){
@@ -65,5 +65,6 @@ if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.ur
  const output=generate();for(const [file,content]of [['public/youtube/index.html',output.html],['public/youtube/destinations.json',output.manifest]]){
   if(process.argv.includes('--check')){if(!fs.existsSync(path.join(root,file))||read(file)!==content)throw Error('Run node scripts/generate-youtube.mjs');}
   else{fs.mkdirSync(path.dirname(path.join(root,file)),{recursive:true});fs.writeFileSync(path.join(root,file),content);}
- }console.log('YouTube hub '+(process.argv.includes('--check')?'verified':'generated')+' (Preview only).');
+ }console.log('YouTube hub '+(process.argv.includes('--check')?'verified':'generated')+' ('+loadData().config.releaseStage+').' );
 }
+
