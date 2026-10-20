@@ -15,7 +15,10 @@
   ],
   "serviceRefs": [
     "dake_tools",
-    "niceskill"
+    "niceskill",
+    "japan_memory_lane",
+    "thanks",
+    "sashiire"
   ],
   "socialRefs": [
     "yukiz_x",
@@ -23,7 +26,9 @@
     "peakheadz_instagram",
     "peakheadz_threads",
     "peakheadz_tiktok",
-    "yuki_github"
+    "yuki_github",
+    "shimarisu_instagram",
+    "shimarisu_threads"
   ],
   "supportRef": "dake_pdf_merge_booth",
   "releaseStage": "production"

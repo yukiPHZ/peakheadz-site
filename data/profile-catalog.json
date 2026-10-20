@@ -377,6 +377,15 @@
       "verifiedAt": "2026-10-08",
       "cta": "見に行く",
       "verificationSource": "public/information.html"
+    },
+    "youtube": {
+      "status": "active",
+      "kind": "service",
+      "description": "写真と言葉で、日本の静かな記憶をたどる。",
+      "cta": "作品を見る",
+      "verifiedAt": "2026-10-20",
+      "verificationSource": "docs/youtube/EXPANSION_20261020.md",
+      "verificationSha256": "59df0494a184325acc18d7749016284823a89c3170c90c61f1b93ce191af417c"
     }
   },
   "thanks": {
@@ -394,6 +403,15 @@
       "displayOrder": 39,
       "verifiedAt": "2026-10-08",
       "cta": "体験する"
+    },
+    "youtube": {
+      "status": "active",
+      "kind": "service",
+      "description": "目の前の人に「いつもありがとう」を渡す、二台のスマホのWeb体験。",
+      "cta": "ありがとうを渡す",
+      "verifiedAt": "2026-10-20",
+      "verificationSource": "docs/youtube/EXPANSION_20261020.md",
+      "verificationSha256": "24dcaa44980acb4950e942b267fda77b133f5eeda32cfa11d0ad3deb6e4781f4"
     }
   },
   "dake_pdf_merge": {
@@ -456,6 +474,52 @@
       "platform": "instagram",
       "brand": "菊田幸彦 / 写真",
       "verificationSha256": "80a1589a60785003b809fc89b1326fa118b56719f3d802ea87a871ef061c8cc3"
+    }
+  },
+  "shimarisu_instagram": {
+    "name": "@kikuta.shimarisu_fudosan",
+    "url": "https://www.instagram.com/kikuta.shimarisu_fudosan/",
+    "source": "docs/youtube/EXPANSION_20261020.md",
+    "youtube": {
+      "status": "active",
+      "kind": "social",
+      "description": "空き家・中古戸建の相談と、しまりす不動産の発信。",
+      "cta": "Instagramを見る",
+      "verifiedAt": "2026-10-20",
+      "verificationSource": "docs/youtube/EXPANSION_20261020.md",
+      "verificationSha256": "f11eb53114b298ce0f401be476f601d08f3732399f43fa76eb757fc4440f9c48",
+      "platform": "instagram",
+      "brand": "しまりす不動産 / 菊田幸彦"
+    }
+  },
+  "shimarisu_threads": {
+    "name": "@kikuta.shimarisu_fudosan",
+    "url": "https://www.threads.com/@kikuta.shimarisu_fudosan",
+    "source": "docs/youtube/EXPANSION_20261020.md",
+    "youtube": {
+      "status": "active",
+      "kind": "social",
+      "description": "空き家相談・実務改善・AIについての発信。",
+      "cta": "Threadsを見る",
+      "verifiedAt": "2026-10-20",
+      "verificationSource": "docs/youtube/EXPANSION_20261020.md",
+      "verificationSha256": "6a7e0df77fd3cee3911d7c03d36f08993e0412820aae9d01d6891ee2baee6528",
+      "platform": "threads",
+      "brand": "しまりす不動産 / 菊田幸彦"
+    }
+  },
+  "sashiire": {
+    "name": "差し入れです。",
+    "url": "https://sashiire.niceskill.com/",
+    "source": "docs/youtube/EXPANSION_20261020.md",
+    "youtube": {
+      "status": "active",
+      "kind": "service",
+      "description": "画面のお菓子を選んで、スマホごと相手に渡す小さな体験。",
+      "cta": "作品をひらく",
+      "verifiedAt": "2026-10-20",
+      "verificationSource": "docs/youtube/EXPANSION_20261020.md",
+      "verificationSha256": "aa8f95da96506ca5142436cf9bc483fda9de20def75c37e063d981d636ca1aee"
     }
   }
 }
