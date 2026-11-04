@@ -196,3 +196,13 @@ PEAKHEADZは、菊田幸彦がつくる実務道具、Webサービス、メデ�
 - 2026年の情報設計再編後はすべて凍結し、`noindex,follow` としてsitemapから除外する。
 - 料金・連絡方法・実例・市場観測・GBPの正本は `docs/it-support/` と `docs/google-business-profile/` に分離している。
 - 事例ページは会社名・写真・説明の掲載承諾がpendingのため、引き続き `noindex,follow` とする。
+
+<!-- social-video-studio-canonical-v1 -->
+
+## 動画制作・素材管理
+
+動画制作・収録素材・本人採用状態・制作履歴の正本は **Social Video Studio** です。製品仕様はこのrepoの既存正本、投稿・予約・公開結果はPublisherを参照します。
+
+Studio検索用の製品識別子：`peakheadz_portfolio`。
+
+ローカルで同じ作業フォルダ配下にStudioを置き、`../social-video-studio/VIDEO_REGISTRY.md`、`../social-video-studio/registry/catalog.html`、`../social-video-studio/registry/videos.json` を参照してください。中央StudioのGitHub remoteは未設定のため、GitHub上の中央リンクは未設定です。製品repoへ動画や制作履歴を複製しません。
