@@ -592,8 +592,8 @@
   }
 
   function allowedValuesForSource(source) {
-    if (source === "project_registry.projects.project_id") return new Set(Object.keys(state.runtimeSchema.projects || {}));
-    if (source === "surface_dictionary.surfaces") return new Set(asArray(state.runtimeSchema.surfaces));
+    if (source === "sites.project_id") return new Set(Object.keys(state.runtimeSchema.projects || {}));
+    if (source === "sites.surface") return new Set(Object.values(state.runtimeSchema.projects || {}).map((project) => project.surface));
     if (source && source.startsWith("profile.")) {
       const key = source.slice("profile.".length);
       if (key === "destination_hosts") return new Set(asArray(state.profile.destination_hosts));
