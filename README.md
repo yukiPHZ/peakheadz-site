@@ -53,6 +53,8 @@ PEAKHEADZは、菊田幸彦がつくる実務道具、Webサービス、メデ�
 - 四surfaceの役割、URLの責任、SERP公開順、相互リンク方針を変更する場合は、同文書を先に更新する。
 - PEAKHEADZ本体は一般検索キーワードの大量獲得を担当せず、活動母体としてPEAKHEADZ、ピークヘッズ、菊田幸彦との関係を受け止める。
 - 具体的な検索需要はDAKE、しまりす不動産、NICE SKILL、NICE KIP、Japan Memory Laneなど、それぞれのブランド・プロジェクトが受け持つ。
+- しまりす不動産の中古戸建検索は `docs/serp-conquest/SHIMARISU_SERP_CONQUEST_2.md` を専門正本とし、既存記事優先・少数公開・地域一次資料優先で運用する。
+- 菊田幸彦のPerson Entity正本IDは `https://yukihikokikuta.com/#person`。PEAKHEADZは同一人物ではなく、既存のOrganization `founder` 関係を維持する。
 
 ## 世界観
 

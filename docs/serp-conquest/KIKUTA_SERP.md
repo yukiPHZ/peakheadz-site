@@ -70,6 +70,12 @@
 
 `https://yukihikokikuta.com/`
 
+## Person Entity 正本ID
+
+`https://yukihikokikuta.com/#person`
+
+各サイトの `creator`、`founder`、`author` が菊田幸彦を示す場合は、この `@id` を参照する。同一人物のローカルPerson IDをサイトごとに作らず、ブランドサイトをPersonの `sameAs` として扱わない。
+
 ## 表記
 
 - 日本語表示：`菊田 幸彦`
@@ -89,7 +95,7 @@
 - `/dake/` をDAKEを作る理由の正本とする
 - `/peakheadz/` をPEAKHEADZとの関係の正本とする
 - `/work/` を不動産実務とWeb制作・道具づくりの接点として扱う
-- `ProfilePage` + `Person` の構造化データを検討する
+- `/about/` の `ProfilePage.mainEntity` を `https://yukihikokikuta.com/#person` とする
 - `sameAs` は本人の公式SNS・GitHub・必要な公式プロフィールだけに絞る
 
 ---
