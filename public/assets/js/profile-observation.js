@@ -1,7 +1,7 @@
 (function(root){'use strict';
   if(root.__PEAKHEADZ_OBSERVER_BOOTSTRAPPED__)return;
   var body=root.document.body, data=root.MarketObserverRuntimePackage,tracker=root.MarketObserver;
-  if(root.MarketObserverConsent)root.MarketObserverConsent.mount({locale:'ja',presentation:'quiet',containerSelector:'#analytics-consent',settingsContainerSelector:'.site-utility-links',privacyUrl:body.getAttribute('data-profile-project')==='niceskill'?'/about/#analytics':'#analytics',detailsSelector:'.analytics-privacy'});
+  if(root.MarketObserverConsent)root.MarketObserverConsent.mount({locale:'ja',presentation:'quiet',containerSelector:'#analytics-consent',settingsContainerSelector:'.site-utility-links',privacyUrl:'/privacy/'});
   if(!data||!tracker)return;
   var config = { projectId: "peakheadz_brand" };
   var projectId=config.projectId;

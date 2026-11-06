@@ -88,8 +88,14 @@ img {
   letter-spacing: 0.12em;
 }
 
+.brand-motion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
 .dots {
-  margin-top: 6px;
   height: 18px;
 }
 
@@ -100,7 +106,7 @@ img {
   margin: 0 6px;
   background: var(--accent);
   border-radius: 50%;
-  opacity: 0.2;
+  opacity: 0.45;
   animation: pulse 2.5s infinite ease-in-out;
 }
 
@@ -114,7 +120,7 @@ img {
 
 @keyframes pulse {
   0%, 100% {
-    opacity: 0.2;
+    opacity: 0.45;
     transform: scale(1);
   }
 
@@ -125,7 +131,7 @@ img {
 }
 
 .nav {
-  margin-top: 42px;
+  margin-top: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -133,14 +139,34 @@ img {
 }
 
 .nav a {
-  font-size: 12px;
-  color: var(--text-dim);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 8px 6px;
+  font-size: 13px;
+  color: var(--text-muted);
   letter-spacing: 0.08em;
   transition: color 0.2s ease, opacity 0.2s ease;
 }
 
-.nav a:hover {
+.nav a:hover,
+.nav a:focus-visible {
   color: var(--accent);
+}
+
+.nav a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.meaning {
+  margin-top: 36px;
+  max-width: 30em;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.9;
+  letter-spacing: 0.08em;
 }
 
 .home-workflow-link {
@@ -1283,6 +1309,38 @@ img {
   font-size: 12px;
 }
 
+.top-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.site-utility-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 20px;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.site-utility-links a,
+.site-utility-links .market-observer-consent-change {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+body:not(.connect-page):not(.profile-page) > .site-utility-links {
+  width: min(100%, var(--max-width));
+  margin: -20px auto 0;
+  padding: 0 24px 24px;
+}
+
 .about-footer {
   display: flex;
   align-items: center;
@@ -1370,12 +1428,17 @@ img {
 
   .nav {
     display: grid;
-    grid-template-columns: repeat(3, max-content);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     justify-content: center;
     width: min(100%, 320px);
     max-width: 320px;
-    margin-top: 34px;
-    gap: 12px 16px;
+    margin-top: 0;
+    gap: 12px 8px;
+  }
+
+  .meaning {
+    margin-top: 28px;
+    font-size: 13px;
   }
 
   .page {
@@ -1506,6 +1569,12 @@ img {
   .wlzphz-signal {
     font-size: 9px;
     gap: 4px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dot {
+    animation: none;
   }
 }
 
