@@ -1,3 +1,9 @@
+## PEAKHEADZ top / AdSense removal / OGP — 2026-11-07
+
+TOPは正式ロゴ、`Stay motion.` と3点のブランド表現を維持し、その後に「実務道具、Webサービス、メディア、実験。」を置く。直接navigationは About / Projects / DAKE / START / Connect / Orbit の6件。Information、YouTube、GitHubは削除せず、About / Connect / footer等から到達できる状態を維持する。
+
+AdSense loaderは公開HTMLから撤去し、PEAKHEADZでは使用しない。GA4は明示同意、拒否、GPC、後からの設定変更、Preview隔離を維持する。通常画面では長い内部説明を出さず、`/privacy/` と実際に開く解析設定へ集約する。TOP OGPは正式ロゴから `public/assets/og/peakheadz-og.png` を生成する。依存追加はなく、再生成は `powershell -ExecutionPolicy Bypass -File scripts/generate-peakheadz-ogp.ps1`。
+
 ## ユキズ　稼働中 YouTubeリンクハブ — Production / 2026-10-20
 
 候補 `/youtube/` は既存リンク正本 `data/profile-catalog.json` と、参照ID/表示順だけを持つ `data/youtube.json` から静的生成する。紹介アプリの掲載/順序はデータで編集し、`node scripts/generate-youtube.mjs` でHTMLと製品manifestを更新する。既存CONNECT、X、Instagram、Threads、TOP、共通CSS、中央Analyticsは保全する。
@@ -6,7 +12,7 @@
 
 ## PEAKHEADZ Production / consented observation — 2026-10-09
 
-/connect and all nine brand routes are public after #14/#15. Owner-approved Production-only measurement package is pinned to central d7efc37; Preview and Lite reporting remain disabled. Consent, GPC, withdrawal and exact route gates remain. Real receipt/processing/mapping are separate evidence, not inferred from deployment. Preview-only CSP preserves the original Production AdSense ownership snippet. See docs/connect/OBSERVER_ONBOARDING.md and central docs/PEAKHEADZ_PRODUCTION_ACTIVATION.md. Historical Preview-only sections below describe prior stages.
+/connect and all nine brand routes are public after #14/#15. Owner-approved Production-only measurement package is pinned to central d7efc37; Preview and Lite reporting remain disabled. Consent, GPC, withdrawal and exact route gates remain. Real receipt/processing/mapping are separate evidence, not inferred from deployment. AdSense loader is removed; Preview-only CSP isolation remains. See docs/connect/OBSERVER_ONBOARDING.md and central docs/PEAKHEADZ_PRODUCTION_ACTIVATION.md. Historical Preview-only sections below describe prior stages.
 
 ## PEAKHEADZ CONNECT v1.0 — 2026-10-08
 

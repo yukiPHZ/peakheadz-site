@@ -5,6 +5,11 @@ import vm from 'node:vm';
 import {generate, render, validate, loadData} from '../scripts/generate-connect.mjs';
 const data = loadData();
 const template = fs.readFileSync(new URL('../templates/connect.html',import.meta.url),'utf8');
+function loadProfile(){
+  const context={};
+  vm.runInNewContext(fs.readFileSync(new URL('../public/assets/market-observer/generated/runtime-package.js',import.meta.url),'utf8'),context);
+  return JSON.parse(JSON.stringify(context.MarketObserverRuntimePackage.profiles.peakheadz_brand));
+}
 
 test('generated output is current and has unique IDs and verified public links', () => {
   validate(data);
@@ -14,7 +19,7 @@ test('generated output is current and has unique IDs and verified public links',
 });
 
 test('CONNECT references the pinned central route and fixed CTA ledger IDs',()=>{
-  const profile=JSON.parse(fs.readFileSync(new URL('../public/assets/market-observer/generated/peakheadz_brand.profile.json',import.meta.url),'utf8'));
+  const profile=loadProfile();
   const route=profile.route_contracts['/connect'];
   assert.equal(profile.project_id,'peakheadz_brand');
   assert.equal(route.route_id,'connect');
@@ -33,7 +38,7 @@ test('CONNECT references the pinned central route and fixed CTA ledger IDs',()=>
 });
 
 test('shared bootstrap rejects unknown ID, destination drift and unapproved group',()=>{
-  const profile=JSON.parse(fs.readFileSync(new URL('../public/assets/market-observer/generated/peakheadz_brand.profile.json',import.meta.url),'utf8'));
+  const profile=loadProfile();
   const script=fs.readFileSync(new URL('../public/assets/js/profile-observation.js',import.meta.url),'utf8');
   let click; let listeners=0,initializations=0; const events=[];
   const root={location:new URL('https://peakheadz.com/connect?email=private#private'),document:{body:{getAttribute:()=> 'peakheadz_brand'},addEventListener:(name,fn)=>{listeners++;click=fn;}},MarketObserverRuntimePackage:{profiles:{peakheadz_brand:profile},profileHashes:{peakheadz_brand:'fixture'}},MarketObserver:{init:()=>{initializations++;return {ok:true};},trackPageView:()=>events.push(['page_view']),track:(...args)=>events.push(args)}};
@@ -85,19 +90,23 @@ test('unsafe links, unverified active rows and internal UTMs fail generation', (
 });
 
 
-test('advertising and analytics consent are explicitly separate without changing the AdSense review tag',()=>{
-  const paths=['index.html','about.html','information.html','projects/index.html','orbit/index.html','connect.html','instagram/index.html','threads/index.html','x/index.html'];
-  for(const file of paths){
+test('public pages have no AdSense loader and keep analytics settings available',()=>{
+  const pages=[];
+  const walk=dir=>{for(const entry of fs.readdirSync(dir,{withFileTypes:true})){const full=new URL(entry.name+(entry.isDirectory()?'/':''),dir);if(entry.isDirectory())walk(full);else if(entry.name.endsWith('.html'))pages.push(full);}};
+  walk(new URL('../public/',import.meta.url));
+  for(const file of pages){
+    const html=fs.readFileSync(file,'utf8');
+    assert.ok(!/pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js|<ins[^>]+adsbygoogle/i.test(html),file.pathname);
+  }
+  for(const file of ['index.html','about.html','information.html','projects/index.html','orbit/index.html','connect.html','instagram/index.html','threads/index.html','x/index.html']){
     const html=fs.readFileSync(new URL('../public/'+file,import.meta.url),'utf8');
-    assert.ok(html.includes('このGA4解析では広告シグナルと広告パーソナライズを使用しません。解析設定は広告への同意を兼ねません。'),file);
+    assert.ok(html.includes('href="/privacy/"'),file);
+    assert.ok(!html.includes('class="analytics-privacy"'),file);
     assert.ok(!/src="https:\/\/(www\.)?(googletagmanager|google-analytics)\.com/.test(html),file);
-    const ads=html.match(/<script async src="https:\/\/pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js\?client=ca-pub-5726328353897371"\s+crossorigin="anonymous"><\/script>/g)||[];
-    assert.equal(ads.length,file==='index.html'?1:0,file);
-    if(file==='index.html')assert.ok(html.includes('解析設定の選択前にも発生'));
   }
 });
 
-test('Pages host-only CSP blocks advertising and analytics without changing Production ownership HTML',()=>{
+test('Pages host-only CSP keeps Preview isolated from external scripts and analytics',()=>{
   const headers=fs.readFileSync(new URL('../public/_headers',import.meta.url),'utf8');
   const blocks=headers.trim().split(/\r?\n\r?\n/);
   const allPolicies=blocks.filter(b=>b.includes('Content-Security-Policy:'));

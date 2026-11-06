@@ -50,7 +50,12 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
 
-# Pages-only isolation: retain the unchanged Production AdSense ownership tag.
+/privacy/*
+  Cache-Control: public, must-revalidate, max-age=0, no-transform
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+# Pages-only isolation: keep Preview non-indexed and self-contained.
 https://:preview.peakheadz-site.pages.dev/*
   Content-Security-Policy: script-src 'self' 'unsafe-inline'; connect-src 'self'; frame-src 'none';
   X-Robots-Tag: noindex
