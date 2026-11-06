@@ -10,6 +10,8 @@
 
 この文書は、`peakheadz.com`、`start.peakheadz.com`、`tools.dakeapp.com`、`yukihikokikuta.com` の四surfaceを横断するSERP責任分担の専門正本です。
 
+しまりす不動産の検索責任は [しまりす不動産 SERP Conquest 2](SHIMARISU_SERP_CONQUEST_2.md) を専門正本とします。中古戸建を主戦場とし、静かな見た目を維持したまま、既存記事、クラスター、内部リンク、将来ロードマップを管理します。大量記事生成、地域名だけを置換したページ、宅建業者・仲介会社としての表現は行いません。
+
 単なるSEO施策や記事量産ではなく、実際に役立つ道具、活動を束ねる母体、その理由を持つ人を、それぞれの役割のまま検索上へ広げていきます。
 
 ## 2026年9月の現在地
@@ -36,6 +38,7 @@
 - siteがORIGINAL.mdをブランド・製品正本として明示している場合は、その領域でORIGINAL.mdを優先する。DAKEの思想を他ブランドへ一律適用しない。
 - 各READMEは現在状態、技術構成、deploy、保守を扱う。
 - 本書は検索責任、検索意図別canonical、相互リンクとSERP公開順の領域だけを扱う。ブランドの統合・改名やdeploy承認を行わない。
+- しまりす不動産の検索責任と記事ロードマップは `SHIMARISU_SERP_CONQUEST_2.md`、横断EntityとSHIMARISU Product Lineは `peakheadz-project-index/rules/ENTITY_BRAND_GRAPH.md` を正本とする。
 - STARTのブランド・製品仕様はpeakheadz-start-site/ORIGINAL.md（repo作成前の起点仕様はpeakheadz-project-index/rules/PEAKHEADZ_START_SPEC.md）、制作循環はCONTENT_OS_RULE.md、KGI/KPIはmarket-observer/00_core/V2_FRAMEWORK.mdが正本。
 
 検索責任、URLの役割、SERP公開順、相互リンク方針を変更する場合は本書を更新し、現在の実装状態は対象READMEへ反映する。領域の衝突は関係正本を整合させ、一つの文書で他領域を上書きしない。
